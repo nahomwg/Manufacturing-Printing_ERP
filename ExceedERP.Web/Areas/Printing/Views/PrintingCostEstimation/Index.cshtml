@@ -1,0 +1,223 @@
+﻿
+<label>Printing Cost Estimation</label>
+
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.Printing.PrintingCostEstimation>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+                      columns.ForeignKey(c => c.JobTypeId, (IEnumerable)ViewData["JobType"], "Value", "Text");
+
+                      columns.ForeignKey(c => c.PaperSizeId, (IEnumerable)ViewData["PaperSize"], "Value", "Text");
+                      columns.ForeignKey(c => c.CustomerId, (IEnumerable)ViewData["Customer"], "Value", "Text");
+                      columns.ForeignKey(c => c.BindingStyleId, (IEnumerable)ViewData["BindingStyle"], "Value", "Text");
+
+                      columns.Bound(c => c.TextNoOfColors);
+                      columns.Bound(c => c.CoverNoOfColor);
+                      columns.Bound(c => c.ProductQuantity);
+                      columns.Bound(c => c.TotalTextNoPages).Title("Number Of Pages");
+
+
+                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                  })
+                  .ToolBar(toolbar =>
+                  {
+                      toolbar.Create();
+                  })
+                  .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("PrintingCostEstimationTemplate"))
+                  .Filterable()
+                  .Scrollable()
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Model(model => model.Id(p => p.PrintingCostEstimationId))
+                      .Read(read => read.Action("PrintingCostEstimations_Read", "PrintingCostEstimation"))
+                      .Create(create => create.Action("PrintingCostEstimations_Create", "PrintingCostEstimation"))
+                      .Update(update => update.Action("PrintingCostEstimations_Update", "PrintingCostEstimation"))
+                      .Destroy(destroy => destroy.Action("PrintingCostEstimations_Destroy", "PrintingCostEstimation"))
+                  ).ClientDetailTemplateId("cost_estimation")
+)
+
+<script id="cost_estimation" type="text/x-kendo-template">
+    @(Html.Kendo().TabStrip()
+        .Name("tabstrip_grid_#=PrintingCostEstimationId#")
+        .SelectedIndex(0)
+        .Items(itemn =>
+        {
+            itemn.Add().Text("Estimation Material List").Content(@<text>@MaterialCost()</text>);
+            itemn.Add().Text("Labor Cost").Content(@<text>@LaborCost()</text>);
+            itemn.Add().Text("Over All Cost").Content(@<text>@OverAllCost()</text>);
+        }).ToClientTemplate())
+</script>
+
+@helper MaterialCost()
+{
+    @(Html.Kendo().Grid<ExceedERP.Core.Domain.Printing.PrintingEstimationMaterialCost>()
+                                      .Name("material_#=PrintingCostEstimationId#")
+                                      .Columns(columns =>
+                                      {
+                                          columns.ForeignKey(c => c.PrintingMaterialCategoryId, (IEnumerable)ViewData["Category"], "Value", "Text");
+                                          columns.ForeignKey(c => c.PrintingMaterialCategoryItemId, (IEnumerable)ViewData["Item"], "Value", "Text");
+                                          columns.Bound(c => c.UnitOfMeasurment);
+                                          columns.Bound(c => c.Quantity);
+                                          columns.Bound(c => c.UnitCost);
+                                          columns.Bound(c => c.TotalCost);                                          
+                                          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                                      })
+                                      .ToolBar(toolbar =>
+                                      {
+                                          toolbar.Create();
+                                      })
+                                      .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("PrintMaterialEstimationTemplate"))
+                                      .Filterable()
+                                      .Scrollable()
+                                      .DataSource(dataSource => dataSource
+                                          .Ajax()
+                                          .Model(model => model.Id(p => p.PrintingEstimationMaterialCostId))
+                                          .Read(read => read.Action("PrintingEstimationMaterialCosts_Read", "PrintingEstimationMaterialCost", new { id = "#=PrintingCostEstimationId#" }))
+                                          .Create(create => create.Action("PrintingEstimationMaterialCosts_Create", "PrintingEstimationMaterialCost", new { id = "#=PrintingCostEstimationId#" }))
+                                          .Update(update => update.Action("PrintingEstimationMaterialCosts_Update", "PrintingEstimationMaterialCost"))
+                                          .Destroy(destroy => destroy.Action("PrintingEstimationMaterialCosts_Destroy", "PrintingEstimationMaterialCost"))
+                                      ).ToClientTemplate()
+    )
+}
+@helper LaborCost()
+{
+    @(Html.Kendo().Grid<ExceedERP.Core.Domain.Printing.PrintingEstimationLaborCost>()
+                      .Name("labor_#=PrintingCostEstimationId#")
+                      .Columns(columns =>
+                      {
+                          columns.Bound(c => c.ProcessCategory).EditorTemplateName("PrintingCategoryDropDownTemplate");
+                          columns.ForeignKey(c => c.PrintingProcessId, (IEnumerable)ViewData["PrintingProcess"], "Value", "Text");
+                          columns.ForeignKey(c => c.PrintingMachineTypeId, (IEnumerable)ViewData["PrintingMachineType"], "Value", "Text");
+                          columns.Bound(c => c.EstimatedHours);
+                          columns.Bound(c => c.LaborRate);
+                          columns.Bound(c => c.TotalCost);
+
+                          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                      })
+                      .ToolBar(toolbar =>
+                      {
+                          toolbar.Create();
+                      })
+                      .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("laborTemplate"))
+                      .Filterable()
+                      .Scrollable()
+                      .DataSource(dataSource => dataSource
+                          .Ajax()
+                          .Model(model => model.Id(p => p.PrintingEstimationLaborCostId))
+                          .Read(read => read.Action("PrintingEstimationLaborCosts_Read", "PrintingEstimationLaborCost", new { id = "#=PrintingCostEstimationId#" }))
+                          .Create(create => create.Action("PrintingEstimationLaborCosts_Create", "PrintingEstimationLaborCost", new { id = "#=PrintingCostEstimationId#" }))
+                          .Update(update => update.Action("PrintingEstimationLaborCosts_Update", "PrintingEstimationLaborCost"))
+                          .Destroy(delete => delete.Action("PrintingEstimationLaborCosts_Delete", "PrintingEstimationLaborCost"))
+                      ).ToClientTemplate()
+    )
+
+}
+
+
+@helper OverAllCost()
+{
+    @(Html.Kendo().Grid<ExceedERP.Core.Domain.Printing.PrintingOverAllCost>()
+                              .Name("overall_#=PrintingCostEstimationId#")
+                              .Columns(columns =>
+                              {
+                                  columns.Bound(c => c.MaterialCost);
+                                  columns.Bound(c => c.LaborCost);
+                                  columns.Bound(c => c.TotalProductionCost);
+                                  columns.Bound(c => c.AdminstrativeCost);
+                                  columns.Bound(c => c.ProfitMargin);
+                                  columns.Bound(c => c.GraphicsCost);
+                                  columns.Bound(c => c.UnitPrice);
+                                  columns.Bound(c => c.TotalBeforeVAT);
+                                  columns.Bound(c => c.VAT);
+                                  columns.Bound(c => c.GrandTotal);
+                                  columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                              })
+                              .ToolBar(toolbar =>
+                              {
+                                  toolbar.Create();
+                              })
+                              .Editable(editable => editable.Mode(GridEditMode.InLine))
+                              .Filterable()
+                              .Scrollable()
+                              .DataSource(dataSource => dataSource
+                                  .Ajax()
+                                  .Model(model => model.Id(p => p.PrintingOverAllCostId))
+                                  .Read(read => read.Action("PrintingOverAllCosts_Read", "PrintingOverAllCost", new { id = "#=PrintingCostEstimationId#" }))
+                                  .Create(create => create.Action("PrintingOverAllCosts_Create", "PrintingOverAllCost", new { id = "#=PrintingCostEstimationId#" }))
+                                  .Update(update => update.Action("PrintingOverAllCosts_Update", "PrintingOverAllCost"))
+                                  .Destroy(destroy => destroy.Action("PrintingOverAllCosts_Destroy", "PrintingOverAllCost"))
+                              ).ToClientTemplate()
+    )
+
+}
+
+
+<script type="text/javascript">
+    function filterJobType() {
+        return {
+            text: $("#JobTypeId").data("kendoDropDownList").filterInput.val(),
+        }
+    }
+
+    function filterCustomer() {
+        return {
+            text: $("#CustomerId").data("kendoDropDownList").filterInput.val(),
+        }
+    }
+
+    function filterPaperSize() {
+        return {
+            text: $("#PaperSizeId").data("kendoDropDownList").filterInput.val(),
+        }
+    }
+
+
+    function filterBindingStyle() {
+        return {
+            text: $("#BindingStyleId").data("kendoDropDownList").filterInput.val(),
+        }
+    }
+
+    function filterCategory() {
+        return {
+            text: $("#PrintingMaterialCategoryId").data("kendoDropDownList").filterInput.val(),
+        }
+    }
+    function filterCategoryItem() {
+        return {
+            text: $("#PrintingMaterialCategoryItemId").data("kendoDropDownList").filterInput.val(),
+            materialCategoryId: $("#PrintingMaterialCategoryId").val()
+        }
+    }
+    function filterProcess() {
+        return {
+            text: $("#PrintingProcessId").data("kendoDropDownList").filterInput.val(),
+            printingProcessCategory: $("#ProcessCategory").val()
+        }
+    }
+
+    function showMachineType() {
+        var ProcessCategory = $("#ProcessCategory").val()
+        if (ProcessCategory == 1) {
+            $(".machine-type").show();
+        }
+        else {
+            $(".machine-type").hide();
+        }
+    }
+</script>
+
+<style>
+    div.k-edit-form-container {
+        width: auto;
+        height: auto;
+    }
+
+    .row .col-sm-2 {
+        width: 150px;
+    }
+
+    .row {
+        margin: auto;
+    }
+</style>

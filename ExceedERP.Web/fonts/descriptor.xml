@@ -1,0 +1,4 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>Defining Commodity Codes</Title>
+  <Type>Topic</Type>
+  <PlayModes>STKDP</PlayModes><JumpIn FrameID="F4">Customer Item Commodity Codes page</JumpIn><Leadin>1</Leadin><Concept>./tpc/b3d8f470-a0a2-45fe-8590-30890e0402bd/index.html</Concept><PrintItName>0e0b8df4-b1bc-4efa-a418-901eeb553fe5_JOBAID.doc</PrintItName></Description>

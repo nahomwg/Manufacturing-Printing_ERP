@@ -1,0 +1,15 @@
+﻿
+@(Html.Kendo().DropDownListFor(m => m)
+                  .AutoBind(true)
+                  .OptionLabel("Select ")
+                  .DataTextField("Description")
+                  .DataValueField("Code")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetThingCategory", "DataProvider"))
+                                .ServerFiltering(false);
+                  })
+                  .ValuePrimitive(true)
+
+)
+@Html.ValidationMessageFor(m => m)

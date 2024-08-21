@@ -1,0 +1,34 @@
+﻿
+<label>Printing Machines</label>
+
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.Printing.PrintingMachineType>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+
+          //columns.Bound(c => c.PaperFeedStyle);
+          columns.Bound(c => c.MachineTypeName);
+          //columns.Bound(c => c.NumberUnits);
+          columns.Bound(c => c.NumberOfColors);
+          columns.Bound(c => c.OutputRate);
+          //columns.Bound(c => c.PrintingHourlyChargeRate);
+          //columns.Bound(c => c.MakeReadyHours);
+          //columns.Bound(c => c.MachineStatus);
+
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+          toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.PrintingMachineTypeId))
+          .Read(read => read.Action("PrintingMachineType_Read", "PrintingMachineType"))
+          .Create(create => create.Action("PrintingMachineType_Create", "PrintingMachineType"))
+          .Update(update => update.Action("PrintingMachineType_Update", "PrintingMachineType"))
+          .Destroy(destroy => destroy.Action("PrintingMachineType_Delete", "PrintingMachineType"))
+      )
+)

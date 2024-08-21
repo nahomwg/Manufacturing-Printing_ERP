@@ -1,0 +1,106 @@
+﻿@model ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation.FurnitureMaterialCost
+@using ExceedERP.Core.Localization
+
+<form id="lineForm" method="post">
+
+
+    @Html.HiddenFor(model => model.FurnitureMaterialCostId)
+
+    <div class="form-group row">
+        <label for="cat" class="control-label control-label col-sm-2 text-right text-right">Type:</label>
+
+        <div class="col-sm-8">
+            @(Html.Kendo().DropDownListFor(m => m.TaskType)
+             .OptionLabel("Task Type...")
+             .DataTextField("Text")
+             .DataValueField("Value")
+
+             .BindTo(ExceedERP.Helpers.Common.EnumExtension.EnumToSelectList(typeof(ExceedERP.Core.Domain.Manufacturing.Setting.WorkShop))
+             )
+            )
+        </div>
+    </div>
+
+    <div class="row">
+        <label for="cat" class="control-label control-label col-sm-2 text-right text-right">Category:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().DropDownListFor(m => m.ManufacturingMaterialCategoryId)
+                .OptionLabel(Resources.Select)
+                .DataTextField("Text")
+                .DataValueField("Value")
+                
+                .DataSource(dataSource =>
+                {
+                    dataSource.Read(read => read.Action("GetManufacturingMaterialCategory", "ManufacturingDataProvider", new { Area = "Manufacturing" }))
+                    .ServerFiltering(false);
+                })
+                .Filter("contains")
+                .MinLength(2)
+                .ValuePrimitive(true)
+            )
+        </div>
+    </div>
+
+
+    @*<div class="form-group row">
+        <label for="Product" class="control-label col-sm-2 text-right">Unit of measurement:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().DropDownListFor(m => m.UnitOfMeasurment)
+                .AutoBind(false)
+                .OptionLabel("Select UOM...")
+                .DataTextField("UoMName")
+                .DataValueField("Value")
+                .ValuePrimitive(true)
+                .DataSource(dataSource =>
+                {
+                    dataSource.Read(read => read.Action("GetUoM", "ManufacturingDataProvider"))
+                            .ServerFiltering(false);
+                })
+
+            )
+        </div>
+    </div>*@
+
+    @*<div class="form-group row">
+        <label for="Balance" class="control-label col-sm-2 text-right col-form-label">Balance:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().TextBoxFor(model => model.Balance)
+                .HtmlAttributes(new
+                { style = "color:red;", @readonly = "readonly" }))
+        </div>
+    </div>*@ 
+    
+    <div class="form-group row">
+        <label for="Quantity" class="control-label col-sm-2 text-right col-form-label">Quantity:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().TextBoxFor(model => model.Quantity)
+                                .HtmlAttributes(new
+                                { onchange = "onChange(this)" }))
+        </div>
+    </div>
+
+
+    @*<div class="form-group row">
+        <label for="UnitPrice" class="control-label col-sm-2 text-right col-form-label">Unit Price:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().TextBoxFor(model => model.UnitPrice)
+                                          .HtmlAttributes(new { style = "color:red;", onchange = "onChange(this)"/*, @readonly = "readonly" */}))
+        </div>
+    </div>*@
+
+
+    @*<div class="form-group row">
+        <label for="TotalPrice" class="control-label col-sm-2 text-right col-form-label">Total Price:</label>
+        <div class="col-sm-8">
+            @(Html.Kendo().TextBoxFor(model => model.TotalPrice)
+.HtmlAttributes(new { style = "color:red;", @readonly = "readonly" }) )
+        </div>
+    </div>*@
+
+</form>
+
+<style>
+    /*.label {
+        float: left;
+    }*/
+</style>

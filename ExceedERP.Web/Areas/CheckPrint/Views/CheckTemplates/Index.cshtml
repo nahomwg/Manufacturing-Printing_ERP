@@ -1,0 +1,257 @@
+﻿<legend> Check Template</legend>
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.CheckTemplate>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+
+          columns.Group(group =>
+          {
+              group.HeaderHtmlAttributes(new { style = "font-weight:bold;text-align:center" });
+              group.Title("Paying Company");
+              group.Columns(innerColumns =>
+              {
+                  innerColumns.Template(c => { }).Width(100)
+                       .ClientTemplate("<img class='circular-profile-img-small' src ='" + @Url.Content("~/Content/Images/CheckPrint/Logo/CheckTemplate/") + "#=PayingCompanyLogoFileName#'/>");
+                  innerColumns.Bound(c => c.PayingCompanyName);
+                  innerColumns.Bound(c => c.PayingCompanyAccountNumber);
+              });
+          });
+          columns.Group(group =>
+          {
+              group.HeaderHtmlAttributes(new { style = "font-weight:bold;text-align:center" });
+              group.Title("Bank");
+              group.Columns(innerColumns =>
+              {
+                  innerColumns.ForeignKey(c => c.CPBankId, (IEnumerable)ViewData["Banks"], "CPBankId", "Name")/*.EditorTemplateName("CheckPrintBankEditorTemplate")*/;
+                  innerColumns.Template(c => { }).Width(100)
+                    .ClientTemplate("<img class='circular-profile-img-small' src ='" + @Url.Content("~/Content/Images/CheckPrint/Logo/Banks/") + "#=BankLogoFileName#'/>");
+              });
+          });
+
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar => {
+          toolbar.Create();
+          //toolbar.Excel();
+          //toolbar.Pdf();
+      })
+      .Events(events =>
+      {
+          events.Edit("onTemplateEdit");
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+       .Pageable(pagable =>
+       {
+           pagable.Enabled(true);
+           pagable.PageSizes(true);
+           pagable.Refresh(true);
+           pagable.ButtonCount(10);
+           pagable.Input(true);
+           pagable.Numeric(false);
+       })
+      //.Selectable(selectable => {
+      //    selectable.Mode(GridSelectionMode.Single);
+      //    selectable.Type(GridSelectionType.Row);
+      //})
+      .Filterable()
+      .Scrollable(s => s.Height(700))
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.CheckTemplateId))
+          .Events(ev => ev
+                            .Error("error_handler(\"grid\")")
+                            .RequestStart("onRequestStart(\"grid\")")
+                            .RequestEnd("onRequestEnd(\"grid\")"))
+
+          .Read(read => read.Action("Templates_Read", "CheckTemplates"))
+          .Create(create => create.Action("Template_Create", "CheckTemplates"))
+          .Update(update => update.Action("Template_Update", "CheckTemplates"))
+          .Destroy(destroy => destroy.Action("Template_Destroy", "CheckTemplates"))
+      ).ClientDetailTemplateId("check_template_detail")
+)
+
+<script type="text/kendo-template" id="check_template_detail">
+    @(Html.Kendo().TabStrip()
+        .Name("tab_str_#=CheckTemplateId#")
+        .SelectedIndex(0)
+        .Items(items =>
+        {
+            @*items.Add().Text("Branch").Content(@<text>
+                @(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.CPBankBranch>()
+                      .Name("grid_#=CPBankId#")
+                      .Columns(columns =>
+                      {
+                          columns.Bound(c => c.Name);
+
+                          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                      })
+                      .ToolBar(toolbar => {
+                          toolbar.Create();
+                          
+                      })
+                      .Editable(editable => editable.Mode(GridEditMode.InLine))
+                       .Pageable(pagable =>
+                       {
+                           pagable.Enabled(true);
+                           pagable.PageSizes(true);
+                           pagable.Refresh(true);
+                           pagable.ButtonCount(10);
+                           pagable.Input(true);
+                           pagable.Numeric(false);
+                       })
+                      .Selectable(selectable => {
+                          selectable.Mode(GridSelectionMode.Single);
+                          selectable.Type(GridSelectionType.Row);
+                      })
+                      .Filterable()
+                      .Scrollable(s => s.Height(350))
+                      .DataSource(dataSource => dataSource
+                          .Ajax()
+                          .Model(model => model.Id(p => p.CPBankBranchId))
+                          .Events(ev => ev
+                                            .Error("error_handler(\"grid_#=CPBankId#\")")
+                                            .RequestStart("onRequestStart(\"grid_#=CPBankId#\")")
+                                            .RequestEnd("onRequestEnd(\"grid_#=CPBankId#\")"))
+
+                          .Read(read => read.Action("CPBanks_Read", "BankBranch", new { id = "#=CPBankId#" }))
+                          .Create(create => create.Action("CPBanks_Create", "BankBranch", new { id = "#=CPBankId#" }))
+                          .Update(update => update.Action("CPBanks_Update", "BankBranch"))
+                          .Destroy(destroy => destroy.Action("CPBanks_Destroy", "BankBranch"))
+                      ).ToClientTemplate()
+                )
+            </text>);*@
+         items.Add().Text("Company Logo").Content(@<text>
+                <div>
+                    @LogoChangeHelper()
+                </div>
+                <div class="image-container-box">
+                    <img class="rectuangular-large-img" src="~/Content/Images/CheckPrint/Logo/CheckTemplate/#=PayingCompanyLogoFileName#" />
+                </div>
+
+            </text>);
+        items.Add().Text("Signiture").Content(@<text>
+                <div>
+                    @SignitureChangeHelper()
+                </div>
+                <div class="image-container-box">
+                    <img class="rectuangular-large-img" src="~/Content/Images/CheckPrint/Signiture/CheckTemplate/#=PayingCompanySignitureFileName#" />
+                </div>
+
+            </text>);
+        }).ToClientTemplate()
+    )
+</script>
+
+@helper LogoChangeHelper()
+{
+    @(Html.Kendo().Upload()
+        .Name("files")
+        .HtmlAttributes(new { @id= "uploader_#=CheckTemplateId#" })
+        .Messages(msg =>
+        {
+            msg.Select("<i class = \"fa fa-upload\"></i> Upload Photo");
+        })
+        .ShowFileList(false)
+        .Async(s => s.Save("Logo_Upload", "CheckTemplates", new { id = "#=CheckTemplateId#", area= "CheckPrint" })
+        )
+        .HtmlAttributes(new { accept = "image/*" })
+        .Events(events => events.Complete(
+                            @<text>
+                                function(e) {
+                                var ddl = $("\\#grid").data("kendoGrid");
+                                ddl.dataSource.read();
+                                }
+                            </text>
+                                   ))
+               .ToClientTemplate()
+    )
+}
+@helper SignitureChangeHelper()
+{
+    @(Html.Kendo().Upload()
+        .Name("signiture")
+        .HtmlAttributes(new { @id= "signiture_uploader_#=CheckTemplateId#" })
+        .Messages(msg =>
+        {
+            msg.Select("<i class = \"fa fa-upload\"></i> Upload Photo");
+        })
+        .ShowFileList(false)
+        .Async(s => s.Save("CheckTemplate_Signiture_Upload", "CheckTemplates", new { id = "#=CheckTemplateId#", area= "CheckPrint" })
+        )
+        .HtmlAttributes(new { accept = "image/*" })
+        .Events(events => events.Complete(
+                            @<text>
+                                function(e) {
+                                var ddl = $("\\#grid").data("kendoGrid");
+                                ddl.dataSource.read();
+                                }
+                            </text>
+                                   ))
+               .ToClientTemplate()
+    )
+}
+<script type="text/javascript">
+    function onTemplateEdit(e) {
+        var txt = $("#PayingCompanyName").val();
+        if (!txt || txt === "") {
+            $.ajax({
+                url: '@Url.Action("GetMainCompanyName", "CheckTemplates", new { area = "CheckPrint" })',
+                //data: { InvoiceId: invoiceId },
+                type: 'POST',
+                cache: false,
+                success: function (result) {
+                    $("#PayingCompanyName").val(result.Name);
+                    $("#PayingCompanyName").trigger("change");
+                }
+            });
+        }
+    }
+</script>
+
+<style>
+    .full-width-custom-input-box {
+        width: 100%;
+    }
+
+    .image-container-box {
+        border: 1px solid #e6e6e6;
+        box-shadow: 0px 2px 3px #888888;
+    }
+
+    .rectuangular-large-img {
+        max-height: 400px;
+        width: auto;
+        border: 1px solid #e6e6e6;
+        box-shadow: 1px 2px 2px #888888;
+    }
+
+    .circular-profile-img {
+        z-index: 5;
+        height: 150px;
+        width: 150px;
+        border: 5px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.2);
+        transition: transform .5s ease;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .circular-profile-img-small {
+        z-index: 5;
+        height: 70px;
+        width: 70px;
+        border: 3px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        vertical-align: middle;
+        transition: transform .5s ease;
+    }
+
+        .circular-profile-img-small:hover {
+            transform: scale(1.2);
+        }
+</style>

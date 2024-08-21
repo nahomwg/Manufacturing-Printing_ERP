@@ -1,0 +1,144 @@
+﻿<legend> Check Book</legend>
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.CPCheckBook>()
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.ForeignKey(c => c.CPBankId, (IEnumerable)ViewData["Banks"], "CPBankId", "Name").EditorTemplateName("BankEditorTemplate");
+              columns.ForeignKey(c => c.CPBankAccountId, (IEnumerable)ViewData["BankAccounts"], "CPBankAccountId", "AccountNumber").EditorTemplateName("BankAccountEditorTemplate");
+              columns.Bound(c => c.NumberOfChecks);
+              columns.Bound(c => c.StartCheckNumber);
+              columns.Bound(c => c.EndCheckNumber);
+              columns.Bound(c => c.Description);
+              columns.Bound(c => c.Reference);
+              columns.Bound(c => c.DateCreated).Format("{0:yyyy-MM-dd}");
+              columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+          })
+          .ToolBar(toolbar =>
+          {
+              toolbar.Create();
+              toolbar.Excel();
+              toolbar.Pdf();
+          })
+          .Events(ev =>
+          {
+              ev.DataBound("onCheckBookDataBound");
+          })
+          .Editable(editable => editable.Mode(GridEditMode.InLine))
+           .Pageable(pagable =>
+           {
+               pagable.Enabled(true);
+               pagable.PageSizes(true);
+               pagable.Refresh(true);
+               pagable.ButtonCount(10);
+               pagable.Input(true);
+               pagable.Numeric(false);
+           })
+          //.Selectable(selectable =>
+          //{
+          //    selectable.Mode(GridSelectionMode.Single);
+          //    selectable.Type(GridSelectionType.Row);
+          //})
+          .Filterable()
+          .Scrollable(s => s.Height(700))
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .Model(model =>
+              {
+                  model.Id(p => p.CPCheckBookId);
+                  model.Field(f => f.EndCheckNumber).Editable(false);
+                  model.Field(f => f.Description).Editable(false);
+                  model.Field(f => f.DateCreated).Editable(false);
+
+              })
+              .Events(ev => ev
+                                .Error("error_handler(\"grid\")")
+                                .RequestStart("onRequestStart(\"grid\")")
+                                .RequestEnd("onRequestEnd(\"grid\")"))
+
+              .Read(read => read.Action("Books_Read", "CheckBooks"))
+              .Create(create => create.Action("Books_Create", "CheckBooks"))
+              .Update(update => update.Action("Books_Update", "CheckBooks"))
+              .Destroy(destroy => destroy.Action("Books_Destroy", "CheckBooks"))
+          ).ClientDetailTemplateId("book_detail")
+)
+<script type="text/kendo-template" id="book_detail">
+    @(Html.Kendo().TabStrip()
+                .Name("tab_str_#=CPCheckBookId#")
+                .SelectedIndex(0)
+                .Items(items =>
+                {
+                    items.Add().Text("Check Numbers").Content(@<text>
+                        @(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.CPCheckBookCheckNumber>()
+                          .Name("grid_#=CPCheckBookId#")
+                          .Columns(columns =>
+                          {
+                              columns.Bound(c => c.CheckNumber);
+                              //columns.Bound(c => c.Status);
+
+                              //columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                          })
+                          //.ToolBar(toolbar =>
+                          //{
+                          //            toolbar.Create();
+                          //            toolbar.Excel();
+                          //            toolbar.Pdf();
+                          //        })
+                          .Editable(editable => editable.Mode(GridEditMode.InLine))
+                          //.Pageable(pagable =>
+                          //{
+                          //    pagable.Enabled(true);
+                          //    pagable.PageSizes(true);
+                          //    pagable.Refresh(true);
+                          //    pagable.ButtonCount(10);
+                          //    pagable.Input(true);
+                          //    pagable.Numeric(false);
+                          //})
+
+                          .Filterable()
+                          .Scrollable(s => s.Height("auto"))
+                          .DataSource(dataSource => dataSource
+                              .Ajax()
+                              .Model(model =>
+                              {
+                                  model.Id(p => p.CPCheckBookCheckNumberId);
+
+                              })
+                              .Events(ev => ev
+                                                .Error("error_handler(\"grid_#=CPCheckBookId#\")")
+                                                .RequestStart("onRequestStart(\"grid_#=CPCheckBookId#\")")
+                                                .RequestEnd("onRequestEnd(\"grid_#=CPCheckBookId#\")"))
+
+                              .Read(read => read.Action("Books_Read", "CheckBookCheckNumbers", new { id = "#=CPCheckBookId#" }))
+                              .Create(create => create.Action("Books_Create", "CheckBookCheckNumbers", new { id = "#=CPCheckBookId#" }))
+                              .Update(update => update.Action("Books_Update", "CheckBookCheckNumbers"))
+                              .Destroy(destroy => destroy.Action("Books_Destroy", "CheckBookCheckNumbers"))
+                          ).ToClientTemplate()
+                        )
+                    </text>);
+        }).ToClientTemplate()
+    )
+</script>
+<script type="text/javascript">
+    function getSelectedBank() {
+        return {
+            bankId: $("#CPBankId").val(),
+            filterString: $("#CPBankAccountId").data("kendoDropDownList").filterInput.val()
+        };
+    }
+    function onCheckBookDataBound(e) {
+        var grid = this;
+        var gridRows = grid.tbody.find("tr");
+        for (var i = 0; i < gridRows.length; i++) {
+            var row = $(gridRows[i]);
+            var dataItem = grid.dataItem(row);
+            if (dataItem.HasChecks === true) {
+                row.find(".k-grid-edit").hide();
+                row.find(".k-grid-delete").hide();
+            }
+            else {
+                row.find(".k-grid-edit").show();
+                row.find(".k-grid-delete").show();
+            }
+        }
+    }
+</script>

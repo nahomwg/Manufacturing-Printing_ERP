@@ -1,0 +1,301 @@
+﻿<legend> Checks</legend>
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.CPCheckBook>()
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.ForeignKey(c => c.CPBankId, (IEnumerable)ViewData["Banks"], "CPBankId", "Name").EditorTemplateName("BankEditorTemplate");
+              columns.ForeignKey(c => c.CPBankAccountId, (IEnumerable)ViewData["BankAccounts"], "CPBankAccountId", "AccountNumber").EditorTemplateName("BankAccountEditorTemplate");
+              //columns.Bound(c => c.NumberOfChecks);
+              //columns.Bound(c => c.StartCheckNumber);
+              //columns.Bound(c => c.EndCheckNumber);
+              columns.Bound(c => c.Description);
+              columns.Bound(c => c.Reference);
+              columns.Bound(c => c.DateCreated).Format("{0:yyyy-MM-dd}");
+              //columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+          })
+           //.ToolBar(toolbar =>
+           //{
+           //    toolbar.Create();
+           //    toolbar.Excel();
+           //    toolbar.Pdf();
+           //})
+           //.Editable(editable => editable.Mode(GridEditMode.InLine))
+           .Pageable(pagable =>
+           {
+               pagable.Enabled(true);
+               pagable.PageSizes(true);
+               pagable.Refresh(true);
+               pagable.ButtonCount(10);
+               pagable.Input(true);
+               pagable.Numeric(false);
+           })
+          //.Selectable(selectable =>
+          //{
+          //    selectable.Mode(GridSelectionMode.Single);
+          //    selectable.Type(GridSelectionType.Row);
+          //})
+          .Filterable()
+          .Scrollable(s => s.Height(700))
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .Model(model =>
+              {
+                  model.Id(p => p.CPCheckBookId);
+                  model.Field(f => f.EndCheckNumber).Editable(false);
+                  model.Field(f => f.Description).Editable(false);
+                  model.Field(f => f.DateCreated).Editable(false);
+
+              })
+              .Events(ev => ev
+                                .Error("error_handler(\"grid\")")
+                                .RequestStart("onRequestStart(\"grid\")")
+                                .RequestEnd("onRequestEnd(\"grid\")"))
+
+              .Read(read => read.Action("Books_Read", "CheckBooks"))
+              //.Create(create => create.Action("Books_Create", "CheckBooks"))
+              //.Update(update => update.Action("Books_Update", "CheckBooks"))
+              //.Destroy(destroy => destroy.Action("Books_Destroy", "CheckBooks"))
+          ).ClientDetailTemplateId("book_detail")
+)
+
+<script type="text/kendo-template" id="book_detail">
+    @(Html.Kendo().TabStrip()
+        .Name("tab_str_#=CPCheckBookId#")
+        .SelectedIndex(0)
+        .Items(items =>
+        {
+            items.Add().Text("Checks").Content(@<text>
+                @(Html.Kendo().Grid<ExceedERP.Core.Domain.CheckPrint.Check>()
+                    .Name("grid_template_#=CPCheckBookId#")
+                    .Columns(columns =>
+                    {
+                        //if (HttpContext.Current.User.IsInRole(RESTRoles.DataEncoder))
+                        //{
+                        columns.Template(e => { }).Width(60)
+                              .ClientTemplate("<div class='row'> \\#if(Status==0){\\#" +
+                                                  "<div class='col-xs-12'>" +
+                                                      "<button class='btn btn-link btn-print-check' title='Print Check'><span class ='fa fa-print text-success fa-2x'></span></button>" +
+                                                  "</div> \\#}\\#" +
+                                              //"else{\\#" +
+                                              //"<div class='col-xs-12'>" +
+                                              //    "<button class='btn-sign-check' title='Sign this Check'><span class ='fa fa-check text-primary'></span></button>" +
+                                              //"</div> \\#}\\#" +
+                                              "</div>" +
+                                              "").Title(" ");
+                        //}
+
+                        columns.Bound(c => c.Date);
+                        //columns.Bound(c => c.PayableTo);
+                        //columns.Bound(c => c.PayableFor);
+                        //columns.Bound(c => c.BBF);
+                        //columns.Bound(c => c.Deposits);
+                        //columns.Bound(c => c.Total);
+                        //columns.Bound(c => c.ThisCheck);
+                        //columns.Bound(c => c.Balance);
+                        columns.Bound(c => c.CheckNumber).EditorTemplateName("CheckNumberEditorTemplate");
+                        columns.Bound(c => c.Payee);
+                        columns.Bound(c => c.CheckAmount).Format("{0:N2}");
+                        columns.Bound(c => c.Purpose);
+                        columns.Bound(c => c.Status);
+
+                        columns.Command(command =>
+                        {
+                            command.Custom("custom-cmd-prepare-voucher").Text("&nbsp;&nbsp;Prepare Voucher").HtmlAttributes(new { @class="btn btn-primary"}).Click("prepareClick").IconClass("fa fa-paperclip");
+                            command.Custom("custom-cmd-print-voucher").Text("&nbsp;&nbsp;Print Voucher").HtmlAttributes(new { @class = "btn btn-primary" }).Click("printVoucher").IconClass("fa fa-print");
+                            command.Edit();
+                            command.Destroy();
+                        }).Width(180);
+                    })
+                    .ToolBar(toolbar =>
+                    {
+                        toolbar.Create();
+                        toolbar.Excel();
+                        toolbar.Pdf();
+                    })
+                    .Events(ev =>
+                    {
+                        ev.DataBound("onCheckGridDataBound");
+                        ev.Cancel("onCancelEdit");
+                    })
+                    .Editable(editable => editable.Mode(GridEditMode.InLine))
+                    .Pageable(pagable =>
+                    {
+                        pagable.Enabled(true);
+                        pagable.PageSizes(true);
+                        pagable.Refresh(true);
+                        pagable.ButtonCount(10);
+                        pagable.Input(true);
+                        pagable.Numeric(false);
+                    })
+                    .Sortable(sortable =>
+                    {
+                        sortable.SortMode(GridSortMode.SingleColumn);
+                    })
+                    .Filterable()
+                    .Scrollable(s => s.Height(500))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Model(model =>
+                        {
+                            model.Id(p => p.CheckId);
+                            model.Field(p => p.Status).Editable(false);
+                        })
+                        .Events(ev => ev
+                            .Error("error_handler(\"grid_template_#=CPCheckBookId#\")")
+                            .RequestStart("onRequestStart(\"grid_template_#=CPCheckBookId#\")")
+                            .RequestEnd("onRequestEnd(\"grid_template_#=CPCheckBookId#\")"))
+
+                        .Read(read => read.Action("Checks_Read", "Checks", new { id = "#=CPCheckBookId#" }))
+                        .Create(create => create.Action("Checks_Create", "Checks", new { id= "#=CPCheckBookId#" }))
+                        .Update(update => update.Action("Checks_Update", "Checks"))
+                        .Destroy(destroy => destroy.Action("Checks_Destroy", "Checks"))
+                    ).ToClientTemplate()
+                )
+            </text>);
+        }).ToClientTemplate()
+    )
+</script>
+<script type="text/javascript">
+    function prepareClick(e) {
+        var grid = this;
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        var id = dataItem.CheckId;
+         $.ajax({
+            type: "POST",
+            url: '@Url.Action("PreparePaymentVoucher", "Checks", new { area = "CheckPrint" })',
+            data: { checkId:id },
+            cache: false,
+            success: function (result) {
+                alert(result.Message);
+                grid.dataSource.read();
+            }, 
+            error: function (result) {
+            }
+        });
+    }
+    function printVoucher(e) {
+        var dataItem = this.dataItem($(e.currentTarget).closest("tr"));
+        var id = dataItem.CheckId;
+        location.href = "/CheckPrint/Print/Voucher?code=" + dataItem.Code;
+    }
+    function onCancelEdit(e) {
+        var grid = this;
+        grid.dataSource.read();
+    }
+    function onCheckGridDataBound(ev) {
+        var grid = this;
+        @*$(".btn-sign-check").on("click", function (e) {
+            var selectedItem = $(this).closest("tr");
+            var dataItem = grid.dataItem(selectedItem);
+            var id = dataItem.CheckId;
+            if (dataItem.IsSigned == false) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("SignACheck", "Checks", new { area = "CheckPrint" })',
+                    data: { checkId:id },
+                    cache: false,
+                    success: function (result) {
+                        grid.dataSource.read();
+                    }, 
+                    error: function (result) {
+                    }
+                });
+            }
+        });*@
+
+        $(".btn-print-check").on("click", function (e) {
+            var selectedItem = $(this).closest("tr");
+            var dataItem = grid.dataItem(selectedItem);
+            var id = dataItem.CheckId;
+
+            if (dataItem.Status == 0) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("PrintCheck", "Checks", new { area = "CheckPrint" })',
+                    data: { checkId:id },
+                    cache: false,
+                    success: function (result) {
+                        alert(result.Message);
+                        grid.dataSource.read();
+                    }, 
+                    error: function (result) {
+                    }
+                });
+                //location.href = "/CheckPrint/Print/Index?code=" + dataItem.Code;
+            }
+        });
+
+        var gridRows = grid.tbody.find("tr");
+        for (var i = 0; i < gridRows.length; i++) {
+            var row = $(gridRows[i]);
+            var dataItem = grid.dataItem(row);
+            if (dataItem.Status !== 0) {
+                row.find(".k-grid-edit").hide();
+                row.find(".k-grid-delete").hide();
+                if (dataItem.IsVoucherPrepared == false) {
+                    row.find(".k-grid-custom-cmd-prepare-voucher").show();
+                    row.find(".k-grid-custom-cmd-print-voucher").hide();
+                } else {
+                    row.find(".k-grid-custom-cmd-prepare-voucher").hide();
+                    row.find(".k-grid-custom-cmd-print-voucher").show();
+                }
+                //row.addClass("k-state-Approved");
+            } 
+            else {
+                row.find(".k-grid-edit").show();
+                row.find(".k-grid-delete").show();
+                row.find(".k-grid-custom-cmd-prepare-voucher").hide();
+                row.find(".k-grid-custom-cmd-print-voucher").hide();
+            }
+        }
+    }
+</script>
+<style>
+    .full-width-custom-input-box {
+        width: 100%;
+    }
+
+    .image-container-box {
+        border: 1px solid #e6e6e6;
+        box-shadow: 0px 2px 3px #888888;
+    }
+
+    .rectuangular-large-img {
+        max-height: 400px;
+        width: auto;
+        border: 1px solid #e6e6e6;
+        box-shadow: 1px 2px 2px #888888;
+    }
+
+    .circular-profile-img {
+        z-index: 5;
+        height: 150px;
+        width: 150px;
+        border: 5px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.2);
+        transition: transform .5s ease;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .circular-profile-img-small {
+        z-index: 5;
+        height: 70px;
+        width: 70px;
+        border: 3px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        vertical-align: middle;
+        transition: transform .5s ease;
+    }
+
+        .circular-profile-img-small:hover {
+            transform: scale(1.2);
+        }
+</style>
+
+

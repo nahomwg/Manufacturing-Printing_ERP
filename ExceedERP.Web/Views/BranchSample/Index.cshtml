@@ -1,0 +1,23 @@
+﻿@using ExceedERP.Core.Localization
+
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.Common.Branch>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Name);
+          columns.Bound(c => c.Remark);
+          columns.Command(command => { command.Edit().UpdateText(Resources.ActionButton_Update).CancelText(Resources.ActionButton_CancelUpdate).Text(Resources.ActionButton_Edit);command.Destroy().Text(Resources.ActionButton_Cancel);  }).Width(180);
+      })
+      .ToolBar(toolbar => {
+                              toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.BranchId))
+          .Read(read => read.Action("Branches_Read", "BranchSample"))
+          .Create(create => create.Action("Branches_Create", "BranchSample"))
+          .Update(update => update.Action("Branches_Update", "BranchSample"))
+          .Destroy(destroy => destroy.Action("Branches_Destroy", "BranchSample"))
+      ))

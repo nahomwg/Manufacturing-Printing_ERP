@@ -1,0 +1,13 @@
+﻿@(Html.Kendo().DropDownListFor(m => m)
+                  .AutoBind(false)
+                  .OptionLabel("--Select Specification Category--")
+                  .DataTextField("Description")
+                  .DataValueField("LookupID")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetSpecificationCategory", "DataProvider"))
+                                .ServerFiltering(true);
+                  })
+
+)
+@Html.ValidationMessageFor(m => m)

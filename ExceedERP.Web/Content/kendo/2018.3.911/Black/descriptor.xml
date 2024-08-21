@@ -1,0 +1,5 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>Install SmartHelp for Mozilla FireFox</Title>
+  <Type>Section</Type>
+  <Concept>./tpc/63ac6be5-0aba-4e23-a09e-71d25516ccfa/index.html</Concept>
+</Description>

@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\ExceedERP.Core.csproj" />
+  <event action="Analyze" type="Success" name="Resources.am.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\Localization\Resources.am.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\Localization\Resources.resx" />
+  <event action="Analyze" type="Success" name="ResourcesCourt.am.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\Localization\ResourcesCourt.am.resx" />
+  <event action="Analyze" type="Success" name="ResourcesCourt.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\Localization\ResourcesCourt.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\packages.config" />
+  <event action="Analyze" type="Success" name="ExceedERP.Core" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Core\ExceedERP.Core.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ExceedERP.Web.csproj" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="_ViewStart.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Banks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Banks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Banks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankAccountEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankAccountEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="BankAccountEditorTemplate.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankAccountEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="BankEditorTemplate.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\EditorTemplates\BankEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckBooks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\EditorTemplates\CheckNumberEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\EditorTemplates\CheckNumberEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="CheckNumberEditorTemplate.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\EditorTemplates\CheckNumberEditorTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Checks\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckTemplates\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckTemplates\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\CheckTemplates\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Template.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Template.cshtml" />
+  <event action="Analyze" type="Success" name="Template.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Template.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Voucher.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Voucher.cshtml" />
+  <event action="Analyze" type="Success" name="Voucher.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Voucher.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Report\Checks.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Report\Checks.cshtml" />
+  <event action="Analyze" type="Success" name="Checks.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Report\Checks.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\web.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\IndexingCount\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\IndexingCount\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\IndexingCount\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\FixedAsset\Views\web.config" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\MissingPayrollBackPays\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\MissingPayrollBackPays\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\MissingPayrollBackPays\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\HRM\Views\web.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="202311301037536_InitialCreate.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Migrations\202311301037536_InitialCreate.resx" />
+  <event action="Analyze" type="Success" name="202312011039464_Initial Migration.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Migrations\202312011039464_Initial Migration.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\packages.config" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Project_Readme.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Project_Readme.html" />
+  <event action="Analyze" type="Success" name="Project_Readme.html" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Project_Readme.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\content\xhtml.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\content\xhtml.html" />
+  <event action="Analyze" type="Success" name="xhtml.html" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\content\xhtml.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\js\telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\js\telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-FA.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-FA.html" />
+  <event action="Analyze" type="Success" name="telerikReportViewerTemplate-FA.html" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-FA.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-ng.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-ng.html" />
+  <event action="Analyze" type="Success" name="telerikReportViewerTemplate-ng.html" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-ng.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-sass.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-sass.html" />
+  <event action="Analyze" type="Success" name="telerikReportViewerTemplate-sass.html" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\templates\telerikReportViewerTemplate-sass.html" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="_ViewStart.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\_ViewStart.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\_ExternalLoginsListPartial.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\_ExternalLoginsListPartial.cshtml" />
+  <event action="Analyze" type="Success" name="_ExternalLoginsListPartial.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\_ExternalLoginsListPartial.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ConfirmEmail.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ConfirmEmail.cshtml" />
+  <event action="Analyze" type="Success" name="ConfirmEmail.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ConfirmEmail.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="ExternalLoginConfirmation.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginFailure.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginFailure.cshtml" />
+  <event action="Analyze" type="Success" name="ExternalLoginFailure.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ExternalLoginFailure.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPassword.cshtml" />
+  <event action="Analyze" type="Success" name="ForgotPassword.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="ForgotPasswordConfirmation.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ForgotPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login - Copy.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login - Copy.cshtml" />
+  <event action="Analyze" type="Success" name="Login - Copy.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login - Copy.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login.cshtml" />
+  <event action="Analyze" type="Success" name="Login.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Login.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Register.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Register.cshtml" />
+  <event action="Analyze" type="Success" name="Register.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\Register.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="ResetPassword.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="ResetPasswordConfirmation.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\ResetPasswordConfirmation.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\SendCode.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\SendCode.cshtml" />
+  <event action="Analyze" type="Success" name="SendCode.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\SendCode.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\VerifyCode.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\VerifyCode.cshtml" />
+  <event action="Analyze" type="Success" name="VerifyCode.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Account\VerifyCode.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationRole\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationRole\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationRole\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\EditorTemplates\UserEdit.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\EditorTemplates\UserEdit.cshtml" />
+  <event action="Analyze" type="Success" name="UserEdit.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\EditorTemplates\UserEdit.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index-2.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index-2.cshtml" />
+  <event action="Analyze" type="Success" name="Index-2.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index-2.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ApplicationUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Branch\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Branch\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Branch\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\BranchSample\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\BranchSample\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\BranchSample\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\CRMDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\CRMDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="CRMDashboard.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\CRMDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="FinanceDashboard.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceDashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceRatioDashBoard.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceRatioDashBoard.cshtml" />
+  <event action="Analyze" type="Success" name="FinanceRatioDashBoard.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Dashboard\FinanceRatioDashBoard.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ErpUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ErpUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\ErpUser\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Create.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Delete.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Details.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Edit.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalBranchsetups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalUserAccessLogs\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalUserAccessLogs\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\GlobalUserAccessLogs\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Groups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Groups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Groups\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\About.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\About.cshtml" />
+  <event action="Analyze" type="Success" name="About.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\About.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Contact.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Contact.cshtml" />
+  <event action="Analyze" type="Success" name="Contact.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Contact.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Dashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Dashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Dashboard.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Dashboard.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ImportExcelFileToDatabase.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ImportExcelFileToDatabase.cshtml" />
+  <event action="Analyze" type="Success" name="ImportExcelFileToDatabase.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ImportExcelFileToDatabase.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report1.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report1.cshtml" />
+  <event action="Analyze" type="Success" name="Report1.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report1.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report2.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report2.cshtml" />
+  <event action="Analyze" type="Success" name="Report2.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report2.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ReportViewerView1.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ReportViewerView1.cshtml" />
+  <event action="Analyze" type="Success" name="ReportViewerView1.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ReportViewerView1.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Upload.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\AddPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\AddPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="AddPhoneNumber.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\AddPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ChangePassword.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ChangePassword.cshtml" />
+  <event action="Analyze" type="Success" name="ChangePassword.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ChangePassword.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ManageLogins.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ManageLogins.cshtml" />
+  <event action="Analyze" type="Success" name="ManageLogins.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\ManageLogins.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\SetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\SetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="SetPassword.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\SetPassword.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\VerifyPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\VerifyPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="VerifyPhoneNumber.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Manage\VerifyPhoneNumber.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Create.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Create.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Delete.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Delete.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Details.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Details.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Edit.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Edit.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\OrgBranchUserMappings\Index.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Budget.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Budget.cshtml" />
+  <event action="Analyze" type="Success" name="_Budget.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Budget.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_BudgetGAAP.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_BudgetGAAP.cshtml" />
+  <event action="Analyze" type="Success" name="_BudgetGAAP.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_BudgetGAAP.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CheckPrint.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CheckPrint.cshtml" />
+  <event action="Analyze" type="Success" name="_CheckPrint.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CheckPrint.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CRM.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CRM.cshtml" />
+  <event action="Analyze" type="Success" name="_CRM.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_CRM.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Fleet.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Fleet.cshtml" />
+  <event action="Analyze" type="Success" name="_Fleet.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Fleet.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Layout.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Layout.cshtml" />
+  <event action="Analyze" type="Success" name="_Layout.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Layout.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_LoginPartial.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_LoginPartial.cshtml" />
+  <event action="Analyze" type="Success" name="_LoginPartial.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_LoginPartial.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Maintenance.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Maintenance.cshtml" />
+  <event action="Analyze" type="Success" name="_Maintenance.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Maintenance.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Popup.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Popup.cshtml" />
+  <event action="Analyze" type="Success" name="_Popup.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\_Popup.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountCode.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountCode.cshtml" />
+  <event action="Analyze" type="Success" name="AccountCode.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountCode.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountRequirementDefinition.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountRequirementDefinition.cshtml" />
+  <event action="Analyze" type="Success" name="AccountRequirementDefinition.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AccountRequirementDefinition.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AddressType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AddressType.cshtml" />
+  <event action="Analyze" type="Success" name="AddressType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AddressType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AllowanceType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AllowanceType.cshtml" />
+  <event action="Analyze" type="Success" name="AllowanceType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\AllowanceType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BankAccountType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BankAccountType.cshtml" />
+  <event action="Analyze" type="Success" name="BankAccountType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BankAccountType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Benefits.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Benefits.cshtml" />
+  <event action="Analyze" type="Success" name="Benefits.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Benefits.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BinaryFile.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BinaryFile.cshtml" />
+  <event action="Analyze" type="Success" name="BinaryFile.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BinaryFile.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BusinessType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BusinessType.cshtml" />
+  <event action="Analyze" type="Success" name="BusinessType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\BusinessType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="CategoryList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CommitmentType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CommitmentType.cshtml" />
+  <event action="Analyze" type="Success" name="CommitmentType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\CommitmentType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Companies.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Companies.cshtml" />
+  <event action="Analyze" type="Success" name="Companies.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Companies.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContinentType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContinentType.cshtml" />
+  <event action="Analyze" type="Success" name="ContinentType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContinentType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContributionType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContributionType.cshtml" />
+  <event action="Analyze" type="Success" name="ContributionType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ContributionType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ControlAccountList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ControlAccountList.cshtml" />
+  <event action="Analyze" type="Success" name="ControlAccountList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ControlAccountList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Countries.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Countries.cshtml" />
+  <event action="Analyze" type="Success" name="Countries.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Countries.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Course.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Course.cshtml" />
+  <event action="Analyze" type="Success" name="Course.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Course.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Currency.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Currency.cshtml" />
+  <event action="Analyze" type="Success" name="Currency.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Currency.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Customer.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Customer.cshtml" />
+  <event action="Analyze" type="Success" name="Customer.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Customer.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Date.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Date.cshtml" />
+  <event action="Analyze" type="Success" name="Date.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Date.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\DateTime.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\DateTime.cshtml" />
+  <event action="Analyze" type="Success" name="DateTime.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\DateTime.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="EduFiled.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduLevel.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduLevel.cshtml" />
+  <event action="Analyze" type="Success" name="EduLevel.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EduLevel.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Email.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Email.cshtml" />
+  <event action="Analyze" type="Success" name="Email.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Email.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+  <event action="Analyze" type="Success" name="EmailAddress.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmployementType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmployementType.cshtml" />
+  <event action="Analyze" type="Success" name="EmployementType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\EmployementType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ETDateTime.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ETDateTime.cshtml" />
+  <event action="Analyze" type="Success" name="ETDateTime.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ETDateTime.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Gender.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Gender.cshtml" />
+  <event action="Analyze" type="Success" name="Gender.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Gender.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GlobalType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GlobalType.cshtml" />
+  <event action="Analyze" type="Success" name="GlobalType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GlobalType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GridForeignKey.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GridForeignKey.cshtml" />
+  <event action="Analyze" type="Success" name="GridForeignKey.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\GridForeignKey.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="HolidayDefinitionList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionType.cshtml" />
+  <event action="Analyze" type="Success" name="HolidayDefinitionType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\HolidayDefinitionType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="IdentificationType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IndustryType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IndustryType.cshtml" />
+  <event action="Analyze" type="Success" name="IndustryType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\IndustryType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Integer.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Integer.cshtml" />
+  <event action="Analyze" type="Success" name="Integer.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Integer.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageLists.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageLists.cshtml" />
+  <event action="Analyze" type="Success" name="LanguageLists.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageLists.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageType.cshtml" />
+  <event action="Analyze" type="Success" name="LanguageType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LanguageType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LetterOwner.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LetterOwner.cshtml" />
+  <event action="Analyze" type="Success" name="LetterOwner.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\LetterOwner.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfAccount.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfAccount.cshtml" />
+  <event action="Analyze" type="Success" name="ListOfAccount.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfAccount.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfEmployee.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfEmployee.cshtml" />
+  <event action="Analyze" type="Success" name="ListOfEmployee.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ListOfEmployee.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\MartialStatus.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\MartialStatus.cshtml" />
+  <event action="Analyze" type="Success" name="MartialStatus.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\MartialStatus.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Nation.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Nation.cshtml" />
+  <event action="Analyze" type="Success" name="Nation.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Nation.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\NationalityList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\NationalityList.cshtml" />
+  <event action="Analyze" type="Success" name="NationalityList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\NationalityList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Number.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Number.cshtml" />
+  <event action="Analyze" type="Success" name="Number.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Number.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ObjectStateDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ObjectStateDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="ObjectStateDefinitionList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ObjectStateDefinitionList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationCategory.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationCategory.cshtml" />
+  <event action="Analyze" type="Success" name="OrganizationCategory.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationCategory.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationIdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationIdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="OrganizationIdentificationType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrganizationIdentificationType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrgUnitDefnType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrgUnitDefnType.cshtml" />
+  <event action="Analyze" type="Success" name="OrgUnitDefnType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\OrgUnitDefnType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Password.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Password.cshtml" />
+  <event action="Analyze" type="Success" name="Password.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Password.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Period.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Period.cshtml" />
+  <event action="Analyze" type="Success" name="Period.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Period.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PeriodType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PeriodType.cshtml" />
+  <event action="Analyze" type="Success" name="PeriodType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PeriodType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonCustomer.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonCustomer.cshtml" />
+  <event action="Analyze" type="Success" name="PersonCustomer.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonCustomer.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonTitle.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonTitle.cshtml" />
+  <event action="Analyze" type="Success" name="PersonTitle.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PersonTitle.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PlanType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PlanType.cshtml" />
+  <event action="Analyze" type="Success" name="PlanType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\PlanType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Price_Types.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Price_Types.cshtml" />
+  <event action="Analyze" type="Success" name="Price_Types.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Price_Types.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Proficiency.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Proficiency.cshtml" />
+  <event action="Analyze" type="Success" name="Proficiency.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Proficiency.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Rank.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Rank.cshtml" />
+  <event action="Analyze" type="Success" name="Rank.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Rank.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Region.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Region.cshtml" />
+  <event action="Analyze" type="Success" name="Region.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Region.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Relationship.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Relationship.cshtml" />
+  <event action="Analyze" type="Success" name="Relationship.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Relationship.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Religion.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Religion.cshtml" />
+  <event action="Analyze" type="Success" name="Religion.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Religion.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SpecificationCategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SpecificationCategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="SpecificationCategoryList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SpecificationCategoryList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Step.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Step.cshtml" />
+  <event action="Analyze" type="Success" name="Step.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Step.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StockBalanceType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StockBalanceType.cshtml" />
+  <event action="Analyze" type="Success" name="StockBalanceType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StockBalanceType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StoreObject.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StoreObject.cshtml" />
+  <event action="Analyze" type="Success" name="StoreObject.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\StoreObject.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\String.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\String.cshtml" />
+  <event action="Analyze" type="Success" name="String.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\String.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SubCountries.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SubCountries.cshtml" />
+  <event action="Analyze" type="Success" name="SubCountries.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\SubCountries.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TargetGroup.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TargetGroup.cshtml" />
+  <event action="Analyze" type="Success" name="TargetGroup.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TargetGroup.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ThingCategory.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ThingCategory.cshtml" />
+  <event action="Analyze" type="Success" name="ThingCategory.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\ThingCategory.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Time.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Time.cshtml" />
+  <event action="Analyze" type="Success" name="Time.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Time.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TitleList.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TitleList.cshtml" />
+  <event action="Analyze" type="Success" name="TitleList.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TitleList.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TrainingType.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TrainingType.cshtml" />
+  <event action="Analyze" type="Success" name="TrainingType.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\TrainingType.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UnitOfMeasurement.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UnitOfMeasurement.cshtml" />
+  <event action="Analyze" type="Success" name="UnitOfMeasurement.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UnitOfMeasurement.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UOM.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UOM.cshtml" />
+  <event action="Analyze" type="Success" name="UOM.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\UOM.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Upload.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Upload.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Url.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Url.cshtml" />
+  <event action="Analyze" type="Success" name="Url.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\Url.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\VoucherExtensionTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\VoucherExtensionTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="VoucherExtensionTemplate.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EditorTemplates\VoucherExtensionTemplate.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="EduFiled.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\EduFiled.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\Error.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\Error.cshtml" />
+  <event action="Analyze" type="Success" name="Error.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Shared\Error.cshtml" />
+  <event action="Analyze" type="Success" name="Register Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\UserProfile\MyBranches.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\UserProfile\MyBranches.cshtml" />
+  <event action="Analyze" type="Success" name="MyBranches.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\UserProfile\MyBranches.cshtml" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Web.Release.config" />
+  <event action="Analyze" type="Success" name="ExceedERP.Web" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ExceedERP.Web.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\ExceedERP.DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\App.config" />
+  <event action="Analyze" type="Success" name="202311301037536_InitialCreate.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202311301037536_InitialCreate.resx" />
+  <event action="Analyze" type="Success" name="202312011155577_bussinessUnitAndBranchHasAdded.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202312011155577_bussinessUnitAndBranchHasAdded.resx" />
+  <event action="Analyze" type="Success" name="202312020814484_MissperiodtableDropped.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202312020814484_MissperiodtableDropped.resx" />
+  <event action="Analyze" type="Success" name="202312020820334_UpdateChangesreve.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202312020820334_UpdateChangesreve.resx" />
+  <event action="Analyze" type="Success" name="202312020824476_Create theDropedTableBAck.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202312020824476_Create theDropedTableBAck.resx" />
+  <event action="Analyze" type="Success" name="202312141249489_IndexingTableAdded.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\Migrations\202312141249489_IndexingTableAdded.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\packages.config" />
+  <event action="Analyze" type="Success" name="ExceedERP.DataAccess" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.DataAccess\ExceedERP.DataAccess.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\ExceedERP.Helpers.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\app.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\packages.config" />
+  <event action="Analyze" type="Success" name="ExceedERP.Helpers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\ExceedERP.Helpers.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\App.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\packages.config" />
+  <event action="Analyze" type="Success" name="Resources.am.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.am.resx" />
+  <event action="Analyze" type="Success" name="Resources.or.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.or.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.resx" />
+  <event action="Analyze" type="Success" name="Resources.ti.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.ti.resx" />
+  <event action="Analyze" type="Success" name="Resources" path="H:\Project\ExceedERP-Template\ExceedERP-Template\Resources\Resources.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\ExceedERP.Reporting.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Analyze" type="Success" name="CheckRepDesign.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\CheckPrint\Designs\CheckRepDesign.resx" />
+  <event action="Analyze" type="Success" name="CheckPrintDesign.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\CheckPrint\Printing\Designs\CheckPrintDesign.resx" />
+  <event action="Analyze" type="Success" name="VoucherPrintDesign.resx" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\CheckPrint\Printing\Designs\VoucherPrintDesign.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\packages.config" />
+  <event action="Analyze" type="Success" name="ExceedERP.Reporting" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\ExceedERP.Reporting.csproj" />
+  <event action="Analyze" type="Success" name="ExceedERP" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.sln" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Analyze" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Backup" type="Success" name="ExceedERP.Web" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ExceedERP.Web.csproj" />
+  <event action="Backup" type="Success" name="ExceedERP.Helpers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\ExceedERP.Helpers.csproj" />
+  <event action="Backup" type="Success" name="ExceedERP.Reporting" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\ExceedERP.Reporting.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ExceedERP.Web.csproj" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="Index.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Index.cshtml" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="Voucher.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Print\Voucher.cshtml" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="Checks.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Areas\CheckPrint\Views\Report\Checks.cshtml" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\js\telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ReportViewer\js\telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="Report2.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\Report2.cshtml" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer-17.0.23.118.min.js" path="telerikReportViewer-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="telerikReportViewer.kendo-17.0.23.118.min.js" path="telerikReportViewer.kendo-17.0.23.118.min.js" />
+  <event action="Upgrade" type="Success" name="ReportViewerView1.cshtml" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\Views\Home\ReportViewerView1.cshtml" />
+  <event action="Upgrade" type="Success" name="ExceedERP.Web" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Web\ExceedERP.Web.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\ExceedERP.Helpers.csproj" />
+  <event action="Upgrade" type="Success" name="ExceedERP.Helpers" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Helpers\ExceedERP.Helpers.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\ExceedERP.Reporting.csproj" />
+  <event action="Upgrade" type="Success" name="Config Sections" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Upgrade" type="Success" name="App.config" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\App.config" />
+  <event action="Upgrade" type="Success" name="ExceedERP.Reporting" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.Reporting\ExceedERP.Reporting.csproj" />
+  <event action="Upgrade" type="Success" name="ExceedERP" path="H:\Project\ExceedERP-Template\ExceedERP-Template\ExceedERP.sln" />
+</log>

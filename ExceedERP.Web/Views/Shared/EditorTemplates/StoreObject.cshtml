@@ -1,0 +1,13 @@
+﻿@(Html.Kendo().DropDownListFor(m => m)
+                  .AutoBind(false)
+                  .OptionLabel("--Select Store--")
+                  .DataTextField("Description")
+                  .DataValueField("StoreID")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetStoreList", "DataProvider"))
+                                .ServerFiltering(true);
+                  })
+
+)
+@Html.ValidationMessageFor(m => m)

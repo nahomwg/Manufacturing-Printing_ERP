@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CB9519B-4A76-4B18-B0EA-F7B057CD46FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExceedERP.DataAccess</RootNamespace>
+    <AssemblyName>ExceedERP.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\CheckPrintEntityConfiguration.cs" />
+    <Compile Include="Context\EntityConfiguration.cs" />
+    <Compile Include="Context\ExceedDbContext.cs" />
+    <Compile Include="Context\PrintingEntityConfiguration.cs" />
+    <Compile Include="Context\ManufacturingEntityConfiguration.cs" />
+    <Compile Include="Migrations\202402121313247_Iitial_Create.cs" />
+    <Compile Include="Migrations\202402121313247_Iitial_Create.Designer.cs">
+      <DependentUpon>202402121313247_Iitial_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402261104483_Manf.cs" />
+    <Compile Include="Migrations\202402261104483_Manf.Designer.cs">
+      <DependentUpon>202402261104483_Manf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402261302220_manf2.cs" />
+    <Compile Include="Migrations\202402261302220_manf2.Designer.cs">
+      <DependentUpon>202402261302220_manf2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402261359115_manf3.cs" />
+    <Compile Include="Migrations\202402261359115_manf3.Designer.cs">
+      <DependentUpon>202402261359115_manf3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402261406246_man4.cs" />
+    <Compile Include="Migrations\202402261406246_man4.Designer.cs">
+      <DependentUpon>202402261406246_man4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402271123332_manf1.cs" />
+    <Compile Include="Migrations\202402271123332_manf1.Designer.cs">
+      <DependentUpon>202402271123332_manf1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402271534384_manf11.cs" />
+    <Compile Include="Migrations\202402271534384_manf11.Designer.cs">
+      <DependentUpon>202402271534384_manf11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402280826335_manf12.cs" />
+    <Compile Include="Migrations\202402280826335_manf12.Designer.cs">
+      <DependentUpon>202402280826335_manf12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402280935573_manf13.cs" />
+    <Compile Include="Migrations\202402280935573_manf13.Designer.cs">
+      <DependentUpon>202402280935573_manf13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402281136191_manf14.cs" />
+    <Compile Include="Migrations\202402281136191_manf14.Designer.cs">
+      <DependentUpon>202402281136191_manf14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402281234556_manf15.cs" />
+    <Compile Include="Migrations\202402281234556_manf15.Designer.cs">
+      <DependentUpon>202402281234556_manf15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291211110_manf16.cs" />
+    <Compile Include="Migrations\202402291211110_manf16.Designer.cs">
+      <DependentUpon>202402291211110_manf16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402291332586_manf17.cs" />
+    <Compile Include="Migrations\202402291332586_manf17.Designer.cs">
+      <DependentUpon>202402291332586_manf17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403010549567_manf18.cs" />
+    <Compile Include="Migrations\202403010549567_manf18.Designer.cs">
+      <DependentUpon>202403010549567_manf18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403010700065_manf19.cs" />
+    <Compile Include="Migrations\202403010700065_manf19.Designer.cs">
+      <DependentUpon>202403010700065_manf19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403040942330_manf110.cs" />
+    <Compile Include="Migrations\202403040942330_manf110.Designer.cs">
+      <DependentUpon>202403040942330_manf110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403041248222_manf111.cs" />
+    <Compile Include="Migrations\202403041248222_manf111.Designer.cs">
+      <DependentUpon>202403041248222_manf111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403041446511_manf112.cs" />
+    <Compile Include="Migrations\202403041446511_manf112.Designer.cs">
+      <DependentUpon>202403041446511_manf112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403050852394_manf113.cs" />
+    <Compile Include="Migrations\202403050852394_manf113.Designer.cs">
+      <DependentUpon>202403050852394_manf113.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403050958586_manf114.cs" />
+    <Compile Include="Migrations\202403050958586_manf114.Designer.cs">
+      <DependentUpon>202403050958586_manf114.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051138362_manf115.cs" />
+    <Compile Include="Migrations\202403051138362_manf115.Designer.cs">
+      <DependentUpon>202403051138362_manf115.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403060931518_manf116.cs" />
+    <Compile Include="Migrations\202403060931518_manf116.Designer.cs">
+      <DependentUpon>202403060931518_manf116.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403061214504_manf117.cs" />
+    <Compile Include="Migrations\202403061214504_manf117.Designer.cs">
+      <DependentUpon>202403061214504_manf117.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403061451028_manf118.cs" />
+    <Compile Include="Migrations\202403061451028_manf118.Designer.cs">
+      <DependentUpon>202403061451028_manf118.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403071042366_manf119.cs" />
+    <Compile Include="Migrations\202403071042366_manf119.Designer.cs">
+      <DependentUpon>202403071042366_manf119.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403080646359_manf120.cs" />
+    <Compile Include="Migrations\202403080646359_manf120.Designer.cs">
+      <DependentUpon>202403080646359_manf120.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403080755461_manf121.cs" />
+    <Compile Include="Migrations\202403080755461_manf121.Designer.cs">
+      <DependentUpon>202403080755461_manf121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403080821238_manf122.cs" />
+    <Compile Include="Migrations\202403080821238_manf122.Designer.cs">
+      <DependentUpon>202403080821238_manf122.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081129129_manf123.cs" />
+    <Compile Include="Migrations\202403081129129_manf123.Designer.cs">
+      <DependentUpon>202403081129129_manf123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081209127_manf124.cs" />
+    <Compile Include="Migrations\202403081209127_manf124.Designer.cs">
+      <DependentUpon>202403081209127_manf124.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081212058_manf125.cs" />
+    <Compile Include="Migrations\202403081212058_manf125.Designer.cs">
+      <DependentUpon>202403081212058_manf125.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081416022_manf126.cs" />
+    <Compile Include="Migrations\202403081416022_manf126.Designer.cs">
+      <DependentUpon>202403081416022_manf126.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081602089_manf127.cs" />
+    <Compile Include="Migrations\202403081602089_manf127.Designer.cs">
+      <DependentUpon>202403081602089_manf127.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403091002498_manf128.cs" />
+    <Compile Include="Migrations\202403091002498_manf128.Designer.cs">
+      <DependentUpon>202403091002498_manf128.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403091131348_manf129.cs" />
+    <Compile Include="Migrations\202403091131348_manf129.Designer.cs">
+      <DependentUpon>202403091131348_manf129.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403120700259_standardJobType.cs" />
+    <Compile Include="Migrations\202403120700259_standardJobType.Designer.cs">
+      <DependentUpon>202403120700259_standardJobType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403121330414_standardJobType1.cs" />
+    <Compile Include="Migrations\202403121330414_standardJobType1.Designer.cs">
+      <DependentUpon>202403121330414_standardJobType1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403130825094_standardJobType2.cs" />
+    <Compile Include="Migrations\202403130825094_standardJobType2.Designer.cs">
+      <DependentUpon>202403130825094_standardJobType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403131418460_standardJobType3.cs" />
+    <Compile Include="Migrations\202403131418460_standardJobType3.Designer.cs">
+      <DependentUpon>202403131418460_standardJobType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403141239138_standardJobType4.cs" />
+    <Compile Include="Migrations\202403141239138_standardJobType4.Designer.cs">
+      <DependentUpon>202403141239138_standardJobType4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403141408435_standardJobType5.cs" />
+    <Compile Include="Migrations\202403141408435_standardJobType5.Designer.cs">
+      <DependentUpon>202403141408435_standardJobType5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403141426191_standardJobType6.cs" />
+    <Compile Include="Migrations\202403141426191_standardJobType6.Designer.cs">
+      <DependentUpon>202403141426191_standardJobType6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403281220274_Production.cs" />
+    <Compile Include="Migrations\202403281220274_Production.Designer.cs">
+      <DependentUpon>202403281220274_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403281522304_Production1.cs" />
+    <Compile Include="Migrations\202403281522304_Production1.Designer.cs">
+      <DependentUpon>202403281522304_Production1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403290554573_Production2.cs" />
+    <Compile Include="Migrations\202403290554573_Production2.Designer.cs">
+      <DependentUpon>202403290554573_Production2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404011354516_Production3.cs" />
+    <Compile Include="Migrations\202404011354516_Production3.Designer.cs">
+      <DependentUpon>202404011354516_Production3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404011358240_Production4.cs" />
+    <Compile Include="Migrations\202404011358240_Production4.Designer.cs">
+      <DependentUpon>202404011358240_Production4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404041317270_furnitureDailyFollowUp1.cs" />
+    <Compile Include="Migrations\202404041317270_furnitureDailyFollowUp1.Designer.cs">
+      <DependentUpon>202404041317270_furnitureDailyFollowUp1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404041329090_furnitureDailyFollowUp11.cs" />
+    <Compile Include="Migrations\202404041329090_furnitureDailyFollowUp11.Designer.cs">
+      <DependentUpon>202404041329090_furnitureDailyFollowUp11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404041457331_furnitureDailyFollowUp12.cs" />
+    <Compile Include="Migrations\202404041457331_furnitureDailyFollowUp12.Designer.cs">
+      <DependentUpon>202404041457331_furnitureDailyFollowUp12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404050513113_furnitureDailyFollowUp13.cs" />
+    <Compile Include="Migrations\202404050513113_furnitureDailyFollowUp13.Designer.cs">
+      <DependentUpon>202404050513113_furnitureDailyFollowUp13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404050922531_furnitureDailyFollowUp14.cs" />
+    <Compile Include="Migrations\202404050922531_furnitureDailyFollowUp14.Designer.cs">
+      <DependentUpon>202404050922531_furnitureDailyFollowUp14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404051423031_furnitureDailyFollowUp15.cs" />
+    <Compile Include="Migrations\202404051423031_furnitureDailyFollowUp15.Designer.cs">
+      <DependentUpon>202404051423031_furnitureDailyFollowUp15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404080920403_furnitureDailyFollowUp16.cs" />
+    <Compile Include="Migrations\202404080920403_furnitureDailyFollowUp16.Designer.cs">
+      <DependentUpon>202404080920403_furnitureDailyFollowUp16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404081127527_furnitureDailyFollowUp17.cs" />
+    <Compile Include="Migrations\202404081127527_furnitureDailyFollowUp17.Designer.cs">
+      <DependentUpon>202404081127527_furnitureDailyFollowUp17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404081246110_furnitureDailyFollowUp18.cs" />
+    <Compile Include="Migrations\202404081246110_furnitureDailyFollowUp18.Designer.cs">
+      <DependentUpon>202404081246110_furnitureDailyFollowUp18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404081314115_furnitureDailyFollowUp19.cs" />
+    <Compile Include="Migrations\202404081314115_furnitureDailyFollowUp19.Designer.cs">
+      <DependentUpon>202404081314115_furnitureDailyFollowUp19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404081421034_furnitureDailyFollowUp110.cs" />
+    <Compile Include="Migrations\202404081421034_furnitureDailyFollowUp110.Designer.cs">
+      <DependentUpon>202404081421034_furnitureDailyFollowUp110.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404090904085_furnitureDailyFollowUp111.cs" />
+    <Compile Include="Migrations\202404090904085_furnitureDailyFollowUp111.Designer.cs">
+      <DependentUpon>202404090904085_furnitureDailyFollowUp111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404091409432_furnitureDailyFollowUp112.cs" />
+    <Compile Include="Migrations\202404091409432_furnitureDailyFollowUp112.Designer.cs">
+      <DependentUpon>202404091409432_furnitureDailyFollowUp112.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202404101425214_furnitureDailyFollowUp113.cs" />
+    <Compile Include="Migrations\202404101425214_furnitureDailyFollowUp113.Designer.cs">
+      <DependentUpon>202404101425214_furnitureDailyFollowUp113.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405140926433_PrintingModels.cs" />
+    <Compile Include="Migrations\202405140926433_PrintingModels.Designer.cs">
+      <DependentUpon>202405140926433_PrintingModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405151502365_PrintingModels1.cs" />
+    <Compile Include="Migrations\202405151502365_PrintingModels1.Designer.cs">
+      <DependentUpon>202405151502365_PrintingModels1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405171413575_PrintingModels2.cs" />
+    <Compile Include="Migrations\202405171413575_PrintingModels2.Designer.cs">
+      <DependentUpon>202405171413575_PrintingModels2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405171453557_PrintingModels3.cs" />
+    <Compile Include="Migrations\202405171453557_PrintingModels3.Designer.cs">
+      <DependentUpon>202405171453557_PrintingModels3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405171612498_PrintingModels4.cs" />
+    <Compile Include="Migrations\202405171612498_PrintingModels4.Designer.cs">
+      <DependentUpon>202405171612498_PrintingModels4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405211229107_spin.cs" />
+    <Compile Include="Migrations\202405211229107_spin.Designer.cs">
+      <DependentUpon>202405211229107_spin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405211434583_spin1.cs" />
+    <Compile Include="Migrations\202405211434583_spin1.Designer.cs">
+      <DependentUpon>202405211434583_spin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405220838567_spin2.cs" />
+    <Compile Include="Migrations\202405220838567_spin2.Designer.cs">
+      <DependentUpon>202405220838567_spin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405221411063_a.cs" />
+    <Compile Include="Migrations\202405221411063_a.Designer.cs">
+      <DependentUpon>202405221411063_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405231005211_a1.cs" />
+    <Compile Include="Migrations\202405231005211_a1.Designer.cs">
+      <DependentUpon>202405231005211_a1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405231505514_a2.cs" />
+    <Compile Include="Migrations\202405231505514_a2.Designer.cs">
+      <DependentUpon>202405231505514_a2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405241245530_a3.cs" />
+    <Compile Include="Migrations\202405241245530_a3.Designer.cs">
+      <DependentUpon>202405241245530_a3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202405241431335_a4.cs" />
+    <Compile Include="Migrations\202405241431335_a4.Designer.cs">
+      <DependentUpon>202405241431335_a4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406051408543_Printing.cs" />
+    <Compile Include="Migrations\202406051408543_Printing.Designer.cs">
+      <DependentUpon>202406051408543_Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="content\toastr.less" />
+    <None Include="content\toastr.scss" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExceedERP.Core\ExceedERP.Core.csproj">
+      <Project>{79503d6a-e3c6-4641-8255-3c6188b929e4}</Project>
+      <Name>ExceedERP.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402121313247_Iitial_Create.resx">
+      <DependentUpon>202402121313247_Iitial_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402261104483_Manf.resx">
+      <DependentUpon>202402261104483_Manf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402261302220_manf2.resx">
+      <DependentUpon>202402261302220_manf2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402261359115_manf3.resx">
+      <DependentUpon>202402261359115_manf3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402261406246_man4.resx">
+      <DependentUpon>202402261406246_man4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402271123332_manf1.resx">
+      <DependentUpon>202402271123332_manf1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402271534384_manf11.resx">
+      <DependentUpon>202402271534384_manf11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402280826335_manf12.resx">
+      <DependentUpon>202402280826335_manf12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402280935573_manf13.resx">
+      <DependentUpon>202402280935573_manf13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402281136191_manf14.resx">
+      <DependentUpon>202402281136191_manf14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402281234556_manf15.resx">
+      <DependentUpon>202402281234556_manf15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291211110_manf16.resx">
+      <DependentUpon>202402291211110_manf16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402291332586_manf17.resx">
+      <DependentUpon>202402291332586_manf17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403010549567_manf18.resx">
+      <DependentUpon>202403010549567_manf18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403010700065_manf19.resx">
+      <DependentUpon>202403010700065_manf19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403040942330_manf110.resx">
+      <DependentUpon>202403040942330_manf110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403041248222_manf111.resx">
+      <DependentUpon>202403041248222_manf111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403041446511_manf112.resx">
+      <DependentUpon>202403041446511_manf112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403050852394_manf113.resx">
+      <DependentUpon>202403050852394_manf113.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403050958586_manf114.resx">
+      <DependentUpon>202403050958586_manf114.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051138362_manf115.resx">
+      <DependentUpon>202403051138362_manf115.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403060931518_manf116.resx">
+      <DependentUpon>202403060931518_manf116.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403061214504_manf117.resx">
+      <DependentUpon>202403061214504_manf117.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403061451028_manf118.resx">
+      <DependentUpon>202403061451028_manf118.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403071042366_manf119.resx">
+      <DependentUpon>202403071042366_manf119.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403080646359_manf120.resx">
+      <DependentUpon>202403080646359_manf120.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403080755461_manf121.resx">
+      <DependentUpon>202403080755461_manf121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403080821238_manf122.resx">
+      <DependentUpon>202403080821238_manf122.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081129129_manf123.resx">
+      <DependentUpon>202403081129129_manf123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081209127_manf124.resx">
+      <DependentUpon>202403081209127_manf124.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081212058_manf125.resx">
+      <DependentUpon>202403081212058_manf125.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081416022_manf126.resx">
+      <DependentUpon>202403081416022_manf126.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081602089_manf127.resx">
+      <DependentUpon>202403081602089_manf127.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403091002498_manf128.resx">
+      <DependentUpon>202403091002498_manf128.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403091131348_manf129.resx">
+      <DependentUpon>202403091131348_manf129.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403120700259_standardJobType.resx">
+      <DependentUpon>202403120700259_standardJobType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403121330414_standardJobType1.resx">
+      <DependentUpon>202403121330414_standardJobType1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403130825094_standardJobType2.resx">
+      <DependentUpon>202403130825094_standardJobType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403131418460_standardJobType3.resx">
+      <DependentUpon>202403131418460_standardJobType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403141239138_standardJobType4.resx">
+      <DependentUpon>202403141239138_standardJobType4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403141408435_standardJobType5.resx">
+      <DependentUpon>202403141408435_standardJobType5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403141426191_standardJobType6.resx">
+      <DependentUpon>202403141426191_standardJobType6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403281220274_Production.resx">
+      <DependentUpon>202403281220274_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403281522304_Production1.resx">
+      <DependentUpon>202403281522304_Production1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403290554573_Production2.resx">
+      <DependentUpon>202403290554573_Production2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404011354516_Production3.resx">
+      <DependentUpon>202404011354516_Production3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404011358240_Production4.resx">
+      <DependentUpon>202404011358240_Production4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404041317270_furnitureDailyFollowUp1.resx">
+      <DependentUpon>202404041317270_furnitureDailyFollowUp1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404041329090_furnitureDailyFollowUp11.resx">
+      <DependentUpon>202404041329090_furnitureDailyFollowUp11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404041457331_furnitureDailyFollowUp12.resx">
+      <DependentUpon>202404041457331_furnitureDailyFollowUp12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404050513113_furnitureDailyFollowUp13.resx">
+      <DependentUpon>202404050513113_furnitureDailyFollowUp13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404050922531_furnitureDailyFollowUp14.resx">
+      <DependentUpon>202404050922531_furnitureDailyFollowUp14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404051423031_furnitureDailyFollowUp15.resx">
+      <DependentUpon>202404051423031_furnitureDailyFollowUp15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404080920403_furnitureDailyFollowUp16.resx">
+      <DependentUpon>202404080920403_furnitureDailyFollowUp16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404081127527_furnitureDailyFollowUp17.resx">
+      <DependentUpon>202404081127527_furnitureDailyFollowUp17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404081246110_furnitureDailyFollowUp18.resx">
+      <DependentUpon>202404081246110_furnitureDailyFollowUp18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404081314115_furnitureDailyFollowUp19.resx">
+      <DependentUpon>202404081314115_furnitureDailyFollowUp19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404081421034_furnitureDailyFollowUp110.resx">
+      <DependentUpon>202404081421034_furnitureDailyFollowUp110.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404090904085_furnitureDailyFollowUp111.resx">
+      <DependentUpon>202404090904085_furnitureDailyFollowUp111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404091409432_furnitureDailyFollowUp112.resx">
+      <DependentUpon>202404091409432_furnitureDailyFollowUp112.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404101425214_furnitureDailyFollowUp113.resx">
+      <DependentUpon>202404101425214_furnitureDailyFollowUp113.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405140926433_PrintingModels.resx">
+      <DependentUpon>202405140926433_PrintingModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405151502365_PrintingModels1.resx">
+      <DependentUpon>202405151502365_PrintingModels1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405171413575_PrintingModels2.resx">
+      <DependentUpon>202405171413575_PrintingModels2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405171453557_PrintingModels3.resx">
+      <DependentUpon>202405171453557_PrintingModels3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405171612498_PrintingModels4.resx">
+      <DependentUpon>202405171612498_PrintingModels4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405211229107_spin.resx">
+      <DependentUpon>202405211229107_spin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405211434583_spin1.resx">
+      <DependentUpon>202405211434583_spin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405220838567_spin2.resx">
+      <DependentUpon>202405220838567_spin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405221411063_a.resx">
+      <DependentUpon>202405221411063_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405231005211_a1.resx">
+      <DependentUpon>202405231005211_a1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405231505514_a2.resx">
+      <DependentUpon>202405231505514_a2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405241245530_a3.resx">
+      <DependentUpon>202405241245530_a3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405241431335_a4.resx">
+      <DependentUpon>202405241431335_a4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406051408543_Printing.resx">
+      <DependentUpon>202406051408543_Printing.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

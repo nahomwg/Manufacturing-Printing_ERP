@@ -1,0 +1,5 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>Viewing Shipping Information</Title>
+  <Type>Section</Type>
+  <Concept>./tpc/8b9b38f9-015c-4fc6-a18e-d4867427bf39/index.html</Concept>
+</Description>

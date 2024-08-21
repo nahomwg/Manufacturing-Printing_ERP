@@ -1,0 +1,4 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>Entering Time for a Period</Title>
+  <Type>Topic</Type>
+  <PlayModes>STKDP</PlayModes><JumpIn FrameID="F2">Time page</JumpIn><Leadin>1</Leadin><Concept>./tpc/c70cb1f9-43bd-4683-8f28-65b488218ad2/index.html</Concept><PrintItName>74eeb949-309d-460b-85cf-682a24d7e876_JOBAID.doc</PrintItName></Description>

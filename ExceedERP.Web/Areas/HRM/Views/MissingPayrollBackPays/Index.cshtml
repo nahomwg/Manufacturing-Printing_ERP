@@ -1,0 +1,395 @@
+﻿@using Kendo.Mvc.UI
+@using System.Collections
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<legend> Missing Payroll Back Pays</legend>
+
+@(Html.Kendo().Grid<ExceedERP.Core.Domain.HRM.Payroll.MissingPayrollBackPays.MissingPayrollBackPay>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+
+                      columns.ForeignKey(c => c.BranchId, (IEnumerable)ViewData["branch"], "BranchId", "Name").Width(140);
+                      columns.ForeignKey(c => c.BusinessUnitId, (IEnumerable)ViewData["bussinessunit"], "BusinessUnitId", "Name").Width(140);
+                      columns.ForeignKey(c => c.GLPeriodId, (IEnumerable)ViewData["glPeriods"], "GLPeriodId", "Name").Width(140);
+                      columns.Bound(c => c.Date).Width(110);
+                      columns.Bound(c => c.IsOnlineTransferred).ClientTemplate("<input type='checkbox' disabled = 'true' #=IsOnlineTransferred ? checked='checked' :'' # >").Width(100).Hidden();
+                      columns.Bound(c => c.IsClosed).ClientTemplate("<input type='checkbox' Disabled='disabled' #=IsClosed ? checked='checked' :'' # >").Width(100);
+
+                      columns.Bound(c => c.Remark);
+
+                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(220);
+                  })
+                  .ToolBar(toolbar =>
+                  {
+                      toolbar.Create();
+                      //toolbar.Excel();
+                      //toolbar.Pdf();
+                  })
+                  .Editable(editable => editable.Mode(GridEditMode.InLine))
+                   .Pageable(pagable =>
+                   {
+                       pagable.Enabled(true);
+                       pagable.PageSizes(true);
+                       pagable.Refresh(true);
+                       pagable.ButtonCount(10);
+                       pagable.Input(true);
+                       pagable.Numeric(false);
+                   })
+                   .Events(ev =>
+                   {
+                       ev.DataBound("onGridDataBound");
+                   })
+                  .Selectable(selectable =>
+                  {
+                      selectable.Mode(GridSelectionMode.Single);
+                      selectable.Type(GridSelectionType.Row);
+                  })
+                  .Filterable()
+
+                  .Scrollable(s => s.Height(700))
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Model(model => model.Id(p => p.MissingPayrollBackPayId))
+                      .Events(ev => ev
+                                        //.Error("error_handler(\"grid\")")
+                                        .Error("handleError(\"grid\")")
+                                        .RequestStart("onRequestStart(\"grid\")")
+                                        .RequestEnd("onRequestEnd(\"grid\")"))
+
+                      .Read(read => read.Action("MissingPayrollBackPays_Read", "MissingPayrollBackPays"))
+                      .Create(create => create.Action("MissingPayrollBackPays_Create", "MissingPayrollBackPays"))
+                      .Update(update => update.Action("MissingPayrollBackPays_Update", "MissingPayrollBackPays"))
+                      .Destroy(destroy => destroy.Action("MissingPayrollBackPays_Destroy", "MissingPayrollBackPays"))
+                  ).ClientDetailTemplateId("missing_Payroll_Back_Pays_detail")
+)
+
+<script type="text/kendo-template" id="missing_Payroll_Back_Pays_detail">
+    @(Html.Kendo().TabStrip()
+                .Name("tab_str_#=MissingPayrollBackPayId#")
+                .SelectedIndex(0)
+                .Items(items =>
+                {
+                    items.Add().Text("Line").Content(@<text>
+                        @(Html.Kendo().Grid<ExceedERP.Core.Domain.HRM.Payroll.MissingPayrollBackPays.MissingPayrollBackPaymentLine>()
+                                      .Name("MissingPayrollBackPaymentLine_grid_#=MissingPayrollBackPayId#")
+                                      .Columns(columns =>
+                                      {
+                                          columns.ForeignKey(c => c.EmployeeId, (IEnumerable)ViewData["employees"], "EmployeeId", "FullName").Width(250);
+                                          columns.Bound(c => c.Reason);
+                                          columns.Command(command => { command.Edit(); command.Destroy(); });
+                                      })
+                                      .ToolBar(toolbar =>
+                                      {
+                                          toolbar.Create();
+                                      //toolbar.Excel();
+                                      //toolbar.Pdf();
+                                  })
+                                      .Events(ev =>
+                                      {
+                                          ev.DataBound("onGridDataBound");
+                                      })
+                                      .Editable(editable => editable.Mode(GridEditMode.InLine))
+                                       .Pageable(pagable =>
+                                       {
+                                           pagable.Enabled(true);
+                                           pagable.PageSizes(true);
+                                           pagable.Refresh(true);
+                                           pagable.ButtonCount(10);
+                                           pagable.Input(true);
+                                           pagable.Numeric(false);
+                                       })
+                                      .Selectable(selectable =>
+                                      {
+                                          selectable.Mode(GridSelectionMode.Single);
+                                          selectable.Type(GridSelectionType.Row);
+                                      })
+                                      .Filterable()
+                                      .Scrollable(s => s.Height(350))
+                                      .DataSource(dataSource => dataSource
+                                          .Ajax()
+                                          .Model(model => model.Id(p => p.MissingPayrollBackPaymentLineId))
+                                          .Events(ev => ev
+                                                            .Error("error_handler(\"MissingPayrollBackPaymentLine_grid_#=MissingPayrollBackPayId#\")")
+                                                            .RequestStart("onRequestStart(\"MissingPayrollBackPaymentLine_grid_#=MissingPayrollBackPayId#\")")
+                                                            .RequestEnd("onRequestEnd(\"MissingPayrollBackPaymentLine_grid_#=MissingPayrollBackPayId#\")"))
+
+                                          .Read(read => read.Action("MissingPayrollBackPaymentLines_Read", "MissingPayrollBackPaymentLines", new { mPBId = "#=MissingPayrollBackPayId#" }))
+                                          .Create(create => create.Action("MissingPayrollBackPaymentLines_Create", "MissingPayrollBackPaymentLines", new { mPBId = "#=MissingPayrollBackPayId#" }))
+                                          .Update(update => update.Action("MissingPayrollBackPaymentLines_Update", "MissingPayrollBackPaymentLines"))
+                                          .Destroy(destroy => destroy.Action("MissingPayrollBackPaymentLines_Destroy", "MissingPayrollBackPaymentLines"))
+                                      ).ClientDetailTemplateId("line_detail_template")
+                                      .ToClientTemplate()
+                        )
+                    </text>);
+                    items.Add().Text("Distribution").Content(@<text>
+                        @missingPayrollBackPaymentDistribution()
+                    </text>);
+
+                }).ToClientTemplate()
+    )
+</script>
+
+
+@helper missingPayrollBackPaymentDistribution()
+{
+
+
+    @(Html.Kendo().Grid<ExceedERP.Core.Domain.HRM.Payroll.MissingPayrollBackPays.MissingPayrollBackPaymentDistribution>()
+                        .Name("MissingPayrollBackPaymentDistribution_grid_#=MissingPayrollBackPayId#")
+                        .Columns(columns =>
+                        {
+                            columns.Bound(c => c.AccountCode).Width(120);
+                            columns.Bound(c => c.Credit).Width(120);
+                            columns.Bound(c => c.Debit).Width(120);
+                            columns.Bound(c => c.AccountDesc).Width(120);
+                            columns.Bound(c => c.AdditionalDescription).Width(160);
+                            columns.Command(command => { command.Edit(); command.Destroy(); }).Width(220);
+                        })
+                        .ToolBar(toolbar =>
+                        {
+                            toolbar.Create();
+
+                        })
+                        .Events(ev =>
+                        {
+                            ev.DataBound("onGridDataBound");
+                        })
+                        .Editable(editable => editable.Mode(GridEditMode.InLine))
+                        .Pageable(pagable =>
+                        {
+                            pagable.Enabled(true);
+                            pagable.PageSizes(true);
+                            pagable.Refresh(true);
+                            pagable.ButtonCount(10);
+                            pagable.Input(true);
+                            pagable.Numeric(false);
+                        })
+                        .Selectable(selectable =>
+                        {
+                            selectable.Mode(GridSelectionMode.Single);
+                            selectable.Type(GridSelectionType.Row);
+                        })
+                        .Filterable()
+                        .Scrollable(s => s.Height(350))
+                        .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .Model(model => model.Id(p => p.MissingPayrollBackPaymentDistributionId))
+                            .Events(ev => ev
+                                            .Error("error_handler(\"MissingPayrollBackPaymentDistribution_grid_#=MissingPayrollBackPayId#\")")
+                                            .RequestStart("onRequestStart(\"MissingPayrollBackPaymentDistribution_grid_#=MissingPayrollBackPayId#\")")
+                                            .RequestEnd("onRequestEnd(\"MissingPayrollBackPaymentDistribution_grid_#=MissingPayrollBackPayId#\")"))
+
+                            .Read(read => read.Action("MissingPayrollBackPaymentDistributions_Read", "MissingPayrollBackPaymentDistributions", new { PayBackId = "#=MissingPayrollBackPayId#" }))
+                            .Create(create => create.Action("MissingPayrollBackPaymentDistributions_Create", "MissingPayrollBackPaymentDistributions", new { PayBackId = "#=MissingPayrollBackPayId#" }))
+                            .Update(update => update.Action("MissingPayrollBackPaymentDistributions_Update", "MissingPayrollBackPaymentDistributions"))
+                            .Destroy(destroy => destroy.Action("MissingPayrollBackPaymentDistributions_Destroy", "MissingPayrollBackPaymentDistributions"))
+                        ).ToClientTemplate()
+    )
+
+
+}
+
+<script type="text/kendo-template" id="line_detail_template">
+    @(Html.Kendo().TabStrip()
+                                .Name("tab_str!23_#=MissingPayrollBackPaymentLineId#")
+                                .SelectedIndex(0)
+                                .Items(items =>
+                                {
+                                    items.Add().Text("Periods").Content(@<text>
+                                        @(Html.Kendo().Grid<ExceedERP.Core.Domain.HRM.Payroll.MissingPayrollBackPays.MissingPayrollBackPaymentDetailPeriod>()
+                                                                                        .Name("MissingPayrollBackPaymentDetailPeriod_grid_#=MissingPayrollBackPaymentLineId#")
+                                                                                        .Columns(columns =>
+                                                                                        {
+                                                                                                    columns.ForeignKey(c => c.GLPeriodId, (IEnumerable)ViewData["glPeriods"], "GLPeriodId", "Name").Width(140);
+                                                                                                    columns.Bound(c => c.Description);
+                                                                                                    columns.Command(command => { command.Edit(); command.Destroy(); });
+                                                                                                })
+                                                                                        .ToolBar(toolbar =>
+                                                                                        {
+                                                                                                    toolbar.Create();
+                                                                                        //toolbar.Excel();
+                                                                                        //toolbar.Pdf();
+                                                                                    })
+                                                                                        .Events(ev =>
+                                                                                        {
+                                                                                                    ev.DataBound("onGridDataBound");
+                                                                                                })
+                                                                                        .Editable(editable => editable.Mode(GridEditMode.InLine))
+                                                                                         .Pageable(pagable =>
+                                                                                         {
+                                                                                                     pagable.Enabled(true);
+                                                                                                     pagable.PageSizes(true);
+                                                                                                     pagable.Refresh(true);
+                                                                                                     pagable.ButtonCount(10);
+                                                                                                     pagable.Input(true);
+                                                                                                     pagable.Numeric(false);
+                                                                                                 })
+                                                                                        .Selectable(selectable =>
+                                                                                        {
+                                                                                                    selectable.Mode(GridSelectionMode.Single);
+                                                                                                    selectable.Type(GridSelectionType.Row);
+                                                                                                })
+                                                                                        .Filterable()
+                                                                                        .Scrollable(s => s.Height(350))
+                                                                                        .DataSource(dataSource => dataSource
+                                                                                            .Ajax()
+                                                                                            .Model(model => model.Id(p => p.MissingPayrollBackPaymentDetailPeriodId))
+                                                                                            .Events(ev => ev
+                                                                                                              .Error("error_handler(\"MissingPayrollBackPaymentDetailPeriod_grid_#=MissingPayrollBackPaymentLineId#\")")
+                                                                                                              .RequestStart("onRequestStart(\"MissingPayrollBackPaymentDetailPeriod_grid_#=MissingPayrollBackPaymentLineId#\")")
+                                                                                                              .RequestEnd("onRequestEnd(\"MissingPayrollBackPaymentDetailPeriod_grid_#=MissingPayrollBackPaymentLineId#\")"))
+
+                                                                                            .Read(read => read.Action("MissingPayrollBackPaymentDetailPeriods_Read", "MissingPayrollBackPaymentDetailPeriods", new { lineId = "#=MissingPayrollBackPaymentLineId#" }))
+                                                                                            .Create(create => create.Action("MissingPayrollBackPaymentDetailPeriods_Create", "MissingPayrollBackPaymentDetailPeriods", new { lineId = "#=MissingPayrollBackPaymentLineId#" }))
+                                                                                            .Update(update => update.Action("MissingPayrollBackPaymentDetailPeriods_Update", "MissingPayrollBackPaymentDetailPeriods"))
+                                                                                            .Destroy(destroy => destroy.Action("MissingPayrollBackPaymentDetailPeriods_Destroy", "MissingPayrollBackPaymentDetailPeriods"))
+                                                                                        ).ToClientTemplate()
+                                        )
+                                    </text>);
+                                            items.Add().Text("Details").Content(@<text>
+                                                @(Html.Kendo().Grid<ExceedERP.Core.Domain.HRM.Payroll.MissingPayrollBackPays.MissingPayrollBackPaymentDetail>()
+                                                          .Name("Missing_Payroll_Back_Payment_Detail_grid_#=MissingPayrollBackPaymentLineId#")
+                                                          .Columns(columns =>
+                                                          {
+                                                              columns.ForeignKey(c => c.GLPeriodId, (IEnumerable)ViewData["glPeriods"], "GLPeriodId", "Name").Width(140);
+                                                              columns.Bound(c => c.Amount).Width(120);
+                                                              columns.Bound(c => c.Type).Width(120);
+                                                              columns.Bound(c => c.Description).Width(120);
+
+                                                              columns.Command(command =>
+                                                              {
+                                                                  //command.Edit();
+                                                                  //command.Destroy();
+                                                              }).Width(220);
+                                                          })
+                                                          //.ToolBar(toolbar =>
+                                                          //{
+                                                          //                  toolbar.Create();
+
+                                                          //              })
+                                                          .Events(ev =>
+                                                          {
+                                                              ev.DataBound("onGridDataBound");
+                                                          })
+                                                          .Editable(editable => editable.Mode(GridEditMode.InLine))
+                                                          .Pageable(pagable =>
+                                                          {
+                                                              pagable.Enabled(true);
+                                                              pagable.PageSizes(true);
+                                                              pagable.Refresh(true);
+                                                              pagable.ButtonCount(10);
+                                                              pagable.Input(true);
+                                                              pagable.Numeric(false);
+                                                          })
+                                                          .Selectable(selectable =>
+                                                          {
+                                                              selectable.Mode(GridSelectionMode.Single);
+                                                              selectable.Type(GridSelectionType.Row);
+                                                          })
+                                                          .Filterable()
+                                                          .Scrollable(s => s.Height(350))
+                                                          .DataSource(dataSource => dataSource
+                                                              .Ajax()
+                                                              .Model(model => model.Id(p => p.MissingPayrollBackPaymentDetailId))
+                                                              .Events(ev => ev
+                                                                              .Error("error_handler(\"Missing_Payroll_Back_Payment_Detail_grid_#=MissingPayrollBackPaymentLineId#\")")
+                                                                              .RequestStart("onRequestStart(\"Missing_Payroll_Back_Payment_Detail_grid_#=MissingPayrollBackPaymentLineId#\")")
+                                                                              .RequestEnd("onRequestEnd(\"Missing_Payroll_Back_Payment_Detail_grid_#=MissingPayrollBackPaymentLineId#\")"))
+
+                                                              .Read(read => read.Action("MissingPayrollBackPaymentDetails_Read", "MissingPayrollBackPaymentDetails", new { missLineId = "#=MissingPayrollBackPaymentLineId#" }))
+                                                              .Create(create => create.Action("MissingPayrollBackPaymentDetails_Create", "MissingPayrollBackPaymentDetails", new { missLineId = "#=MissingPayrollBackPaymentLineId#" }))
+                                                              .Update(update => update.Action("MissingPayrollBackPaymentDetails_Update", "MissingPayrollBackPaymentDetails"))
+                                                              .Destroy(destroy => destroy.Action("MissingPayrollBackPaymentDetails_Destroy", "MissingPayrollBackPaymentDetails"))
+                                                          ).ToClientTemplate()
+                                                )
+                                            </text>);
+
+
+                                                }).ToClientTemplate()
+    )
+</script>
+
+
+
+<style>
+    .full-width-custom-input-box {
+        width: 100%;
+    }
+
+    .image-container-box {
+        border: 1px solid #e6e6e6;
+        box-shadow: 0px 2px 3px #888888;
+    }
+
+    .rectuangular-large-img {
+        max-height: 400px;
+        width: auto;
+        border: 1px solid #e6e6e6;
+        box-shadow: 1px 2px 2px #888888;
+    }
+
+    .circular-profile-img {
+        z-index: 5;
+        height: 150px;
+        width: 150px;
+        border: 5px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.2);
+        transition: transform .5s ease;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    .circular-profile-img-small {
+        z-index: 5;
+        height: 70px;
+        width: 70px;
+        border: 3px solid;
+        overflow: hidden;
+        border-color: transparent;
+        border-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        vertical-align: middle;
+        transition: transform .5s ease;
+    }
+
+        .circular-profile-img-small:hover {
+            transform: scale(1.2);
+        }
+</style>
+
+<script>
+    function handleError(gridName) {
+        return function (args) {
+            if (args.errors) {
+                var grid = $("#" + gridName).data("kendoGrid");
+                grid.dataSource.read();
+                grid.one("dataBinding", function (e) {
+                    e.preventDefault();
+                    for (var error in args.errors) {
+                        alert(args.errors[error].errors[0]);
+                    }
+                });
+            }
+        }
+    }
+    function onGridDataBound(e) {
+        //var grid = this;
+        //var gridRows = grid.tbody.find("tr");
+        //for (var i = 0; i < gridRows.length; i++) {
+        //    var row = $(gridRows[i]);
+        //    var dataItem = grid.dataItem(row);
+        //    if (dataItem.HasLinkedCheckBook === true) {
+        //        row.find(".k-grid-edit").hide();
+        //        row.find(".k-grid-delete").hide();
+        //    }
+        //    else {
+        //        row.find(".k-grid-edit").show();
+        //        row.find(".k-grid-delete").show();
+        //    }
+        //}
+    }
+</script>

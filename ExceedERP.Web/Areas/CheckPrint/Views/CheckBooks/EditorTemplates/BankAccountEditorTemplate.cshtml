@@ -1,0 +1,17 @@
+﻿@(Html.Kendo().DropDownListFor(m => m)
+        .Name("CPBankAccountId")
+        .ValuePrimitive(true)
+        .OptionLabel("Select Account...")
+        .DataTextField("AccountNumber")
+        .DataValueField("CPBankAccountId")
+        .CascadeFrom("CPBankId")
+        .Enable(false)
+        .Filter("contains")
+        .DataSource(dataSource =>
+        {
+            dataSource.Read(read => read.Action("GetBankAccounts", "CheckPrintDataProvider", new { area = "CheckPrint" }).Data("getSelectedBank"))
+            .ServerFiltering(true);
+        })
+
+)
+@Html.ValidationMessageFor(m => m)

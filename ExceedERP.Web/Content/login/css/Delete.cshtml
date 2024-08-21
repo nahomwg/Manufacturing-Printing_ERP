@@ -1,0 +1,23 @@
+﻿@model HRPayroll.Models.MaritalStatus
+
+@{
+    ViewBag.Title = "EXCEED HR & Payroll System";
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>MaritalStatus</legend>
+
+    <div class="display-label">MaritalStatuses</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaritalStatuses)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

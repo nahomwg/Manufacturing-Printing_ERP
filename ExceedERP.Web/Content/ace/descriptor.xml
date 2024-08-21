@@ -1,0 +1,4 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>Approving Time Cards</Title>
+  <Type>Topic</Type>
+  <PlayModes>STKDP</PlayModes><JumpIn FrameID="F1">Worklist page</JumpIn><Leadin>1</Leadin><Concept>./tpc/354453b3-cd7e-40c9-ae65-35c539001161/index.html</Concept><PrintItName>5932ba9e-caee-48cd-bd56-f62ba8b1a187_JOBAID.doc</PrintItName></Description>

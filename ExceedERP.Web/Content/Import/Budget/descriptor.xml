@@ -1,0 +1,5 @@
+﻿<Description xmlns:mfx="urn:manifest-v1" xmlns:tpc="urn:topic-v1" xmlns:sct="urn:section-v1" xmlns:odext="urn:odext">
+  <Title>JD Edwards EnterpriseOne</Title>
+  <Type>Section</Type>
+  <Concept>./tpc/175ae966-303c-47e0-a993-53078845a13a/index.html</Concept>
+</Description>

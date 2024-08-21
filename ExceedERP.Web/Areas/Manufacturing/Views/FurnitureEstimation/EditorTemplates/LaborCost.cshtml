@@ -1,0 +1,87 @@
+﻿@model ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation.DirectLaborCost
+
+<form id="lineForm" method="post">
+
+    @*<div class="row form-group">
+
+                        <label for="PrintingCategory" class="control-label control-label col-sm-3 text-right text-right">Printing Category:</label>
+                    <div  class="col-sm-6">
+                        @(Html.Kendo().DropDownListFor(model => model.PrintingSteps)
+                                                                    .DataTextField("Text")
+                                                                    .DataValueField("Value")
+                                        .BindTo(ExceedERP.Helpers.Common.EnumExtension.EnumToSelectList(typeof(ExceedERP.Core.Domain.printing.PrintingEstimation.PrintingSteps))
+                                        )
+                        )
+                    </div>
+
+        </div>*@
+
+
+    <div class="row">
+        <label for="Material" class="control-label control-label col-sm-3 text-right text-right">Task Type</label>
+        <div class="col-sm-6">
+            @(Html.Kendo().DropDownListFor(m => m.TaskType)
+                     .OptionLabel("Task Type...")
+                     .DataTextField("Text")
+                     .DataValueField("Value")
+
+                     .BindTo(ExceedERP.Helpers.Common.EnumExtension.EnumToSelectList(typeof(ExceedERP.Core.Domain.Manufacturing.Setting.WorkShop))
+                     )
+            )
+        </div>
+    </div>
+    
+    <div class="row">
+
+        <label for="Material" class="control-label control-label col-sm-3 text-right text-right">Task Category</label>
+        <div class="col-sm-6">
+            @(Html.Kendo().DropDownListFor(model => model.TaskCategoryId)
+                .ValuePrimitive(true)
+                .OptionLabel("Select task category...")
+                .DataTextField("Text")
+                .DataValueField("Value")
+                .Filter("contains")
+                .DataSource(dataSource =>
+                {
+                    dataSource.Read(read => read.Action("GetTaskCategory", "ManufacturingDataProvider", new { Area = "Manufacturing" }).Data("filterTaskCategory")
+                    )
+                    .ServerFiltering(true);
+                }).CascadeFrom("TaskType")
+
+            )
+        </div>
+    </div>
+
+    <div class="row">
+        <label for="Material" class="control-label control-label col-sm-3 text-right text-right">Work Hour:</label>
+
+        <div class="col-sm-6">
+            @(Html.Kendo().NumericTextBoxFor(model => model.WorkingTime))
+        </div>
+    </div>
+
+    @*<div class="row">
+
+
+            <label for="Material" class="control-label control-label col-sm-3 text-right text-right">Cost PerHour:</label>
+
+            <div class="col-sm-6">
+
+                @(Html.Kendo().NumericTextBoxFor(model => model.CostPerHour))
+            </div>
+        </div>*@
+    @*<div class="row">
+
+
+            <label for="Material" class="control-label control-label col-sm-3 text-right text-right">Total Cost:</label>
+
+            <div class="col-sm-6">
+
+                @(Html.Kendo().NumericTextBoxFor(model => model.TotalCost))
+            </div>
+        </div>*@
+
+
+
+</form>
+

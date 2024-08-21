@@ -1,0 +1,809 @@
+﻿@*@model ExceedERP.Core.Domain.CRM.CRMDashboardViewModel*@
+@{
+    ViewBag.Title = "CRM Dashboard";
+}
+<div class="content-wrapper">
+    <div class="content">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <div >
+                    <a style="align-content:center;"  onclick='return refreshData()' href='#' title="Refresh Data"><i class="fa fa-refresh fa-2x"> </i></a>
+
+                </div>
+                <h4>
+                    <i class="fa fa-money"></i>
+                    Todate Sales
+                </h4>
+                @*<div class="box-tools pull-right" style="background-color:lightgray;">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i>
+                        </button>
+
+                </div>*@
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                @*<h3>@Model.TodateTotalSales.AmountStr<small>ETB</small></h3>*@
+                                <h3><label id="todateTotalSales"> </label><small>ETB</small></h3>
+
+                                <p>Total  Sales</p>
+                                @*<hr />
+                                    <p>Total Cost = <strong>@Model.TotalProjectsDisplay.TotalCost</strong></p>*@
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-calculator"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                            @*<a href="/Projects/List?ps=@NGODBConstants.AllProjects" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>*@
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-orange">
+                            <div class="inner">
+                                @*<h3>@Model.TodateCashSales.AmountStr<small>ETB</small></h3>*@
+                                <h3><label id="todateCashSales"> </label><small>ETB</small></h3>
+                                <p>Cash Sales</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-money"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                @*<h3>@Model.TodateCreditSales.AmountStr<small>ETB</small></h3>*@
+                                <h3><label id="todateCreditSales"> </label><small>ETB</small></h3>
+                                <p>Credit Sales</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-credit-card"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 chartcontainer">
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todateTotalSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 chartcontainer">
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todateCashSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 chartcontainer">
+
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todateCreditSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h4>
+                    <i class="fa fa-calendar"></i>
+                    Daily Sales
+                </h4>
+                <div class="box-tools pull-right">
+                    @(Html.Kendo().DatePicker()
+                                                    .Name("daySelector")
+                                                    .Value(DateTime.Now)
+                                                    .Events(ev =>
+                                                    {
+                                                        ev.Change("onDaySelectorValueChange");
+                                                    })
+                    )
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <h3><label id="thisDayTotalSales"> @*@Model.TotalSalesToday.AmountStr*@</label><small>ETB</small></h3>
+                                <p>Total  Sales</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-calculator"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-orange">
+                            <div class="inner">
+                                <h3><label id="thisDayCashSales"> @*@Model.CashSalesToday.AmountStr*@</label><small>ETB</small></h3>
+                                <p>Cash Sales</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-money"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-12">
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h3> <label id="thisDayCreditSales"> @*@Model.CreditSalesToday.AmountStr*@</label><small>ETB</small></h3>
+                                <p>Credit Sales</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-credit-card"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 chartcontainer">
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todayTotalSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 chartcontainer">
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todayCashSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 chartcontainer">
+
+                        <div class="k-content wide">
+                            <canvas class="custom-canvas" id="todayCreditSalesBranchDistributionChart" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/Chart.bundle.js"></script>
+<script src="~/Scripts/Chart.PieceLabel.js"></script>
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(201, 203, 207)',
+        aqua: 'rgb(0, 255, 255)',
+        indigo: 'rgb(75, 0, 130)',
+        violet: 'rgb(238, 130, 238)',
+        brown: 'rgb(165, 42, 42)',
+        yale: 'rgb(14, 76, 146)',
+        mulberry: 'rgb(198, 75, 140)',
+        redwood: 'rgb(164, 90, 82)',
+        lemon: 'rgb(239, 253, 95)',
+        olive:'rgb(112, 130, 56)'
+    };
+
+    addTotalTodateSalesBranchDistributionToChartArea();
+    addCashTodateSalesBranchDistributionToChartArea();
+    addCreditTodateSalesBranchDistributionToChartArea();
+
+    addTodayTotalSalesBranchDistributionToChartArea();
+    addTodayCashSalesBranchDistributionToChartArea();
+    addTodayCreditSalesBranchDistributionToChartArea();
+
+    function addTotalTodateSalesBranchDistributionToChartArea() {
+        $.ajax({
+            url: '@Url.Action("GetTodateTotalSalesAmount", "Dashboard", new { area = "" })',
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#todateTotalSales").text(result);
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetTodateTotalSalesData", "Dashboard", new {area = ""})',
+            success: function (result) {
+                var ctx = document.getElementById("todateTotalSalesBranchDistributionChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+
+
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Total Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+    function addCashTodateSalesBranchDistributionToChartArea() {
+        $.ajax({
+            url: '@Url.Action("GetTodateCashSalesAmount", "Dashboard", new { area = "" })',
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#todateCashSales").text(result);
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetTodateCashSalesData", "Dashboard", new {area = ""})',
+            success: function (result) {
+                var ctx = document.getElementById("todateCashSalesBranchDistributionChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+
+
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Cash Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+    function addCreditTodateSalesBranchDistributionToChartArea() {
+        $.ajax({
+            url: '@Url.Action("GetTodateCreditSalesAmount", "Dashboard", new { area = "" })',
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#todateCreditSales").text(result);
+            }
+        });
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetTodateCreditSalesData", "Dashboard", new {area = ""})',
+            success: function (result) {
+                var ctx = document.getElementById("todateCreditSalesBranchDistributionChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+
+
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Credit Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+
+    function onDaySelectorValueChange(e) {
+        addTodayTotalSalesBranchDistributionToChartArea();
+        addTodayCashSalesBranchDistributionToChartArea();
+        addTodayCreditSalesBranchDistributionToChartArea();
+    }
+
+
+    function addTodayTotalSalesBranchDistributionToChartArea() {
+        var selectedDate = $("#daySelector").val();
+        // total daily sales
+        $.ajax({
+            url: '@Url.Action("GetTotalSaleByDate", "Dashboard", new { area = "" })',
+            data: { selectedDate: selectedDate },
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#thisDayTotalSales").text(result);
+            }
+        });
+
+        // distribution by branch
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetTodayTotalSalesData", "Dashboard", new {area = ""})',
+            data: { selectedDate: selectedDate },
+            cache: false,
+            success: function (result) {
+                var ctx = document.getElementById("todayTotalSalesBranchDistributionChart").getContext('2d');
+                //ctx.innerHTML = "";
+                //ctx.clearRect(0, 0, ctx.width, ctx.height);
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Total Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+    function addTodayCashSalesBranchDistributionToChartArea() {
+        var selectedDate = $("#daySelector").val();
+        // total daily sales
+        $.ajax({
+            url: '@Url.Action("GetCashSaleByDate", "Dashboard", new { area = "" })',
+            data: { selectedDate: selectedDate },
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#thisDayCashSales").text(result);
+            }
+        });
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetTodayCashSalesData", "Dashboard", new {area = ""})',
+            cache: false,
+            data: { selectedDate: selectedDate },
+            success: function (result) {
+                var ctx = document.getElementById("todayCashSalesBranchDistributionChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+
+
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Cash Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+    function addTodayCreditSalesBranchDistributionToChartArea() {
+        var selectedDate = $("#daySelector").val();
+        // total daily sales
+        $.ajax({
+            url: '@Url.Action("GetCreditSaleByDate", "Dashboard", new { area = "" })',
+            data: { selectedDate: selectedDate },
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $("#thisDayCreditSales").text(result);
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetTodayCreditSalesData", "Dashboard", new {area = ""})',
+            cache: false,
+            data: { selectedDate: selectedDate },
+            success: function (result) {
+                var ctx = document.getElementById("todayCreditSalesBranchDistributionChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: result.Branchs,
+                        datasets: [{
+                            label: 'Branch',
+                            data: result.Amounts,
+                            backgroundColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderColor: [
+                                window.chartColors.green,
+                                window.chartColors.orange,
+                                window.chartColors.blue,
+                                window.chartColors.purple,
+                                window.chartColors.yellow,
+                                window.chartColors.aqua,
+                                window.chartColors.violet,
+                                window.chartColors.brown,
+                                window.chartColors.indigo,
+                                window.chartColors.olive,
+                                window.chartColors.lemon,
+                                window.chartColors.redwood,
+                                window.chartColors.mulberry,
+                                window.chartColors.yale,
+                                window.chartColors.red,
+                                window.chartColors.grey
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+
+
+                    options: {
+
+                        title: {
+                            display: true,
+                            text: 'Credit Sales by Branch'
+                        },
+                        gridLines: {
+                            display: false
+                        },
+                        pieceLabel: {
+                            render: 'percentage',
+                            fontColor: ['green', 'white', 'red'],
+                            precision: 2,
+                            textShadow: true,
+                        },
+                        legend: {
+                            position: 'bottom',
+                            fontSize: 8,
+                            fullWidth: true,
+                            padding: 6
+                        }
+                    }
+                });
+
+            }, //end succ
+            error: function (result) {
+                alert(result);
+            }
+        });
+    }
+
+    function refreshData() {
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("RefreshCRMDashboard", "Dashboard")',
+            success: function(result) {
+                // toastr.warnning(result.Message);
+                alert(result.Message);
+                recordStatus = result.Status;
+                location.reload(true);
+            }, //end succ
+            beforeSend: function () {
+                // Show image container
+                $("#loading-image").show();
+            },
+            complete: function (data) {
+                // Hide image container
+                $("#loading-image").hide();
+            },
+            error: function(result) {
+                alert(result);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,14 @@
+﻿@using System.Collections
+@(Html.Kendo().DropDownListFor(m => m)
+                  .AutoBind(false)
+                  .OptionLabel("---Select UOM---")
+                  .DataTextField("Description")
+                  .DataValueField("LookupID")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetUOM", "DataProvider"))
+                                .ServerFiltering(true);
+                  })
+
+)
+@Html.ValidationMessageFor(m => m)

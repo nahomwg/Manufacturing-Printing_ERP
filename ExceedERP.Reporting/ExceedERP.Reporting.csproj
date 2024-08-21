@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7820103-AF9E-4B4E-BE06-92328A90F4C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExceedERP.Reporting</RootNamespace>
+    <AssemblyName>ExceedERP.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XAPI">
+      <HintPath>..\XAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.ServiceStack, Version=17.0.23.118, Culture=neutral, PublicKeyToken=null">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.Services.ServiceStack.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.Services.WebApi.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.XpsRendering.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.Mvc, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.ReportViewer.Mvc.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckPrint\DataSource\CheckPrintParametersOds.cs" />
+    <Compile Include="CheckPrint\Designs\CheckRepDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckPrint\Designs\CheckRepDesign.Designer.cs">
+      <DependentUpon>CheckRepDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPrint\Printing\DataSource\CheckPrintOds.cs" />
+    <Compile Include="CheckPrint\Printing\Designs\CheckPrintDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckPrint\Printing\Designs\CheckPrintDesign.Designer.cs">
+      <DependentUpon>CheckPrintDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPrint\DataSource\CheckOds.cs" />
+    <Compile Include="CheckPrint\Printing\DataSource\VoucherPrintOds.cs" />
+    <Compile Include="CheckPrint\Printing\Designs\VoucherPrintDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckPrint\Printing\Designs\VoucherPrintDesign.Designer.cs">
+      <DependentUpon>VoucherPrintDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPrint\ViewModel\CheckReportViewModel.cs" />
+    <Compile Include="CheckPrint\Printing\ViewModel\VoucherPrintViewModel.cs" />
+    <Compile Include="CheckPrint\Printing\ViewModel\CheckPrintViewModel.cs" />
+    <Compile Include="HRM\HRM\HRMViewModel\EmployeeCodeViewModel.cs" />
+    <Compile Include="Printing\JobCosting\DataSource\JobCostingParameterOds.cs" />
+    <Compile Include="Printing\JobCosting\DataSource\JobOrderCardOds.cs" />
+    <Compile Include="Printing\JobCosting\Design\JobOrderCardDesign.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\JobCosting\Design\JobOrderCardDesign.Designer.cs">
+      <DependentUpon>JobOrderCardDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\JobCosting\ViewModel\JobOrderCardVm.cs" />
+    <Compile Include="Printing\PrintingEstimation\DataSource\ChangeOfOrderODS.cs" />
+    <Compile Include="Printing\PrintingEstimation\DataSource\EstimationFormOds.cs" />
+    <Compile Include="Printing\PrintingEstimation\DataSource\JobOrderODS.cs" />
+    <Compile Include="Printing\PrintingEstimation\DataSource\ProformaODS.cs" />
+    <Compile Include="Printing\PrintingEstimation\Design\EstimationFormReporting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\EstimationFormReporting.Designer.cs">
+      <DependentUpon>EstimationFormReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptChangeOfOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptChangeOfOrder.Designer.cs">
+      <DependentUpon>rptChangeOfOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptJobOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptJobOrder.Designer.cs">
+      <DependentUpon>rptJobOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptProforma.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\Design\rptProforma.Designer.cs">
+      <DependentUpon>rptProforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\PrintingEstimation\ViewModel\ApprovalPropertyVM.cs" />
+    <Compile Include="Printing\PrintingEstimation\ViewModel\ExecutiveSummaryVM.cs" />
+    <Compile Include="Printing\PrintingEstimation\ViewModel\PrintingEstimationFormVieModel.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\DeliveryFollowUpSheetODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\DeliveryTeamPerformanceODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\DeliveryTeamPerformanceWpODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\FinishedGoodReceivalODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\FinishedProductsReceivingNoteODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobOrderNoParameterODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobOrderTimeSheetODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobSupplyandSalesODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobSupplyandSalesWpODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobSupplyODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\JobTypeODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\PrintingAndFinishingTeamPerformanceODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\PrintingAndFinishingTeamPerformanceWpODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProductDeliveryODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProductionReportHeaderOds.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProFollowupParameterODs.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProformaItemsListParameterODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProformaItemsODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\DataSource\ProformaListParameterODS.cs" />
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryFollowUpSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryFollowUpSheet.Designer.cs">
+      <DependentUpon>rptDeliveryFollowUpSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformance.Designer.cs">
+      <DependentUpon>rptDeliveryTeamPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformanceWp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformanceWp.Designer.cs">
+      <DependentUpon>rptDeliveryTeamPerformanceWp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptFinishedGoodReceivalForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptFinishedGoodReceivalForm.Designer.cs">
+      <DependentUpon>rptFinishedGoodReceivalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptFinishedProductsReceivingNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptFinishedProductsReceivingNote.Designer.cs">
+      <DependentUpon>rptFinishedProductsReceivingNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobOrdeTimeSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobOrdeTimeSheet.Designer.cs">
+      <DependentUpon>rptJobOrdeTimeSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupply.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupply.Designer.cs">
+      <DependentUpon>rptJobSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesVM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesVM.Designer.cs">
+      <DependentUpon>rptJobSupplyandSalesVM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesWp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesWp.Designer.cs">
+      <DependentUpon>rptJobSupplyandSalesWp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformance.Designer.cs">
+      <DependentUpon>rptPrintingAndFinishingTeamPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformanceWp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformanceWp.Designer.cs">
+      <DependentUpon>rptPrintingAndFinishingTeamPerformanceWp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptProductDelivery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\rptProductDelivery.Designer.cs">
+      <DependentUpon>rptProductDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\RtlJobType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\Designer\RtlJobType.Designer.cs">
+      <DependentUpon>RtlJobType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\ChangeOfOrderVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\DeliveryFollowUpSheetVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\FinishedGoodReceivalVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\FinishedGoodsVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\FinishedProductsReceivingNoteVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobOrderMaterialVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobOrderTimeListVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobOrderVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobSupplyandSalesVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobSupplyVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobTimeSheetVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\JobTypeVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\PrintingAndFinishingTeamPerformanceVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\ProductDeliveryItemsVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\ProductDeliveryVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\ProformaItemVM.cs" />
+    <Compile Include="Printing\ProductionFollowUp\ViewModel\ProformaVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedDataSources\AgeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AllActiveandInActiveEmployeesObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AllEmployeeCodeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AllEmployeeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AssigmnetTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AssignmentTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\AttachmentTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\BranchDataSource.cs" />
+    <Compile Include="SharedDataSources\BranchObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\BusinessUnitOds.cs" />
+    <Compile Include="SharedDataSources\CascadedInternalJobTitleObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\CascadedJobTitleObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\CascadedJobTitleRecruitmentSummaryObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\CascadedRecruitmentSummaryJobTitleObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\ContractEmployeeDataSource.cs" />
+    <Compile Include="SharedDataSources\CostCenterDataSource.cs" />
+    <Compile Include="SharedDataSources\CourseObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\DepartmentObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\DiciplineLevelObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\DiciplineMeasureObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\EduFieldObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\EduLevelObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\EmployeeAssignmentTypeODS.cs" />
+    <Compile Include="SharedDataSources\EmployeeCodeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\EmployeeDataSource.cs" />
+    <Compile Include="SharedDataSources\EmployeeStatusODS.cs" />
+    <Compile Include="SharedDataSources\EmployeeViewModel.cs" />
+    <Compile Include="SharedDataSources\ExternalVacancyObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\FiscalYearDataSource.cs" />
+    <Compile Include="SharedDataSources\GetAddress.cs" />
+    <Compile Include="SharedDataSources\HospitalObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\InternalOrExternalExperienceODS.cs" />
+    <Compile Include="SharedDataSources\InternalVacancyObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\ItemCategoryObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\JobRankObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\JobTitleObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\LanguageODS.cs" />
+    <Compile Include="SharedDataSources\LeavePeriodObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\LeaveStatusObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\LeaveTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\LetterLanguageODS.cs" />
+    <Compile Include="SharedDataSources\LetterTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\LookupObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\NationObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\OrganizationForAttendanceODS.cs" />
+    <Compile Include="SharedDataSources\OrganizationObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\OrganizationWithVacancyObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\PaymentTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\PayrollDepartmentObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\PensionAvailabilityObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\PensionNumberObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\PeriodDataSource.cs" />
+    <Compile Include="SharedDataSources\ProjectOds.cs" />
+    <Compile Include="SharedDataSources\PromotedEmployeeDataSource.cs" />
+    <Compile Include="SharedDataSources\QuarterListDataSource.cs" />
+    <Compile Include="SharedDataSources\RecruitmentEmployeeDataSource.cs" />
+    <Compile Include="SharedDataSources\RegionDataSource.cs" />
+    <Compile Include="SharedDataSources\RetireNofificationNumberObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\SalaryObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\SexObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\SourceODS.cs" />
+    <Compile Include="SharedDataSources\TerminationTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\TitleObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\TrainingObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\TrainingOrEducationODS.cs" />
+    <Compile Include="SharedDataSources\TrainingProviderODS.cs" />
+    <Compile Include="SharedDataSources\TrainingsODS.cs" />
+    <Compile Include="SharedDataSources\TrainingStatusObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\TrainingTypeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\TransferredEmployeeDataSource.cs" />
+    <Compile Include="SharedDataSources\UserBranchObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\VacancyCodeObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\VacancyObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\ViewModel\CostCenterViewModel.cs" />
+    <Compile Include="SharedDataSources\ViewModel\Organization.cs" />
+    <Compile Include="SharedDataSources\WeekObjectDataSource.cs" />
+    <Compile Include="SharedDataSources\WorkunitObjectDataSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CheckPrint\Designs\CheckRepDesign.resx">
+      <DependentUpon>CheckRepDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckPrint\Printing\Designs\CheckPrintDesign.resx">
+      <DependentUpon>CheckPrintDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckPrint\Printing\Designs\VoucherPrintDesign.resx">
+      <DependentUpon>VoucherPrintDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\JobCosting\Design\JobOrderCardDesign.resx">
+      <DependentUpon>JobOrderCardDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\PrintingEstimation\Design\EstimationFormReporting.resx">
+      <DependentUpon>EstimationFormReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\PrintingEstimation\Design\rptChangeOfOrder.resx">
+      <DependentUpon>rptChangeOfOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\PrintingEstimation\Design\rptJobOrder.resx">
+      <DependentUpon>rptJobOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\PrintingEstimation\Design\rptProforma.resx">
+      <DependentUpon>rptProforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptDeliveryFollowUpSheet.resx">
+      <DependentUpon>rptDeliveryFollowUpSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformance.resx">
+      <DependentUpon>rptDeliveryTeamPerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptDeliveryTeamPerformanceWp.resx">
+      <DependentUpon>rptDeliveryTeamPerformanceWp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptFinishedGoodReceivalForm.resx">
+      <DependentUpon>rptFinishedGoodReceivalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptFinishedProductsReceivingNote.resx">
+      <DependentUpon>rptFinishedProductsReceivingNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptJobOrdeTimeSheet.resx">
+      <DependentUpon>rptJobOrdeTimeSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptJobSupply.resx">
+      <DependentUpon>rptJobSupply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesVM.resx">
+      <DependentUpon>rptJobSupplyandSalesVM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptJobSupplyandSalesWp.resx">
+      <DependentUpon>rptJobSupplyandSalesWp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformance.resx">
+      <DependentUpon>rptPrintingAndFinishingTeamPerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptPrintingAndFinishingTeamPerformanceWp.resx">
+      <DependentUpon>rptPrintingAndFinishingTeamPerformanceWp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\rptProductDelivery.resx">
+      <DependentUpon>rptProductDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing\ProductionFollowUp\Designer\RtlJobType.resx">
+      <DependentUpon>RtlJobType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExceedERP.Core\ExceedERP.Core.csproj">
+      <Project>{79503d6a-e3c6-4641-8255-3c6188b929e4}</Project>
+      <Name>ExceedERP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExceedERP.DataAccess\ExceedERP.DataAccess.csproj">
+      <Project>{9CB9519B-4A76-4B18-B0EA-F7B057CD46FA}</Project>
+      <Name>ExceedERP.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExceedERP.Helpers\ExceedERP.Helpers.csproj">
+      <Project>{55879012-e112-46eb-a16d-9305907e7e62}</Project>
+      <Name>ExceedERP.Helpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

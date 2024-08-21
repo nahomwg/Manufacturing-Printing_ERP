@@ -1,0 +1,15 @@
+﻿@(Html.Kendo().DropDownListFor(m => m)
+        .ValuePrimitive(true)
+        .OptionLabel("Select...")
+        .DataTextField("CheckNumber")
+        .DataValueField("CheckNumber")
+        .Filter("contains")
+        //.SelectedIndex(1)
+        .DataSource(dataSource =>
+        {
+            dataSource.Read(read => read.Action("GetCheckNumbers", "CheckPrintDataProvider", new {bookId = "#=CPCheckBookId#", area = "CheckPrint" }))
+            .ServerFiltering(false);
+        })
+
+)
+@Html.ValidationMessageFor(m => m)

@@ -1,0 +1,20 @@
+﻿@model HRPayroll.Models.MaritalStatus
+
+@{
+    ViewBag.Title = "EXCEED HR & Payroll System";
+}
+
+
+
+<fieldset>
+    <legend>MaritalStatus</legend>
+
+    <div class="display-label">MaritalStatuses</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaritalStatuses)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MaritalStatusID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

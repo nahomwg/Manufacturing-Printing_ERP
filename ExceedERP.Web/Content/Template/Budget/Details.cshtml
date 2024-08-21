@@ -1,0 +1,25 @@
+﻿@model timretlehiwot.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Category</legend>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">Objective</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Objective)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CategoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
