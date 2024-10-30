@@ -89,18 +89,34 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers.Estimation
             
             DataSourceResult result = estimationforms.ToDataSourceResult(request, model => new FurnitureEstimationForm
             {
-
                 FurnitureEstimationId = model.FurnitureEstimationId,
-                CustomerId = model.CustomerId,
-                
-                
+                CustomerId = model.CustomerId,               
                 JobTypeId = model.JobTypeId,
                 Quantity = model.Quantity,
                 IsOnlineTransferred = model.IsOnlineTransferred,
-                IsOnlineApproved = model.IsOnlineApproved
-                
+                IsOnlineApproved = model.IsOnlineApproved,
+                IsSentForMarginApproval = model.IsSentForMarginApproval,
+                CreatedBy = model.CreatedBy,
+                DateCreated = model.DateCreated,
+                Description = model.Description,
+                FurnitureBillOfQuantityId = model.FurnitureBillOfQuantityId,
+                IsCurrent = model.IsCurrent,
+                IsOnlineTransferredBy = model.IsOnlineTransferredBy,
+                IsSendForApproval = model.IsSendForApproval,
+                IsVoid = model.IsVoid,
+                LastModified = model.LastModified,
+                ModifiedBy = model.ModifiedBy,
+                OnlineApprovedBy = model.OnlineApprovedBy,
+                OnlineApprovedTime = model.OnlineApprovedTime,
+                OnlineTransferredTime = model.OnlineTransferredTime,
+                OrgBranchName = model.OrgBranchName,
+                Remark = model.Remark,
+                SendForApprovalBy = model.SendForApprovalBy,
+                SendForApprovalTime = model.SendForApprovalTime,
+                Status = model.Status,
+                VoidBy = model.VoidBy,
+                VoidTime = model.VoidTime,                              
             });
-
             return Json(result);
         }
         public ActionResult FurnitureEstimations_Create([DataSourceRequest]DataSourceRequest request, FurnitureEstimationForm estimationForm)
@@ -186,6 +202,71 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers.Estimation
             return Json(new[] { estimationForm }.ToDataSourceResult(request, ModelState));
         }
 
+        public JsonResult ApproveMargin(int id)
+        {
+            
+            object response = null;
+            var overAllCost = db.FurnitureOverallCosts.FirstOrDefault(x => x.FurnitureOverallCostId == id);
+            
+            if (overAllCost != null)
+            {
+                overAllCost.IsApprovedMargin = true;
+
+                db.Entry(overAllCost).State = EntityState.Modified;
+                db.SaveChanges();
+                ExcludeOtherMargin(overAllCost.FurnitureEstimationId);
+                response = new { Success = true, Message = "Margin approved successfully!" };
+
+            }
+            else
+            {
+                response = new { Success = false, Message = "Estimation not found!" };
+            }
+
+            return Json(response);
+        }
+        private void ExcludeOtherMargin(int id)
+        {
+            var estimation = db.FurnitureEstimationForms.Find(id);
+            if(estimation != null)
+            {
+                var overAllCost = db.FurnitureOverallCosts.Where(x => x.FurnitureEstimationId == estimation.FurnitureEstimationId && !x.IsApprovedMargin);
+                foreach (var item in overAllCost)
+                {
+                    item.IsExcludedMargin = true;
+                    db.Entry(item).State = EntityState.Modified;
+                }
+                db.SaveChanges();
+
+            }
+        }
+        public JsonResult SendForMarginApproval(int id)
+        {
+            var estimation = db.FurnitureEstimationForms.Find(id);
+            object response = null;
+            var overAllCost = db.FurnitureOverallCosts.FirstOrDefault(x => x.FurnitureEstimationId == estimation.FurnitureEstimationId);
+            if (overAllCost == null || overAllCost.FinalPriceIncludingProfit == 0)
+            {
+                response = new { Success = false, Message = "⚠️ You forgot to calculate overall cost" };
+                return Json(response);
+            }
+            if (estimation != null)
+            {
+                estimation.IsSentForMarginApproval = true;
+                
+                db.Entry(estimation).State = EntityState.Modified;
+                db.SaveChanges();
+                response = new { Success = true, Message = "Margin summary sent successfully!" };
+
+            }
+            else
+            {
+                response = new { Success = false, Message = "Estimation not found!" };
+            }
+
+            return Json(response);
+
+        }
         public JsonResult CheckEstimation(int id)
         {
             var estimation = db.FurnitureEstimationForms.Find(id);

@@ -375,8 +375,6 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                     CustomerId = billOfQuantity.CustomerId,
                     Quantity = billOfQuantity.Quantity,
                     FurnitureBillOfQuantityId = billOfQuantity.FurnitureBillOfQuantityId,
-
-
                 };
                 db.FurnitureEstimationForms.Add(estimation);
                 db.SaveChanges();

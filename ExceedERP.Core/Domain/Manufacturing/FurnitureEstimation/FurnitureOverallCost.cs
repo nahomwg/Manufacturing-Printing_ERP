@@ -31,6 +31,10 @@ namespace ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation
         public decimal ProfitMargin { get; set; }
         [Display(Name = "Final Price")]
         public decimal FinalPriceIncludingProfit { get; set; }
+
+        public bool IsApprovedMargin { get; set; }
+        public bool IsExcludedMargin { get; set; } // when the vp chooses a profit margin the rest will be excluded if true, false by default.
+
         public int FurnitureEstimationId { get; set; }
         public FurnitureEstimationForm Estimation { get; set; }
     }

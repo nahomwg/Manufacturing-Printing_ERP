@@ -27,7 +27,7 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers.Estimation
         public ActionResult FurnitureOverallCosts_Read([DataSourceRequest]DataSourceRequest request, int estimationFormId)
         {
 
-            IQueryable<FurnitureOverallCost> overallcosts = db.FurnitureOverallCosts.Where(q => q.FurnitureEstimationId == estimationFormId);
+            IQueryable<FurnitureOverallCost> overallcosts = db.FurnitureOverallCosts.Where(q => q.FurnitureEstimationId == estimationFormId && !q.IsExcludedMargin);
 
             var result = overallcosts.ToDataSourceResult(request, model => new FurnitureOverallCost
             {
@@ -41,7 +41,10 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers.Estimation
                 MaterialCost = model.MaterialCost,
                 OverHeadCost = model.OverHeadCost,
                 ProfitMargin = model.ProfitMargin,
-                FinalPriceIncludingProfit = model.FinalPriceIncludingProfit
+                FinalPriceIncludingProfit = model.FinalPriceIncludingProfit,
+                IsApprovedMargin = model.IsApprovedMargin,
+                IsExcludedMargin = model.IsExcludedMargin,
+                
             });
 
             return Json(result);

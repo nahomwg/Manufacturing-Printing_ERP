@@ -1015,7 +1015,7 @@
     </Reference>
     <Reference Include="Telerik.Reporting, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
       <Private>True</Private>
-      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.dll</HintPath>
+      <HintPath>..\ExceedERP.Reporting\bin\Debug\Telerik.Reporting.dll</HintPath>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="Telerik.Reporting.Services.HttpClient, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
@@ -1027,7 +1027,7 @@
       <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="Telerik.Reporting.Services.WebApi, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik Reporting R1 2023\bin\Telerik.Reporting.Services.WebApi.dll</HintPath>
+      <HintPath>..\ExceedERP.Reporting\bin\Debug\Telerik.Reporting.Services.WebApi.dll</HintPath>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="Telerik.Reporting.XpsRendering, Version=17.0.23.118, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">

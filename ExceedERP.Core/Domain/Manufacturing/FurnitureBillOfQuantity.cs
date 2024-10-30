@@ -38,14 +38,11 @@ namespace ExceedERP.Core.Domain.Manufacturing
         public int CustomerId { get; set; }
         public decimal Quantity { get; set; }      
         public string Size { get; set; }
-
-
     }
     public class FurnitureBOQMaterial : TrackUserSettingOperation
     {
         [Key]
         public int FurnitureBOQMaterialId { get; set; }
-
         public int ManufacturingMaterialCategoryId { get; set; }
         public int ManufacturingMaterialCategoryItemId { get; set; }
         [Display(Name ="Item")]
@@ -56,7 +53,6 @@ namespace ExceedERP.Core.Domain.Manufacturing
         public string Remark { get; set; }
         [Display(Name ="Work shop")]
         public WorkShop WorkshopType { get; set; }
-
         public int FurnitureBillOfQuantityId { get; set; }
         public FurnitureBillOfQuantity FurnitureBillOfQuantity { get; set; }
     }
@@ -71,9 +67,7 @@ namespace ExceedERP.Core.Domain.Manufacturing
         [Display(Name ="Number of Employees")]
         public int NumberOfEmloyees { get; set; }
         [Display(Name = "Estimated Minute")]
-        public int EstimatedMinute { get; set; }
-        
-
+        public int EstimatedMinute { get; set; }       
         public int FurnitureBillOfQuantityId { get; set; }
         public FurnitureBillOfQuantity FurnitureBillOfQuantity { get; set; }
     }

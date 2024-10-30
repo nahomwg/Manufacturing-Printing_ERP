@@ -357,6 +357,14 @@
     <Compile Include="Migrations\202406051408543_Printing.Designer.cs">
       <DependentUpon>202406051408543_Printing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202410301318252_booladded.cs" />
+    <Compile Include="Migrations\202410301318252_booladded.Designer.cs">
+      <DependentUpon>202410301318252_booladded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410301443376_boolmodified.cs" />
+    <Compile Include="Migrations\202410301443376_boolmodified.Designer.cs">
+      <DependentUpon>202410301443376_boolmodified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -371,6 +379,15 @@
       <Project>{79503d6a-e3c6-4641-8255-3c6188b929e4}</Project>
       <Name>ExceedERP.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\toastr.css" />
+    <Content Include="content\toastr.min.css" />
+    <Content Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402121313247_Iitial_Create.resx">
@@ -598,15 +615,12 @@
     <EmbeddedResource Include="Migrations\202406051408543_Printing.resx">
       <DependentUpon>202406051408543_Printing.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="content\toastr.css" />
-    <Content Include="content\toastr.min.css" />
-    <Content Include="Scripts\jquery-1.6.3-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.6.3.js" />
-    <Content Include="Scripts\jquery-1.6.3.min.js" />
-    <Content Include="Scripts\toastr.js" />
-    <Content Include="Scripts\toastr.min.js" />
+    <EmbeddedResource Include="Migrations\202410301318252_booladded.resx">
+      <DependentUpon>202410301318252_booladded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410301443376_boolmodified.resx">
+      <DependentUpon>202410301443376_boolmodified.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

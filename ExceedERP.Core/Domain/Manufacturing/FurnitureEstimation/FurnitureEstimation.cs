@@ -27,6 +27,7 @@ namespace ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation
         public decimal Quantity { get; set; }
         public string Description { get; set; }
         public bool IsCurrent { get; set; }
+        public bool IsSentForMarginApproval { get; set; }
 
     }
     
