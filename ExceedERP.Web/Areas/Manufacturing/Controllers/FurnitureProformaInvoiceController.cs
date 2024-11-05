@@ -68,7 +68,9 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 PaymentType = furnitureProformaInvoice.PaymentType,
                 HaveEstimation = furnitureProformaInvoice.HaveEstimation,
                 IsExistingCustomer = furnitureProformaInvoice.IsExistingCustomer,
-                AdvancePaymentInPercent = furnitureProformaInvoice.AdvancePaymentInPercent
+                AdvancePaymentInPercent = furnitureProformaInvoice.AdvancePaymentInPercent,
+                CustomerName = furnitureProformaInvoice.CustomerName
+                
             });
 
             return Json(result);
@@ -90,7 +92,8 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                     Remark = furnitureProformaInvoice.Remark,
                     AdvancePaymentInPercent = furnitureProformaInvoice.AdvancePaymentInPercent,
                     DateCreated = DateTime.Today,
-                    CreatedBy = User.Identity.Name
+                    CreatedBy = User.Identity.Name,
+                    CustomerName = furnitureProformaInvoice.CustomerName
                 };
 
                 db.FurnitureProformaInvoices.Add(entity);
@@ -124,7 +127,8 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                     LastModified = DateTime.Today,
                     CreatedBy = furnitureProformaInvoice.CreatedBy,
                     ModifiedBy = User.Identity.Name,
-                    AdvancePaymentInPercent = furnitureProformaInvoice.AdvancePaymentInPercent
+                    AdvancePaymentInPercent = furnitureProformaInvoice.AdvancePaymentInPercent,
+                    CustomerName = furnitureProformaInvoice.CustomerName
                 };
 
                 db.FurnitureProformaInvoices.Attach(entity);

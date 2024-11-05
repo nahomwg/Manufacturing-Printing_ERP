@@ -365,6 +365,22 @@
     <Compile Include="Migrations\202410301443376_boolmodified.Designer.cs">
       <DependentUpon>202410301443376_boolmodified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411041141481_transporationCost.cs" />
+    <Compile Include="Migrations\202411041141481_transporationCost.Designer.cs">
+      <DependentUpon>202411041141481_transporationCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411050808510_customername.cs" />
+    <Compile Include="Migrations\202411050808510_customername.Designer.cs">
+      <DependentUpon>202411050808510_customername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411050931147_customername1.cs" />
+    <Compile Include="Migrations\202411050931147_customername1.Designer.cs">
+      <DependentUpon>202411050931147_customername1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411051037523_customernameRemove.cs" />
+    <Compile Include="Migrations\202411051037523_customernameRemove.Designer.cs">
+      <DependentUpon>202411051037523_customernameRemove.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -620,6 +636,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410301443376_boolmodified.resx">
       <DependentUpon>202410301443376_boolmodified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411041141481_transporationCost.resx">
+      <DependentUpon>202411041141481_transporationCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411050808510_customername.resx">
+      <DependentUpon>202411050808510_customername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411050931147_customername1.resx">
+      <DependentUpon>202411050931147_customername1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411051037523_customernameRemove.resx">
+      <DependentUpon>202411051037523_customernameRemove.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

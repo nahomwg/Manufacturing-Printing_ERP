@@ -9,18 +9,17 @@
                         columns.Bound(c => c.FurnitureEstimationId).Width(70);
                         columns.ForeignKey(c => c.JobTypeId, (IEnumerable)ViewData["JobType"], "Value", "Text").Width(130);
                         columns.ForeignKey(c => c.CustomerId, (IEnumerable)ViewData["Customers"], "Code", "Name").Width(110).Title("Customer");
-
                         columns.Bound(c => c.Quantity).Width(100);
                         columns.Bound(c => c.Description).Width(80);
 
                         columns.Command(command =>
                         {
-                            command.Edit().Text(" ").IconClass("fa fa-pencil").HtmlAttributes(new { title = "Edit" });
+                            //command.Edit().Text(" ").IconClass("fa fa-pencil").HtmlAttributes(new { title = "Edit" });
                             command.Custom("check").Text(" ").IconClass("fa fa-check").HtmlAttributes(new { @class = "check", title = "Check" }).Click("checkEstimation");
-                            command.Custom("sendmargin").Text(" ").IconClass("fa fa-fast-forward").HtmlAttributes(new { @class = "marginsend", title = "margin send" }).Click("sendMarginForApproval");
-                            command.Custom("approve").Text(" ").IconClass("fa fa-thumbs-o-up").HtmlAttributes(new { @class = "approve", title = "Approve" }).Click("approveEstimation");
-                            command.Custom("reject").Text(" ").IconClass("fa fa-remove").HtmlAttributes(new { @class = "reject", title = "Reject" }).Click("rejectEstimation");
-                            command.Destroy().Text(" ").IconClass("fa fa-trash").HtmlAttributes(new { title = "Delete" });
+                            //command.Custom("sendmargin").Text(" ").IconClass("fa fa-fast-forward").HtmlAttributes(new { @class = "marginsend", title = "margin send" }).Click("sendMarginForApproval");
+                            //command.Custom("approve").Text(" ").IconClass("fa fa-thumbs-o-up").HtmlAttributes(new { @class = "approve", title = "Approve" }).Click("approveEstimation");
+                            //command.Custom("reject").Text(" ").IconClass("fa fa-remove").HtmlAttributes(new { @class = "reject", title = "Reject" }).Click("rejectEstimation");
+                            //command.Destroy().Text(" ").IconClass("fa fa-trash").HtmlAttributes(new { title = "Delete" });
                         }).Width(200);
 
                     })
@@ -140,7 +139,7 @@
 
                                                      //columns.Bound(o => o.TaskCategoryId).EditorTemplateName("TaskCategoryTemplate").Width(80);
                                                      columns.Bound(o => o.WorkingTime).Width(80);
-                                                     columns.Bound(o => o.CostPerHour).Width(80);
+                                                     columns.Bound(o => o.CostPerHour).Width(80).Title("Cost Per Minute");
                                                      columns.Bound(o => o.TotalCost).Width(150).ClientFooterTemplate("Labor Cost: \\#=sum\\# ");
                                                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
 
@@ -209,7 +208,7 @@
                                                         {
                                                             command.Edit();
                                                             command.Destroy();
-                                                            command.Custom("approvemargin").Text(" ").IconClass("fa fa-thumbs-up").HtmlAttributes(new { @class = "margin-approve", title = "approve margin" }).Click("approveMargin");
+                                                            //command.Custom("approvemargin").Text(" ").IconClass("fa fa-thumbs-up").HtmlAttributes(new { @class = "margin-approve", title = "approve margin" }).Click("approveMargin");
 
                                                         }).Width(200);
 
@@ -289,45 +288,31 @@
         e.preventDefault();
 
     });
-    function onChangeOC() {
-        //var lc = parseInt($("#LaborCost").val());
-        //var mc = parseInt($("#MaterialCost").val());
-        //$("#MaterialCost").attr("disabled", "true");
-        //$("#LaborCost").attr("disabled", "true");
-        //console.log($("#LaborCost").val());
-        //console.log($("#MaterialCost").val());
-        //console.log($("#OverHeadCost").val());
-        //var ohC = $("#OverHeadCost").val();
-
-        //var oc = lc + mc;
-        //var tc = oc + oc + (ohC/100);
-        //var tt = $("#T").val(tc);
-        //tt.trigger("change");
-    }
+    
     function dataBound() {
         this.expandRow(this.tbody.find("tr.k-master-row").first());
         var grid = this;
         grid.tbody.find("tr[role='row']").each(function () {
             var dataItem = grid.dataItem(this);
             $(this).find(".k-grid-reject").hide();
-            if (dataItem.IsOnlineApproved) {
+            if (dataItem.IsOnlineApproved || dataItem.IsOnlineTransferred) {
                 $(this).find(".k-grid-edit").hide();
                 $(this).find(".k-grid-check").hide();
-                $(this).find(".k-grid-approve").hide();
-                $(this).find(".k-grid-reject").hide();
+                //$(this).find(".k-grid-approve").hide();
+                //$(this).find(".k-grid-reject").hide();
                 $(this).find(".k-grid-delete").hide();
             }
-            else if (dataItem.IsOnlineTransferred) {
-                $(this).find(".k-grid-edit").hide();
-                $(this).find(".k-grid-check").hide();
-                $(this).find(".k-grid-delete").hide();
-                $(this).find(".k-grid-reject").show();
+            //else if (dataItem.IsOnlineTransferred) {
+            //    $(this).find(".k-grid-edit").hide();
+            //    $(this).find(".k-grid-check").hide();
+            //    $(this).find(".k-grid-delete").hide();
+            //    $(this).find(".k-grid-reject").show();
 
-                $(this).find(".k-grid-approve").show();
-            }
-            else {
-                $(this).find(".k-grid-approve").hide();
-            }
+            //    $(this).find(".k-grid-approve").show();
+            //}
+            //else {
+            //    $(this).find(".k-grid-approve").hide();
+            //}
 
         });
     }
@@ -337,32 +322,13 @@
         grid.tbody.find("tr[role='row']").each(function () {
             var dataItem = grid.dataItem(this);
             
-            if (isChecked && !isApproved) {
+            if (isChecked || isApproved) {
                 $(this).find(".k-grid-edit").hide();
                 $(this).find(".k-grid-delete").hide();
-                $(this).find(".k-grid-approvemargin").hide();
+                //$(this).find(".k-grid-approvemargin").hide();
 
             }
-            if (sendMarginApprove) {
-                $(this).find(".k-grid-approvemargin").show();
-                $(this).find(".k-grid-edit").hide();
-                $(this).find(".k-grid-delete").hide();
-            }
-            if (dataItem.IsApprovedMargin) {
-                $(this).find(".k-grid-edit").hide();
-                $(this).find(".k-grid-delete").hide();
-                $(this).find(".k-grid-approvemargin").hide();
-            }
-            if (isApproved) {
-                $(this).find(".k-grid-edit").hide();
-                $(this).find(".k-grid-delete").hide();
-                $(this).find(".k-grid-approvemargin").hide();
-            }
-            else if (!isApproved && !isChecked){
-                $(this).find(".k-grid-edit").show();
-                $(this).find(".k-grid-delete").show();
-                $(this).find(".k-grid-approvemargin").hide();
-            }
+            
         });
 
     }

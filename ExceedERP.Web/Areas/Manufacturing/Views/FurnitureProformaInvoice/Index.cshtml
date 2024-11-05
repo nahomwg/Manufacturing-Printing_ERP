@@ -7,9 +7,11 @@
     {
         columns.Bound(c => c.FurnitureProformaInvoiceId).Width(100);
         columns.ForeignKey(c => c.CustomerId, (IEnumerable)ViewData["Customer"], "Value", "Text").Width(120);
+        columns.Bound(c => c.CustomerName).Width(120);
         columns.Bound(c => c.DeliveryPeriod).Width(120);
         columns.Bound(c => c.PriceValidityPeriod).Width(120);
         columns.Bound(c => c.ModeOfPayment).Width(100);
+        //columns.Bound(c => c.AdvancePaymentInPercent).Title("Advance Payment(%)").Width(100);
         columns.Bound(c => c.Remark).Width(90);
         columns.Command(command =>
         {
@@ -73,7 +75,8 @@
                   columns.Bound(c => c.UnitPriceBeforeVAT).Width(100);
                   columns.Bound(c => c.VAT).Width(100);
                   columns.Bound(c => c.UnitPriceWithVAT).Width(100);
-                  columns.Bound(c => c.TotalPrice).Width(100);
+                  columns.Bound(c => c.TransportCost).Width(100);
+                  columns.Bound(c => c.TotalPrice).Title("Selling Price").Width(100);
                   columns.Bound(c => c.Remark).Width(100);  
 
                   columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);

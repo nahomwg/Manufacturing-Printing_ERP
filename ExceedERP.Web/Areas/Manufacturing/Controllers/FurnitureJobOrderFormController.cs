@@ -64,7 +64,8 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 LastModified = furnitureJobOrderForm.LastModified,
                 CreatedBy = furnitureJobOrderForm.CreatedBy,
                 ModifiedBy = furnitureJobOrderForm.ModifiedBy,
-                JobClosed = furnitureJobOrderForm.JobClosed
+                JobClosed = furnitureJobOrderForm.JobClosed,
+                PaymentType = furnitureJobOrderForm.PaymentType
             });
 
             return Json(result);
@@ -127,7 +128,9 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                     DateCreated = furnitureJobOrderForm.DateCreated,
                     LastModified = furnitureJobOrderForm.LastModified,
                     CreatedBy = furnitureJobOrderForm.CreatedBy,
-                    ModifiedBy = furnitureJobOrderForm.ModifiedBy
+                    ModifiedBy = furnitureJobOrderForm.ModifiedBy,
+                    PaymentType = furnitureJobOrderForm.PaymentType,
+                    
                 };
 
                 db.FurnitureJobOrderForms.Attach(entity);
@@ -164,12 +167,15 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
             var proformaInvoice = db.FurnitureProformaInvoices.Find(furnitureJobOrderForm.FurnitureProformaInvoiceId);
             if (proformaInvoice != null)
             {
-                var proformaItems = db.FurnitureProformaInvoiceItems.Where(x => x.FurnitureProformaInvoiceId == proformaInvoice.FurnitureProformaInvoiceId).ToList();
+                var proformaItems = db.FurnitureProformaInvoiceItems
+                    .Where(x => x.FurnitureProformaInvoiceId == proformaInvoice.FurnitureProformaInvoiceId)
+                    .ToList();
                 if (proformaItems.Any())
                 {
                     var jobOrder = new FurnitureJobOrderForm
                     {
-                        CustomerId = proformaInvoice.CustomerId,                                               
+                        CustomerId = proformaInvoice.CustomerId,
+                        
                         FurnitureProformaInvoiceId = proformaInvoice.FurnitureProformaInvoiceId,
                         DateCreated = DateTime.Today,
                         CreatedBy = User.Identity.Name,

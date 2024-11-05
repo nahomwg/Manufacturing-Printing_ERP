@@ -3043,6 +3043,7 @@
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\PrintMaterialEstimationTemplate.cshtml" />
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\laborTemplate.cshtml" />
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\PrintingCategoryDropDownTemplate.cshtml" />
+    <Content Include="Areas\Manufacturing\Views\FurnitureEstimation\EstimationSummary.cshtml" />
     <None Include="Properties\PublishProfiles\DebuggableProfile.pubxml" />
     <None Include="Properties\PublishProfiles\ERP.pubxml" />
     <Content Include="ReportViewer\content\content.rar" />
@@ -3356,13 +3357,7 @@
     <Content Include="Views\Shared\EditorTemplates\Upload.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Url.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\VoucherExtensionTemplate.cshtml" />
-    <Content Include="Views\Shared\EduFiled.cshtml" />
-    <Content Include="Views\Shared\_Budget.cshtml" />
-    <Content Include="Views\Shared\_CRM.cshtml" />
-    <Content Include="Views\Shared\_Fleet.cshtml" />
     <Content Include="Views\Shared\_Popup.cshtml" />
-    <Content Include="Views\Shared\_Maintenance.cshtml" />
-    <Content Include="Views\Shared\_BudgetGAAP.cshtml" />
     <Content Include="Views\Dashboard\FinanceDashboard.cshtml" />
     <Content Include="Views\Dashboard\FinanceRatioDashBoard.cshtml" />
     <Content Include="Scripts\kendo\2018.3.911\jquery.min.map" />
@@ -3497,9 +3492,6 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Dashboard\CRMDashboard.cshtml" />
-    <Content Include="Views\Shared\_CheckPrint.cshtml" />
-    <Content Include="Views\Shared\_JobCosting.cshtml" />
-    <Content Include="Views\Shared\_ProductionFollowUp.cshtml" />
     <Content Include="Views\Shared\_Manufacturing.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\StoreSelector.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\WorkUnitCostCenterSelector.cshtml" />

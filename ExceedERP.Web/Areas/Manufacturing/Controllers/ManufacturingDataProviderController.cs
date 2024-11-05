@@ -211,7 +211,7 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
             var result = proformaInvoice.Select(s => new
             {
                 Value = s.FurnitureProformaInvoiceId,
-                Text = s.FurnitureProformaInvoiceId + "-" + db.OrganizationCustomers.FirstOrDefault(x => x.OrganizationCustomerID == s.CustomerId).TradeName
+                Text = s.FurnitureProformaInvoiceId + "-" + db.OrganizationCustomers.FirstOrDefault(x => x.OrganizationCustomerID == s.CustomerId)?.TradeName
             }).ToList();
             return Json(result, JsonRequestBehavior.AllowGet);
         }
