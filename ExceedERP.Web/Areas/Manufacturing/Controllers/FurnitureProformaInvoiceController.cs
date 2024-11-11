@@ -30,7 +30,11 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 Value = s.FurnitureStandardJobTypeId,
                 Text = s.JobTypeName
             }).ToList();
-
+            ViewData["Taxes"] = db.GLTaxRates.Select(s => new
+            {
+                Value = s.GLTaxRateID,
+                Text = s.TaxName
+            }).ToList();
             return View();
         }
 

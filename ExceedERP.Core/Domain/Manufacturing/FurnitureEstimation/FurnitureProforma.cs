@@ -51,6 +51,7 @@ namespace ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation
         public decimal TransportCost { get; set; }
         [Display(Name = "VAT")]
         public decimal VAT { get; set; }
+        public int GLTaxRateID { get; set; }
         [Display(Name = "Unit Price With VAT")]
         public decimal UnitPriceWithVAT { get; set; }
         [Display(Name ="Total Price")]

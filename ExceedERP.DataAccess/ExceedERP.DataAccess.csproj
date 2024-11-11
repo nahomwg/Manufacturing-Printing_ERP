@@ -381,6 +381,30 @@
     <Compile Include="Migrations\202411051037523_customernameRemove.Designer.cs">
       <DependentUpon>202411051037523_customernameRemove.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411081230359_abcdef.cs" />
+    <Compile Include="Migrations\202411081230359_abcdef.Designer.cs">
+      <DependentUpon>202411081230359_abcdef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411081453214_abcdef1.cs" />
+    <Compile Include="Migrations\202411081453214_abcdef1.Designer.cs">
+      <DependentUpon>202411081453214_abcdef1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411091051189_abc.cs" />
+    <Compile Include="Migrations\202411091051189_abc.Designer.cs">
+      <DependentUpon>202411091051189_abc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411111046078_abd.cs" />
+    <Compile Include="Migrations\202411111046078_abd.Designer.cs">
+      <DependentUpon>202411111046078_abd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411111309339_abdef.cs" />
+    <Compile Include="Migrations\202411111309339_abdef.Designer.cs">
+      <DependentUpon>202411111309339_abdef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411111343022_abdefe.cs" />
+    <Compile Include="Migrations\202411111343022_abdefe.Designer.cs">
+      <DependentUpon>202411111343022_abdefe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -648,6 +672,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411051037523_customernameRemove.resx">
       <DependentUpon>202411051037523_customernameRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411081230359_abcdef.resx">
+      <DependentUpon>202411081230359_abcdef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411081453214_abcdef1.resx">
+      <DependentUpon>202411081453214_abcdef1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411091051189_abc.resx">
+      <DependentUpon>202411091051189_abc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411111046078_abd.resx">
+      <DependentUpon>202411111046078_abd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411111309339_abdef.resx">
+      <DependentUpon>202411111309339_abdef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411111343022_abdefe.resx">
+      <DependentUpon>202411111343022_abdefe.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

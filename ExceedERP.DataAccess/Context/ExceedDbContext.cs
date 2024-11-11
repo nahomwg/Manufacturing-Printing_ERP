@@ -461,6 +461,9 @@ namespace ExceedERP.DataAccess.Context
         public DbSet<FurnitureStandardJobType> FurnitureStandardJobTypes { get; set; }
         public DbSet<StandardBillOfMaterial> StandardBillOfMaterials { get; set; }
         public DbSet<StandardBillOfLabor> StandardBillOfLabors { get; set; }
+        public DbSet<EstimationSummary> EstimationSummaries { get; set; }
+        public DbSet<EstimationDetail> EstimationDetails { get; set; }
+        public DbSet<EstimationCostSummary> EstimationCostSummaries { get; set; } 
 
 
         #endregion

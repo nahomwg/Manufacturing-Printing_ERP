@@ -17,7 +17,16 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
         {
             return View();
         }
-
+        public JsonResult GetTaxRate()
+        {
+            var tax = db.GLTaxRates;
+            var result = tax.Select(s => new
+            {
+                Text = s.TaxName,
+                Value = s.GLTaxRateID
+            }).ToList();
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
         public JsonResult GetInventoryItemCategory(string text)
         {
             // only Category

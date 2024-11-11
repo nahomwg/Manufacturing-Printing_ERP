@@ -408,6 +408,7 @@
     <Compile Include="Domain\Inventory\TemporaryGoodReceive.cs" />
     <Compile Include="Domain\Inventory\ViewModels\InventoryDataArchiveVm.cs" />
     <Compile Include="Domain\Manufacturing\FurnitureBillOfQuantity.cs" />
+    <Compile Include="Domain\Manufacturing\FurnitureEstimation\EstimationSummary.cs" />
     <Compile Include="Domain\Manufacturing\FurnitureEstimation\FurnitureCategory.cs" />
     <Compile Include="Domain\Manufacturing\FurnitureEstimation\FurnitureEnum.cs" />
     <Compile Include="Domain\Manufacturing\FurnitureEstimation\FurnitureEstimation.cs" />

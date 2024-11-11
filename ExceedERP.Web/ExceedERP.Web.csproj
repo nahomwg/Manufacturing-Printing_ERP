@@ -1120,6 +1120,9 @@
     <Compile Include="Areas\HRM\Controllers\Payroll\MissingPayrollBackPaymentLinesController.cs" />
     <Compile Include="Areas\HRM\Controllers\Payroll\MissingPayrollBackPaysController.cs" />
     <Compile Include="Areas\HRM\HRMAreaRegistration.cs" />
+    <Compile Include="Areas\Manufacturing\Controllers\EstimationSummaryController.cs" />
+    <Compile Include="Areas\Manufacturing\Controllers\Estimation\EstimationCostSummaryController.cs" />
+    <Compile Include="Areas\Manufacturing\Controllers\Estimation\EstimationDetailController.cs" />
     <Compile Include="Areas\Manufacturing\Controllers\Estimation\FurnitureDirectLaborCostsControllers.cs" />
     <Compile Include="Areas\Manufacturing\Controllers\Estimation\FurnitureEstimationController.cs" />
     <Compile Include="Areas\Manufacturing\Controllers\Estimation\FurnitureCategoriesController.cs" />
@@ -1363,6 +1366,10 @@
     <Compile Include="Migrations\202402121130102_initialCreate.cs" />
     <Compile Include="Migrations\202402121130102_initialCreate.Designer.cs">
       <DependentUpon>202402121130102_initialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411091045233_abc.cs" />
+    <Compile Include="Migrations\202411091045233_abc.Designer.cs">
+      <DependentUpon>202411091045233_abc.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3044,6 +3051,7 @@
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\laborTemplate.cshtml" />
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\PrintingCategoryDropDownTemplate.cshtml" />
     <Content Include="Areas\Manufacturing\Views\FurnitureEstimation\EstimationSummary.cshtml" />
+    <Content Include="Areas\Manufacturing\Views\EstimationSummary\Index.cshtml" />
     <None Include="Properties\PublishProfiles\DebuggableProfile.pubxml" />
     <None Include="Properties\PublishProfiles\ERP.pubxml" />
     <Content Include="ReportViewer\content\content.rar" />
@@ -3545,6 +3553,9 @@
     <Folder Include="Scripts\Exceed\dist\js\" />
     <Folder Include="Views\Banks\" />
     <Folder Include="Views\Checks\" />
+    <Folder Include="Views\EstimationCostSummary\" />
+    <Folder Include="Views\EstimationDetail\" />
+    <Folder Include="Views\EstimationSummary\" />
     <Folder Include="Views\FurnitureBillOfQuantity\" />
     <Folder Include="Views\FurnitureBOQLabor\" />
     <Folder Include="Views\FurnitureBOQMaterial\" />
@@ -3623,6 +3634,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402121130102_initialCreate.resx">
       <DependentUpon>202402121130102_initialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411091045233_abc.resx">
+      <DependentUpon>202411091045233_abc.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,8 +16,7 @@
                         {
                             //command.Edit().Text(" ").IconClass("fa fa-pencil").HtmlAttributes(new { title = "Edit" });
                             command.Custom("check").Text(" ").IconClass("fa fa-check").HtmlAttributes(new { @class = "check", title = "Check" }).Click("checkEstimation");
-                            //command.Custom("sendmargin").Text(" ").IconClass("fa fa-fast-forward").HtmlAttributes(new { @class = "marginsend", title = "margin send" }).Click("sendMarginForApproval");
-                            //command.Custom("approve").Text(" ").IconClass("fa fa-thumbs-o-up").HtmlAttributes(new { @class = "approve", title = "Approve" }).Click("approveEstimation");
+                            command.Custom("approve").Text(" ").IconClass("fa fa-thumbs-o-up").HtmlAttributes(new { @class = "approve", title = "Approve" }).Click("approveEstimation");
                             //command.Custom("reject").Text(" ").IconClass("fa fa-remove").HtmlAttributes(new { @class = "reject", title = "Reject" }).Click("rejectEstimation");
                             //command.Destroy().Text(" ").IconClass("fa fa-trash").HtmlAttributes(new { title = "Delete" });
                         }).Width(200);
@@ -26,8 +25,7 @@
                     .ToolBar(toolbar =>
                     {
                         toolbar.Create();
-                        //toolbar.Excel();
-                        //toolbar.Pdf();
+                       
                     })
                     .Events(ev => ev.DetailExpand("detailExpand")
                     .DataBound("dataBound")
@@ -64,8 +62,7 @@
 
 <script id="cost_estimation" type="text/x-kendo-template">
     @(Html.Kendo().TabStrip()
-                .Name("tabstrip_grid_#=FurnitureEstimationId#")
-                .SelectedIndex(0)
+                .Name("tabstrip_grid_#=FurnitureEstimationId#")              
                 .Items(itemn =>
                  {
 
@@ -85,19 +82,16 @@
                                                columns.Bound(c => c.Quantity).Format("{0:n2}").Width(80);
                                                columns.Bound(c => c.UnitPrice).Width(100);
                                                columns.Bound(c => c.TotalPrice).Format("{0:n2}").Width(130).ClientFooterTemplate("Material Cost: \\#=sum\\# ");
-                                   // escaped template expression, to be evaluated in the child/detail context
-                                   columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
-
+                                               // escaped template expression, to be evaluated in the child/detail context
+                                               columns.Command(command => { command.Edit(); command.Destroy(); }).Width(200);
                                            })
                                      .ToolBar(toolbar =>
                                      {
-                                               toolbar.Create();
-
-                                           })
+                                        toolbar.Create();
+                                     })
                                      .Events(ev => ev.DataBound("onChildDataBound"))
                                      .Events(ev => ev.Edit("onEditMaterialCost"))
-                                     .Editable(editable => editable.Mode(GridEditMode.InLine))
-                                     
+                                     .Editable(editable => editable.Mode(GridEditMode.InLine))                                   
                                      .Pageable(pageable => pageable
                                      .Refresh(true)
                                      .PageSizes(true)
@@ -111,8 +105,8 @@
                                          .Aggregates(aggregates =>
 
                                          {
-                                                   aggregates.Add(c => c.TotalPrice).Sum();
-                                               })
+                                            aggregates.Add(c => c.TotalPrice).Sum();
+                                         })
                                          .Model(model => model.Id(p => p.FurnitureMaterialCostId))
                                          .Read(read => read.Action("FurnitureMaterialCosts_Read", "FurnitureMaterialCosts", new { estimationFormId = "#=FurnitureEstimationId#" }))
                                          .Create(create => create.Action("FurnitureMaterialCosts_Create", "FurnitureMaterialCosts", new { parentId = "#=FurnitureEstimationId#" }))
@@ -202,13 +196,12 @@
                                                         columns.Bound(c => c.AdministrativeCost).Title("Adminst Cost(%)").Width(120);
                                                         columns.Bound(c => c.GrandTotalCost);
                                                         columns.Bound(c => c.ProfitMargin);
-                                                        columns.Bound(c => c.FinalPriceIncludingProfit);
+                                                        columns.Bound(c => c.SellingPrice);
 
                                                         columns.Command(command =>
                                                         {
                                                             command.Edit();
                                                             command.Destroy();
-                                                            //command.Custom("approvemargin").Text(" ").IconClass("fa fa-thumbs-up").HtmlAttributes(new { @class = "margin-approve", title = "approve margin" }).Click("approveMargin");
 
                                                         }).Width(200);
 
@@ -229,9 +222,10 @@
                                                                 model.Field(p => p.LabourCost).Editable(false);
                                                                 model.Field(p => p.MaterialCost).Editable(false);
                                                                 model.Field(p => p.FurnitureOverallCostId).Editable(false);
+                                                                model.Field(p => p.ProfitMargin).Editable(false);
+                                                                model.Field(p => p.SellingPrice).Editable(false);
                                                             })
                                                             .Read(read => read.Action("FurnitureOverallCosts_Read", "FurnitureOverallCosts", new { estimationFormId = "#=FurnitureEstimationId#" }))
-                                                            .Create(create => create.Action("FurnitureOverallCosts_Create", "FurnitureOverallCosts", new { parentId = "#=FurnitureEstimationId#" }))
                                                             .Update(update => update.Action("FurnitureOverallCosts_Update", "FurnitureOverallCosts"))
                                                             .Destroy(destroy => destroy.Action("FurnitureOverallCosts_Destroy", "FurnitureOverallCosts")))
 
@@ -295,25 +289,19 @@
         grid.tbody.find("tr[role='row']").each(function () {
             var dataItem = grid.dataItem(this);
             $(this).find(".k-grid-reject").hide();
-            if (dataItem.IsOnlineApproved || dataItem.IsOnlineTransferred) {
+            if (dataItem.IsOnlineApproved) {
                 $(this).find(".k-grid-edit").hide();
                 $(this).find(".k-grid-check").hide();
-                //$(this).find(".k-grid-approve").hide();
-                //$(this).find(".k-grid-reject").hide();
+                $(this).find(".k-grid-approve").hide();
+                $(this).find(".k-grid-reject").hide();
                 $(this).find(".k-grid-delete").hide();
             }
-            //else if (dataItem.IsOnlineTransferred) {
-            //    $(this).find(".k-grid-edit").hide();
-            //    $(this).find(".k-grid-check").hide();
-            //    $(this).find(".k-grid-delete").hide();
-            //    $(this).find(".k-grid-reject").show();
-
-            //    $(this).find(".k-grid-approve").show();
-            //}
-            //else {
-            //    $(this).find(".k-grid-approve").hide();
-            //}
-
+            else if (dataItem.IsOnlineTransferred && dataItem.IsOnlineApproved == false) {
+                $(this).find(".k-grid-edit").hide();
+                $(this).find(".k-grid-check").hide();
+                $(this).find(".k-grid-delete").hide();
+            }
+            
         });
     }
     function onChildDataBound(e) {
@@ -542,57 +530,7 @@
     }
 
 </script>
-<script>
-    function approveMargin(e) {
-        if (confirm("Are you sure this estimation form is to be checked?")) {
-             var grid = this,
-            dataItem = grid.dataItem(e.currentTarget.closest("tr"));
-        $.ajax({
-           type: "POST",
-            url: '@Url.Action("ApproveMargin", "FurnitureEstimation", new { Area = "Manufacturing" })',
-            data: { id: dataItem.FurnitureOverallCostId },
-            success: function (result) {
-                if (result.Success) {
-                    toastr.success(result.Message);
-                    $("#grid").data("kendoGrid").dataSource.read();
-                }
-                else {
-                    toastr.error(result.Message);
 
-                }
-           },
-           error: function(result) {
-               alert(result);
-           }
-       });
-      }
-    }
-
-    function sendMarginForApproval(e) {
-        if (confirm("Are you sure this estimation form is to be checked?")) {
-             var grid = this,
-            dataItem = grid.dataItem(e.currentTarget.closest("tr"));
-        $.ajax({
-           type: "POST",
-            url: '@Url.Action("SendForMarginApproval", "FurnitureEstimation", new { Area = "Manufacturing" })',
-            data: { id: dataItem.FurnitureEstimationId },
-            success: function (result) {
-                if (result.Success) {
-                    toastr.success(result.Message);
-                    $("#grid").data("kendoGrid").dataSource.read();
-                }
-                else {
-                    toastr.error(result.Message);
-
-                }
-           },
-           error: function(result) {
-               alert(result);
-           }
-       });
-      }
-    }
-</script>
 <style>
     .k-grid .k-grid-toolbar .k-grid-add,
     .k-grid tbody .k-grid-edit,

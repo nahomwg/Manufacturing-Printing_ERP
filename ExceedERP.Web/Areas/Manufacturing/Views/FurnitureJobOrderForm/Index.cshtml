@@ -24,7 +24,8 @@
               {
                   toolbar.Create();
               })
-              .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("FurnitureJoborderEditorTemplate"))
+              .Editable(editable => editable.Mode(GridEditMode.PopUp)
+              .TemplateName("FurnitureJoborderEditorTemplate"))
               .Filterable()
               .Scrollable(s => s.Height(400))
               .Events(ev => ev.DetailExpand("detailExpand")

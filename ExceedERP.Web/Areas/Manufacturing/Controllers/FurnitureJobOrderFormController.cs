@@ -65,7 +65,8 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 CreatedBy = furnitureJobOrderForm.CreatedBy,
                 ModifiedBy = furnitureJobOrderForm.ModifiedBy,
                 JobClosed = furnitureJobOrderForm.JobClosed,
-                PaymentType = furnitureJobOrderForm.PaymentType
+                PaymentType = furnitureJobOrderForm.PaymentType,
+                JobStartDate = furnitureJobOrderForm.JobStartDate
             });
 
             return Json(result);
@@ -174,8 +175,10 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 {
                     var jobOrder = new FurnitureJobOrderForm
                     {
-                        CustomerId = proformaInvoice.CustomerId,
                         
+                        CustomerId = proformaInvoice.CustomerId,
+                        JobStartDate = furnitureJobOrderForm.JobStartDate,
+                        DeliveryDate = furnitureJobOrderForm.JobStartDate.AddDays(proformaInvoice.DeliveryPeriod),
                         FurnitureProformaInvoiceId = proformaInvoice.FurnitureProformaInvoiceId,
                         DateCreated = DateTime.Today,
                         CreatedBy = User.Identity.Name,

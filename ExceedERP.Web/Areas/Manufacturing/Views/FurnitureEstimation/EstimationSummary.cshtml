@@ -197,9 +197,7 @@
                                                                            columns.Bound(c => c.ManufacturingCost);
                                                                            columns.Bound(c => c.AdministrativeCost).Title("Adminst Cost(%)").Width(120);
                                                                            columns.Bound(c => c.GrandTotalCost);
-                                                                           columns.Bound(c => c.ProfitMargin);
-                                                                           columns.Bound(c => c.FinalPriceIncludingProfit);
-
+                                                                           
                                                                            columns.Command(command =>
                                                                            {
                                                                               
@@ -387,21 +385,21 @@
 
         function approveEstimation(e) {
             if (confirm("Are you sure to approve this estimation form?")) {
-             var grid = this,
+            var grid = this,
             dataItem = grid.dataItem(e.currentTarget.closest("tr"));
-        $.ajax({
-           type: "POST",
-            url: '@Url.Action("ApproveEstimationForm", "FurnitureEstimation", new { Area = "Manufacturing" })',
-            data: { id: dataItem.FurnitureEstimationId },
-            success: function (result) {
-                if (result.Success) {
-                    toastr.success(result.Message);
-                    $("#grid").data("kendoGrid").dataSource.read();
-                }
-                else {
-                    toastr.error(result.Message);
+            $.ajax({
+               type: "POST",
+                url: '@Url.Action("ApproveEstimationForm", "FurnitureEstimation", new { Area = "Manufacturing" })',
+                data: { id: dataItem.FurnitureEstimationId },
+                success: function (result) {
+                    if (result.Success) {
+                        toastr.success(result.Message);
+                        $("#grid").data("kendoGrid").dataSource.read();
+                    }
+                    else {
+                        toastr.error(result.Message);
 
-                }
+                    }
            },
            error: function(result) {
                alert(result);
