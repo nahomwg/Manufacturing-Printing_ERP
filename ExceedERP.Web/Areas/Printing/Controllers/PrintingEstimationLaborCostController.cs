@@ -21,9 +21,9 @@ namespace ExceedERP.Web.Areas.Printing.Controllers
             return View();
         }
 
-        public ActionResult PrintingEstimationLaborCosts_Read([DataSourceRequest]DataSourceRequest request, int id)
+        public ActionResult PrintingEstimationLaborCosts_Read([DataSourceRequest]DataSourceRequest request, int estId)
         {
-            IQueryable<PrintingEstimationLaborCost> printingestimationlaborcosts = db.PrintingEstimationLaborCosts.Where(x => x.PrintingCostEstimationId == id);
+            IQueryable<PrintingEstimationLaborCost> printingestimationlaborcosts = db.PrintingEstimationLaborCosts.Where(x => x.PrintingCostEstimationId == estId);
             DataSourceResult result = printingestimationlaborcosts.ToDataSourceResult(request, printingEstimationLaborCost => new PrintingEstimationLaborCost
             {
                 PrintingEstimationLaborCostId = printingEstimationLaborCost.PrintingEstimationLaborCostId,
@@ -44,7 +44,7 @@ namespace ExceedERP.Web.Areas.Printing.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult PrintingEstimationLaborCosts_Create([DataSourceRequest]DataSourceRequest request, PrintingEstimationLaborCost printingEstimationLaborCost, int id)
+        public ActionResult PrintingEstimationLaborCosts_Create([DataSourceRequest]DataSourceRequest request, PrintingEstimationLaborCost printingEstimationLaborCost, int estId)
         {
             if (ModelState.IsValid)
             {
@@ -59,12 +59,14 @@ namespace ExceedERP.Web.Areas.Printing.Controllers
                     LastModified = printingEstimationLaborCost.LastModified,
                     CreatedBy = User.Identity.Name,
                     ModifiedBy = printingEstimationLaborCost.ModifiedBy,
-                    PrintingCostEstimationId = id,
-                    PrintingMachineTypeId = printingEstimationLaborCost.PrintingMachineTypeId
+                    PrintingCostEstimationId = estId,
+                    PrintingMachineTypeId = printingEstimationLaborCost.PrintingMachineTypeId,
+                    
                 };
-
+                entity.TotalCost = entity.LaborRate * entity.EstimatedHours;
                 db.PrintingEstimationLaborCosts.Add(entity);
                 db.SaveChanges();
+                printingEstimationLaborCost.TotalCost = entity.TotalCost;
                 printingEstimationLaborCost.PrintingEstimationLaborCostId = entity.PrintingEstimationLaborCostId;
             }
 
@@ -91,6 +93,7 @@ namespace ExceedERP.Web.Areas.Printing.Controllers
                     PrintingCostEstimationId = printingEstimationLaborCost.PrintingCostEstimationId,
                     PrintingMachineTypeId = printingEstimationLaborCost.PrintingMachineTypeId
                 };
+                entity.TotalCost = entity.LaborRate * entity.EstimatedHours;
 
                 db.PrintingEstimationLaborCosts.Attach(entity);
                 db.Entry(entity).State = EntityState.Modified;

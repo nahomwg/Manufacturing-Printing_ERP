@@ -1,5 +1,4 @@
 ﻿
-
 <label>Job Order</label>
 @(Html.Kendo().Grid<ExceedERP.Core.Domain.Manufacturing.FurnitureEstimation.FurnitureJobOrderForm>()
               .Name("grid")
@@ -17,7 +16,6 @@
                       command.Custom("check").Text(" ").IconClass("fa fa-check").HtmlAttributes(new { @class = "check", title = "check" }).Click("handleChecked");
                       command.Custom("approve").Text(" ").IconClass("fa fa-thumbs-o-up").HtmlAttributes(new { @class = "approve", title = "approve" }).Click("handleApprove");
                       command.Destroy().Text(" ");
-
                   }).Width(180);
               })
               .ToolBar(toolbar =>
@@ -46,14 +44,14 @@
 
 <script id="tabstrip" type="text/x-kendo-template">
     @(Html.Kendo().TabStrip()
-                                                        .Name("tab_#=FurnitureJobOrderFormId#")
-                                                        .Items(item1 =>
-                                                        {
-                                                            item1.Add().Text("job Item").Content(@<text>
-                                                                @JobOrderItem()
-                                                            </text>);
-
-                                                                }).ToClientTemplate())
+        .Name("tab_#=FurnitureJobOrderFormId#")
+        .Items(item1 =>
+        {
+            item1.Add().Text("job Item").Content(
+            @<text>
+                @JobOrderItem()
+            </text>);
+        }).ToClientTemplate())
 </script>
 
 @helper JobOrderItem()
@@ -66,11 +64,9 @@
                   columns.ForeignKey(c => c.JobTypeId, (IEnumerable)ViewData["JobType"], "Value", "Text").Width(120);
                   columns.Bound(c => c.UnitOfMeasurment);
                   columns.Bound(c => c.Quantity);
-                  columns.Bound(c => c.UnitPriceBeforeVAT);
-                  
+                  columns.Bound(c => c.UnitPriceBeforeVAT);                  
                   columns.Bound(c => c.UnitPriceWithVAT);
-                  columns.Bound(c => c.Remark);
-                  
+                  columns.Bound(c => c.Remark);                  
                   columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
               })
               .ToolBar(toolbar =>

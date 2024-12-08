@@ -174,8 +174,7 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                 if (proformaItems.Any())
                 {
                     var jobOrder = new FurnitureJobOrderForm
-                    {
-                        
+                    {                       
                         CustomerId = proformaInvoice.CustomerId,
                         JobStartDate = furnitureJobOrderForm.JobStartDate,
                         DeliveryDate = furnitureJobOrderForm.JobStartDate.AddDays(proformaInvoice.DeliveryPeriod),
@@ -186,7 +185,6 @@ namespace ExceedERP.Web.Areas.Manufacturing.Controllers
                         PaymentType = furnitureJobOrderForm.PaymentType,
                         AdvancePaymentInPercent = furnitureJobOrderForm.AdvancePaymentInPercent,
                         Remark = furnitureJobOrderForm.Remark
-
                     };
                     jobOrder.DeliveryDate = DateTime.Today.AddDays(proformaInvoice.DeliveryPeriod);
                     db.FurnitureJobOrderForms.Add(jobOrder);

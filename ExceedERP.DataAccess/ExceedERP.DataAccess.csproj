@@ -405,6 +405,42 @@
     <Compile Include="Migrations\202411111343022_abdefe.Designer.cs">
       <DependentUpon>202411111343022_abdefe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412021416487_abcs.cs" />
+    <Compile Include="Migrations\202412021416487_abcs.Designer.cs">
+      <DependentUpon>202412021416487_abcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412031149320_acb.cs" />
+    <Compile Include="Migrations\202412031149320_acb.Designer.cs">
+      <DependentUpon>202412031149320_acb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412031335579_acbe.cs" />
+    <Compile Include="Migrations\202412031335579_acbe.Designer.cs">
+      <DependentUpon>202412031335579_acbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412041051320_acbea.cs" />
+    <Compile Include="Migrations\202412041051320_acbea.Designer.cs">
+      <DependentUpon>202412041051320_acbea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412051527480_adc.cs" />
+    <Compile Include="Migrations\202412051527480_adc.Designer.cs">
+      <DependentUpon>202412051527480_adc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412061145560_adc1.cs" />
+    <Compile Include="Migrations\202412061145560_adc1.Designer.cs">
+      <DependentUpon>202412061145560_adc1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412061301268_adcdef.cs" />
+    <Compile Include="Migrations\202412061301268_adcdef.Designer.cs">
+      <DependentUpon>202412061301268_adcdef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412061535238_adcdefw.cs" />
+    <Compile Include="Migrations\202412061535238_adcdefw.Designer.cs">
+      <DependentUpon>202412061535238_adcdefw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412071144017_adcdefwj.cs" />
+    <Compile Include="Migrations\202412071144017_adcdefwj.Designer.cs">
+      <DependentUpon>202412071144017_adcdefwj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -690,6 +726,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202411111343022_abdefe.resx">
       <DependentUpon>202411111343022_abdefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412021416487_abcs.resx">
+      <DependentUpon>202412021416487_abcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412031149320_acb.resx">
+      <DependentUpon>202412031149320_acb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412031335579_acbe.resx">
+      <DependentUpon>202412031335579_acbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412041051320_acbea.resx">
+      <DependentUpon>202412041051320_acbea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412051527480_adc.resx">
+      <DependentUpon>202412051527480_adc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412061145560_adc1.resx">
+      <DependentUpon>202412061145560_adc1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412061301268_adcdef.resx">
+      <DependentUpon>202412061301268_adcdef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412061535238_adcdefw.resx">
+      <DependentUpon>202412061535238_adcdefw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412071144017_adcdefwj.resx">
+      <DependentUpon>202412071144017_adcdefwj.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

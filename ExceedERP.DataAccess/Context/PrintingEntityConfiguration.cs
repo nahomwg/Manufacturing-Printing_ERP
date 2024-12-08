@@ -15,12 +15,92 @@ using System.Threading.Tasks;
 
 namespace ExceedERP.DataAccess.Context
 {
+    public class PrintingJobOrderProductionEntityTypeConfiguration: EntityTypeConfiguration<PrintingJobOrderProduction>
+    {
+        public PrintingJobOrderProductionEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingJobOrderProduction", "Printing");
+            this.HasKey<int>(p => p.PrintingJobOrderProductionId);
+        }
+    }
+    public class PrintingProductionMaterialCostEntityTypeConfiguration : EntityTypeConfiguration<PrintingProductionMaterialCost>
+    {
+        public PrintingProductionMaterialCostEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingProductionMaterialCost", "Printing");
+            this.HasKey<int>(p => p.PrintingProductionMaterialCostId);
+        }
+    }
+    public class PrintingProductionLaborCostEntityTypeConfiguration : EntityTypeConfiguration<PrintingProductionLaborCost>
+    {
+        public PrintingProductionLaborCostEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingProductionLaborCost", "Printing");
+            this.HasKey<int>(p => p.PrintingProductionLaborCostId);
+        }
+    }
+    public class PrintingJobOrderEntityTypeConfiguration : EntityTypeConfiguration<PrintingJobOrder>
+    {
+        public PrintingJobOrderEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingJobOrder", "Printing");
+            this.HasKey<int>(p => p.PrintingJobOrderId);
+        }
+    }
+    public class PrintingJobOrderItemEntityTypeConfiguration : EntityTypeConfiguration<PrintingJobOrderItem>
+    {
+        public PrintingJobOrderItemEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingJobOrderItem", "Printing");
+            this.HasKey<int>(p => p.PrintingJobOrderItemId);
+        }
+    }
+    public class PrintingProformaInvoiceEntityTypeConfiguration : EntityTypeConfiguration<PrintingProformaInvoice>
+    {
+        public PrintingProformaInvoiceEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingProformaInvoice", "Printing");
+            this.HasKey<int>(p => p.PrintingProformaInvoiceId);
+        }
+    }
+    public class PrintingProformaInvoiceItemEntityTypeConfiguration : EntityTypeConfiguration<PrintingProformaInvoiceItem>
+    {
+        public PrintingProformaInvoiceItemEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingProformaInvoiceItem", "Printing");
+            this.HasKey<int>(p => p.PrintingProformaInvoiceItemId);
+        }
+    }
     public class PrintingEstimationMaterialCostsEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationMaterialCost>
     {
         public PrintingEstimationMaterialCostsEntityTypeConfiguration()
         {
             this.ToTable("PrintingEstimationMaterialCost", "Printing");
             this.HasKey<int>(p => p.PrintingEstimationMaterialCostId);
+        }
+    }
+    public class PrintingEstimationSummaryEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationSummary>
+    {
+        public PrintingEstimationSummaryEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingEstimationSummary", "Printing");
+            this.HasKey<int>(p => p.PrintingEstimationSummaryId);
+        }
+    }
+    public class PrintingEstimationDetailEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationDetail>
+    {
+        public PrintingEstimationDetailEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingEstimationDetail", "Printing");
+            this.HasKey<int>(p => p.PrintingEstimationDetailId);
+        }
+    }
+    public class PrintingEstimationCostSummaryEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationCostSummary>
+    {
+        public PrintingEstimationCostSummaryEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingEstimationCostSummary", "Printing");
+            this.HasKey<int>(p => p.PrintingEstimationCostSummaryId);
         }
     }
     public class PrintingEstimationLaborCostEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationLaborCost>

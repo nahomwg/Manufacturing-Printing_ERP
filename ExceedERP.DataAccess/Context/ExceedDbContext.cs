@@ -206,6 +206,17 @@ namespace ExceedERP.DataAccess.Context
             modelBuilder.Configurations.Add(new PrintingOverAllCostEntityTypeConfiguration());
             modelBuilder.Configurations.Add(new PrintingEstimationLaborCostEntityTypeConfiguration());
             modelBuilder.Configurations.Add(new PrintingEstimationMaterialCostsEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingEstimationSummaryEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingEstimationDetailEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingEstimationCostSummaryEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingProformaInvoiceEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingProformaInvoiceItemEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingJobOrderEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingJobOrderItemEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingProductionLaborCostEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingProductionMaterialCostEntityTypeConfiguration());
+            modelBuilder.Configurations.Add(new PrintingJobOrderProductionEntityTypeConfiguration());
+
             #endregion
             #region Manufucturing 
             #region  Estimation
@@ -408,6 +419,7 @@ namespace ExceedERP.DataAccess.Context
 
 
         #endregion
+
         public DbSet<PrintCostCenter> PrintCostCenters { get; set; } 
         public DbSet<PrintingMachineType> PrintingMachineTypes { get; set; }  
         public DbSet<PrintingProcess> PrintingProcesses { get; set; }  
@@ -426,6 +438,16 @@ namespace ExceedERP.DataAccess.Context
         public DbSet<PrintingEstimationMaterialCost> PrintingEstimationMaterialCosts { get; set; }
         public DbSet<PrintingEstimationLaborCost> PrintingEstimationLaborCosts { get; set; }
         public DbSet<PrintingOverAllCost> PrintingOverAllCosts { get; set; }
+        public DbSet<PrintingEstimationSummary> PrintingEstimationSummaries { get; set; }
+        public DbSet<PrintingEstimationDetail> PrintingEstimationDetails { get; set; }
+        public DbSet<PrintingEstimationCostSummary> PrintingEstimationCostSummaries { get; set; }
+        public DbSet<PrintingProformaInvoice> PrintingProformaInvoices { get; set; }
+        public DbSet<PrintingProformaInvoiceItem> PrintingProformaInvoiceItems { get; set; }
+        public DbSet<PrintingJobOrder> PrintingJobOrders { get; set; }
+        public DbSet<PrintingJobOrderItem> PrintingJobOrderItems { get; set; } 
+        public DbSet<PrintingJobOrderProduction> PrintingJobOrderProductions { get; set; } 
+        public DbSet<PrintingProductionMaterialCost> PrintingProductionMaterialCosts { get; set; } 
+        public DbSet<PrintingProductionLaborCost> PrintingProductionLaborCosts { get; set; } 
         #endregion
         #region Manufucturing
         #region  Estimation

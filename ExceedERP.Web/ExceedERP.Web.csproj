@@ -1273,8 +1273,12 @@
     <Compile Include="Areas\Printing\Controllers\JobCosting\Settings\JcPensionController.cs" />
     <Compile Include="Areas\Printing\Controllers\JobCosting\Settings\UnitController.cs" />
     <Compile Include="Areas\Printing\Controllers\JobCosting\Settings\YearlyOverHeadRateController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingCostEstimationSummaryController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingCostSummaryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingEstimationLaborCostController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingEstimationMaterialCostController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingJobOrderController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingJobOrderItemController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingMaterialCategoryItemController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingMaterialCategoryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintCostCenterController.cs" />
@@ -1287,6 +1291,8 @@
     <Compile Include="Areas\Printing\Controllers\PrintingPaperSizeController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingProcessController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingProductProcessController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingProformaInvoiceController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingProformaItemController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintItemCategoryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintLaborRateController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintMachinePaperListController.cs" />
@@ -3052,6 +3058,13 @@
     <Content Include="Areas\Printing\Views\PrintingCostEstimation\EditorTemplates\PrintingCategoryDropDownTemplate.cshtml" />
     <Content Include="Areas\Manufacturing\Views\FurnitureEstimation\EstimationSummary.cshtml" />
     <Content Include="Areas\Manufacturing\Views\EstimationSummary\Index.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingCostEstimationSummary\Index.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingProformaInvoice\Index.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingProformaInvoice\EditorTemplates\PrintingProformaInvoiceTemplate.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingProformaInvoice\EditorTemplates\PrintingProformaItemEditorTemplate.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingJobOrder\Index.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingJobOrder\EditorTemplates\PrintingJoborderEditorTemplate.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingJobOrder\EditorTemplates\PrintingJobOrderItemEditorTemplate.cshtml" />
     <None Include="Properties\PublishProfiles\DebuggableProfile.pubxml" />
     <None Include="Properties\PublishProfiles\ERP.pubxml" />
     <Content Include="ReportViewer\content\content.rar" />
@@ -3533,7 +3546,10 @@
     <Folder Include="Areas\Printing\Views\JobCostingViews\JobCostingDataProvider\" />
     <Folder Include="Areas\Printing\Views\MegaDataProvider\" />
     <Folder Include="Areas\Printing\Views\PrintDataProvider\" />
+    <Folder Include="Areas\Printing\Views\PrintingCostSummary\" />
     <Folder Include="Areas\Printing\Views\PrintingEstimationDataProvider\" />
+    <Folder Include="Areas\Printing\Views\PrintingJobOrderItem\" />
+    <Folder Include="Areas\Printing\Views\PrintingProformaItem\" />
     <Folder Include="Areas\Printing\Views\ProductionDataProvider\" />
     <Folder Include="Areas\Printing\Views\ProductionFollowUpViews\HalfYearlyProductionPlans\" />
     <Folder Include="Areas\Printing\Views\ProductionFollowUpViews\MegaDataProvider\" />

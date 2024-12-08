@@ -495,6 +495,7 @@
     <Compile Include="Domain\Printing\PrintingCostEstimation.cs" />
     <Compile Include="Domain\Printing\PrintingEstimationLaborCost.cs" />
     <Compile Include="Domain\Printing\PrintingEstimationMaterialCost.cs" />
+    <Compile Include="Domain\Printing\PrintingEstimationSummary.cs" />
     <Compile Include="Domain\Printing\PrintingEstimation\EstimationForm.cs" />
     <Compile Include="Domain\Printing\PrintingEstimation\LaborCost.cs" />
     <Compile Include="Domain\Printing\PrintingEstimation\MaterialCost.cs" />
@@ -505,6 +506,8 @@
     <Compile Include="Domain\Printing\PrintingEstimation\PrintingStep.cs" />
     <Compile Include="Domain\Printing\PrintingEstimation\Setting\CommonEnum.cs" />
     <Compile Include="Domain\Printing\PrintingEstimation\Setting\Validation.cs" />
+    <Compile Include="Domain\Printing\PrintingJobOrder.cs" />
+    <Compile Include="Domain\Printing\PrintingJobOrderProduction.cs" />
     <Compile Include="Domain\Printing\PrintingMaterialCategory.cs" />
     <Compile Include="Domain\Printing\PrintingJobType.cs" />
     <Compile Include="Domain\Printing\PrintingMachineType.cs" />
@@ -512,6 +515,7 @@
     <Compile Include="Domain\Printing\PrintingPaperSize.cs" />
     <Compile Include="Domain\Printing\PrintingProcess.cs" />
     <Compile Include="Domain\Printing\PrintingProductProcess.cs" />
+    <Compile Include="Domain\Printing\PrintingProformaInvoice.cs" />
     <Compile Include="Domain\Printing\PrintItemCategory.cs" />
     <Compile Include="Domain\Printing\PrintLabourRate.cs" />
     <Compile Include="Domain\Printing\PrintMachinePaperList.cs" />
