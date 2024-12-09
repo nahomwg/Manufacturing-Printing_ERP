@@ -445,6 +445,10 @@
     <Compile Include="Migrations\202412091110398_afd.Designer.cs">
       <DependentUpon>202412091110398_afd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412091540506_afda.cs" />
+    <Compile Include="Migrations\202412091540506_afda.Designer.cs">
+      <DependentUpon>202412091540506_afda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -760,6 +764,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412091110398_afd.resx">
       <DependentUpon>202412091110398_afd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412091540506_afda.resx">
+      <DependentUpon>202412091540506_afda.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

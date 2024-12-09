@@ -1276,6 +1276,7 @@
     <Compile Include="Areas\Printing\Controllers\PrintingCostEstimationSummaryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingCostSummaryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingEstimationLaborCostController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingEstimationMarginController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingEstimationMaterialCostController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingJobOrderController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingJobOrderItemController.cs" />
@@ -3552,6 +3553,7 @@
     <Folder Include="Areas\Printing\Views\PrintDataProvider\" />
     <Folder Include="Areas\Printing\Views\PrintingCostSummary\" />
     <Folder Include="Areas\Printing\Views\PrintingEstimationDataProvider\" />
+    <Folder Include="Areas\Printing\Views\PrintingEstimationMargin\" />
     <Folder Include="Areas\Printing\Views\PrintingJobOrderItem\" />
     <Folder Include="Areas\Printing\Views\PrintingMaterialCostProduction\" />
     <Folder Include="Areas\Printing\Views\PrintingProformaItem\" />

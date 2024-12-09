@@ -15,6 +15,14 @@ using System.Threading.Tasks;
 
 namespace ExceedERP.DataAccess.Context
 {
+    public class PrintingEstimationMarginEntityTypeConfiguration : EntityTypeConfiguration<PrintingEstimationMargin>
+    {
+        public PrintingEstimationMarginEntityTypeConfiguration()
+        {
+            this.ToTable("PrintingEstimationMargin", "Printing");
+            this.HasKey<int>(p => p.PrintingEstimationMarginId);
+        }
+    }
     public class PrintingJobOrderProductionEntityTypeConfiguration: EntityTypeConfiguration<PrintingJobOrderProduction>
     {
         public PrintingJobOrderProductionEntityTypeConfiguration()
