@@ -224,6 +224,12 @@ namespace ExceedERP.Web.Areas.Printing.Controllers
                                 DateCreated = DateTime.Today,
                                 Status = "Pending",
                                 JobDescription = jobOrder.Remark,
+                                BindingStyleId = estimation.BindingStyleId,
+                                CoverNoOfColor = estimation.CoverNoOfColor,
+                                PaperSizeId = estimation.PaperSizeId,
+                                TextNoOfColors = estimation.TextNoOfColors,
+                                TotalTextNoPages = estimation.TotalTextNoPages,
+                                
                                 PrintingJobOrderId = jobOrder.PrintingJobOrderId
                             };
                             db.PrintingJobOrderProductions.Add(jobOrderProduction);

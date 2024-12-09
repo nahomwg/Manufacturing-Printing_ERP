@@ -16,6 +16,16 @@ namespace ExceedERP.Core.Domain.Printing
         public int CustomerId { get; set; }
         [Display(Name = "Job Name")]
         public int JobTypeId { get; set; }
+        [Display(Name = "Paper Size")]
+        public int PaperSizeId { get; set; }
+        [Display(Name = "Binding style")]
+        public int BindingStyleId { get; set; }
+        [Display(Name = "Text No of Colors")]
+        public int TextNoOfColors { get; set; }
+        [Display(Name = "Cover No of Colors")]
+        public int CoverNoOfColor { get; set; }
+        public int TotalTextNoPages { get; set; }
+
         [Display(Name = "Job.No")]
         public string JobOrderNo { get; set; }
         public string Unit { get; set; }

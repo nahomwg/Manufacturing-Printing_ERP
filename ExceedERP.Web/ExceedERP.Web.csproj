@@ -1279,6 +1279,7 @@
     <Compile Include="Areas\Printing\Controllers\PrintingEstimationMaterialCostController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingJobOrderController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingJobOrderItemController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingJobOrderProductionController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingMaterialCategoryItemController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingMaterialCategoryController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintCostCenterController.cs" />
@@ -1287,6 +1288,7 @@
     <Compile Include="Areas\Printing\Controllers\PrintingCostEstimationController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingJobTypeController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingMachineTypeController.cs" />
+    <Compile Include="Areas\Printing\Controllers\PrintingMaterialCostProductionController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingOverAllCostController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingPaperSizeController.cs" />
     <Compile Include="Areas\Printing\Controllers\PrintingProcessController.cs" />
@@ -3065,6 +3067,8 @@
     <Content Include="Areas\Printing\Views\PrintingJobOrder\Index.cshtml" />
     <Content Include="Areas\Printing\Views\PrintingJobOrder\EditorTemplates\PrintingJoborderEditorTemplate.cshtml" />
     <Content Include="Areas\Printing\Views\PrintingJobOrder\EditorTemplates\PrintingJobOrderItemEditorTemplate.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingJobOrderProduction\Index.cshtml" />
+    <Content Include="Areas\Printing\Views\PrintingJobOrderProduction\EditorTemplates\PrintingJoborderProductionEditorTemplate.cshtml" />
     <None Include="Properties\PublishProfiles\DebuggableProfile.pubxml" />
     <None Include="Properties\PublishProfiles\ERP.pubxml" />
     <Content Include="ReportViewer\content\content.rar" />
@@ -3549,6 +3553,7 @@
     <Folder Include="Areas\Printing\Views\PrintingCostSummary\" />
     <Folder Include="Areas\Printing\Views\PrintingEstimationDataProvider\" />
     <Folder Include="Areas\Printing\Views\PrintingJobOrderItem\" />
+    <Folder Include="Areas\Printing\Views\PrintingMaterialCostProduction\" />
     <Folder Include="Areas\Printing\Views\PrintingProformaItem\" />
     <Folder Include="Areas\Printing\Views\ProductionDataProvider\" />
     <Folder Include="Areas\Printing\Views\ProductionFollowUpViews\HalfYearlyProductionPlans\" />
